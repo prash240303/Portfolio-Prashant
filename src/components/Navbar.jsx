@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function Navbar() {
   const [selectedRadio, setSelectedRadio] = useState('home');
@@ -14,10 +15,13 @@ function Navbar() {
   };
 
   return (
-   <div className="toggle-container">
+    <motion.div initial={{ y: '100%' }}
+     animate={{ y: 0 }} 
+     transition={{ type: 'spring', bounce: 0.5, duration: 0.4 }}
+     className="toggle-container">
       <div className="radio-tile-group">
-      <Link to="/">
-          <div className={`input-container ${selectedRadio === 'home' ? 'active' : ''}`}>
+        <Link to="/">
+          <motion.div className={`input-container ${selectedRadio === 'home' ? 'active' : ''}`}>
             <input
               id="home"
               type="radio"
@@ -28,10 +32,10 @@ function Navbar() {
             <div className="radio-tile">
               <img src="./Home.svg" alt="" />
             </div>
-          </div>
+          </motion.div>
         </Link>
         <Link to="/blogs">
-          <div className={`input-container ${selectedRadio === 'blogs' ? 'active' : ''}`}>
+          <motion.div className={`input-container ${selectedRadio === 'blogs' ? 'active' : ''}`}  >
             <input
               id="blogs"
               type="radio"
@@ -42,10 +46,10 @@ function Navbar() {
             <div className="radio-tile">
               <img src="./Doc.svg" alt="" />
             </div>
-          </div>
+          </motion.div>
         </Link>
         <Link to="/projects">
-          <div className={`input-container ${selectedRadio === 'projects' ? 'active' : ''}`}>
+          <motion.div className={`input-container ${selectedRadio === 'projects' ? 'active' : ''}`} >
             <input
               id="projects"
               type="radio"
@@ -56,9 +60,8 @@ function Navbar() {
             <div className="radio-tile">
               <img src="./Code.svg" alt="" />
             </div>
-          </div>
+          </motion.div>
         </Link>
-
 
         <div className='divider flex w-[0.5px] h-[34px] justify-center items-center border border-[#444444]'> </div>
 
@@ -74,7 +77,7 @@ function Navbar() {
           <a href="https://figma.com/@prash_24" target="_blank" className='flex items-center justify-center'><img src="./Figma.svg" alt="" /></a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 export default Navbar;

@@ -7,7 +7,6 @@
 :root {
   font-family: 'Outfit', sans-serif;  line-height: 1.5;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: #1e1e1e;
 }
 
@@ -19,12 +18,4 @@ body {
   align-items: center; /* Add this line */
   min-width: 320px;
   min-height: 100vh;
-}
-
-.toggle-container {
-  position: fixed;
-  z-index: 99;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%); /* Add this line */
 }
