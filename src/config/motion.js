@@ -25,7 +25,7 @@ export const slideAnimation = (fromPage, toPage) => {
         opacity: 1,
         transition: {
           type: "spring",
-          bounce: 0.3,
+          bounce: 0.2,
           duration: 0.5  }
       },
       exit: {
@@ -33,7 +33,7 @@ export const slideAnimation = (fromPage, toPage) => {
         opacity: 0,
         transition: {
           type: "spring",
-          bounce: 0.3,
+          bounce: 0.2,
           duration: 0.5}
       }
     };

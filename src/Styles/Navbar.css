@@ -80,7 +80,9 @@
   background-color: white !important;
   border-radius: 50px;
 }
-
+.active  .radio-tile img{
+  filter: brightness(0);
+}
 
 .radio-tile:hover{
   background-color: #444444;

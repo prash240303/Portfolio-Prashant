@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { slideAnimation } from "../config/motion";
 import Experience from "../components/Experience";
+import Profile from "../components/Profile";
 
 function Home() {
     const [shouldAnimate, setShouldAnimate] = useState(false);
@@ -30,7 +31,8 @@ function Home() {
                         className="view-container mt-6 w-[900px] grid grid-col-1 item-start justify-start gap-12"
                     >
                         <main className="hero-section" id="hero">
-                            <section className="flex flex-row items-center justify-start gap-10 mt-12 max-sm:items-start max-md:items-start">
+                            {/* <Profile/> */}
+                            {/* <section className="flex flex-row items-center justify-start gap-10 mt-12 max-sm:items-start max-md:items-start">
                                 <div className="profile-icon-wrapper relative ">
                                     <div className="w-[100px] h-[100px] flex">
                                         <img
@@ -48,19 +50,19 @@ function Home() {
                                     <h1 className="welcome-text leading-snug font-semibold text-2xl text-white">
                                         Hi , I am Prashant
                                     </h1>
-                                    <div className="leading-snug font-normal text-base text-zinc-400 mt-2">
+                                    <div className="leading-snug font-light text-base text-zinc-400 mt-2">
                                         <p>
                                             A Front-End Developer who can also double as a Designer.
                                         </p>
                                         <p>20 , He/Him</p>
                                     </div>
                                 </div>
-                            </section>
+                            </section> */}
                             <section className="my-8 py-4">
                                 <h2 className="about-heading leading-snug font-medium text  text-zinc-300">
                                     About me
                                 </h2>
-                                <div className="about-content-wrapper leading-6 text-base font-normal text-zinc-100 mt-4">
+                                <div className="about-content-wrapper leading-6 text-base font-light text-zinc-100 mt-4">
                                     <p>
                                         Hey! I am an engineer (sometimes a designer), learning how to
                                         build and design scalable websites and applications. My focus is
@@ -80,10 +82,10 @@ function Home() {
                                         highly interested in collaborating with you. Feel free to contact
                                         me.
                                     </p>
-                                    <div className="flex flex-row items-center justify-start gap-6">
+                                    <div className="flex flex-row items-center justify-start gap-7">
                                         <a
                                             href=""
-                                            className="flex flex-row items-center justify-start gap-0.5 transition-all text-zinc-300 hover:text-zinc-500 hover:gap-1 active:text-cyan-500  font-[500] text-lg"
+                                            className="flex flex-row items-center justify-start gap-0.5 transition-all text-zinc-300 hover:text-zinc-500 hover:gap-2 active:text-cyan-500  font-[500] text-lg"
                                         >
                                             <span>Resume</span>
                                             <svg
@@ -104,7 +106,7 @@ function Home() {
                                         </a>
                                         <a
                                             href=""
-                                            className="flex flex-row items-center justify-start gap-0.5 transition-all text-zinc-300 hover:text-zinc-500 hover:gap-1 active:text-cyan-500  font-[500] text-lg"
+                                            className="flex flex-row items-center justify-start gap-0.5 transition-all text-zinc-300 hover:text-zinc-500 hover:gap-2 active:text-cyan-500  font-[500] text-lg"
                                         >
                                             <span>LinkedIn</span>
                                             <svg
