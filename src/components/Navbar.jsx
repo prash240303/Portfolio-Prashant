@@ -66,11 +66,11 @@ function Navbar() {
         <div className='divider flex w-[0.5px] h-[34px] justify-center items-center border border-[#444444]'> </div>
 
         <div className="input-container radio-tile  flex justify-center items-center">
-          <a href="https://figma.com/@prash_24" target="_blank" className=' flex justify-center items-center'><img src="./github.svg" alt="" /></a>
+          <a href="https://github.com/prash240303" target="_blank" className=' flex justify-center items-center'><img src="./github.svg" alt="" /></a>
         </div>
 
         <div className="input-container radio-tile flex justify-center items-center">
-          <a href="https://figma.com/@prash_24" target="_blank" className='flex items-center justify-center'><img src="./Twitter.png" alt="" /></a>
+          <a href="https://twitter.com/prash2403" target="_blank" className='flex items-center justify-center'><img src="./Twitter.png" alt="" /></a>
         </div>
 
         <div className="input-container radio-tile flex justify-center items-center">
