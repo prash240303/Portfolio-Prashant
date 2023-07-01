@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import Profile from '../components/Profile'
 function Layout() {
   return (
-    <div>
+    <div >
         <Profile/>
         <Outlet/>
         <Navbar/>

@@ -1,0 +1,9 @@
+.hover:bg-zinc-700 {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hover:bg-zinc-700:hover {
+    transform: scale(1.1);
+  }
+  

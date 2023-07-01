@@ -13,9 +13,10 @@ function Blogs() {
                 animate="animate"
                 exit="exit"
                 variants={variants}
-                className="view-container mt-[50px] mb-[150px] w-[900px] grid grid-col-1 item-start justify-start gap-6"
+                className="view-container mt-[50px] mb-[150px] w-[900px] grid grid-col-1 item-center justify-center gap-6"
             >
-                <div className='font-bold text-3xl mb-5'>Blogs</div>
+
+                <div className='font-bold text-3xl mb-5 flex items-center justify-center'>Blogs</div>
                 <div class=" rounded-xl bg-zinc-700  pb-6 overflow-hidden shadow-lg hover:scale-105 transition">
                     <img class="w-full" src="./Thumbnail.jpg" alt="Article Image" />
                     <div class="px-6 py-4">

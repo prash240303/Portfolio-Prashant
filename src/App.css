@@ -1,0 +1,7 @@
+body{
+    background-image: url("./header-gradient.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    z-index: -10;
+    
+}
