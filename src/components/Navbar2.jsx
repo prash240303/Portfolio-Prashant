@@ -26,7 +26,11 @@ function AnimatedTabs() {
   };
 
   return (
-    <div className="navbar flex gap-4 w-fit rounded-full p-4 shadow-lg border border-[#ffffff14] justify-center items-center">
+    <motion.div initial={{ y: '100%' }}
+    animate={{ y: 0 }} 
+    transition={{ type: 'spring', bounce: 0.5, duration: 0.4 }}
+    className="navbar flex gap-4 w-fit rounded-full p-4 shadow-lg border border-[#ffffff14] justify-center items-center"
+    >
       {tabs.map((tab) => (
         <button
           key={tab.id}
@@ -39,7 +43,7 @@ function AnimatedTabs() {
           {activeTab === tab.id && (
             <motion.span
               layoutId="bubble"
-              className="absolute  rounded-full z-10 contrast-100 "
+              className="absolute inset-0 z-10 contrast-20 rounded-full  mix-blend-difference"
               transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
             />
           )}
@@ -59,7 +63,7 @@ function AnimatedTabs() {
           )}
         </button>
       ))}
-    </div>
+    </motion.div>
   );
 }
 

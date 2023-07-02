@@ -6,6 +6,7 @@ import Navbar2 from '../components/Navbar2'
 function Layout() {
   return (
     <div >
+   
         <Profile/>
         <Outlet/>
         {/* <Navbar/> */}
