@@ -154,8 +154,8 @@ function Home() {
                                 </section>
                             </section>
                             <section className="contacts-section grid grid-cols-1 justify-start gap-4">
-                                <h2 className="contact-heading leading-snug font-medium text-base text-zinc-900">
-                                    contact, socials.
+                                <h2 className="contact-heading leading-snug font-medium text-base text-zinc-100 mt-12 normal-case">
+                                    Contact, Socials.
                                 </h2>
                                 <section className="project-item-list-wrapper m-4 mb-20 grid grid-cols-1 justify-start gap-4">
                                     <div className="contact-item flex flex-row items-center justify-start gap-4">
