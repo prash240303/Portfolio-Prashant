@@ -83,7 +83,7 @@ function Projects() {
               </div>
               <div className='lablel w-fill flex flex-col items-start justify-start mt-[6px]'>
                 <h3 className='text-base font-bold my-1'>Equilibria </h3>
-                <h4 className='text-[13px] opacity-30 leading-tight'>2023</h4>
+                <h4 className='text-[13px] opacity-30 leading-tight'>2022</h4>
                 <div className='text-[15px]  w-fit font-normal  opacity-60 leading-snug'>A Kotlin app build to manage your daily schedule</div>
               </div>
             </div>
