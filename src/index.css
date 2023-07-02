@@ -8,6 +8,11 @@
   font-family: 'Outfit', sans-serif;  line-height: 1.5;
   color-scheme: light dark;
   background-color: #1e1e1e;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {

@@ -7,6 +7,7 @@ import Layout from './pages/Layout'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Blogs from './pages/Blogs'
 import Projects from "./pages/Projects"
+import Resume from './pages/Resume'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='blogs' element={<Blogs />} />
           <Route path='projects' element={<Projects />} />
         </Route>
+          <Route path='resume' element={<Resume />} />
       </Routes>
     </BrowserRouter>
   )
