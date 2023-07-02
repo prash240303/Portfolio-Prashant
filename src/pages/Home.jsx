@@ -240,7 +240,7 @@ function Home() {
                                     </div>
 
 
-                                    <div className="contact-item flex flex-row items-center justify-start gap-4">
+                                    <div className="contact-item flex flex-row items-center justify-start gap-4 mb-12">
                                         <span className="contact-title font-normal text-sm">Resume</span>
                                         <span className="contact-link-content">
                                             <a
