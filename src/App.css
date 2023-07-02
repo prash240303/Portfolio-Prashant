@@ -1,9 +1,10 @@
-body{
-    background-image: url("public/Twitter.png");
+body {
+    background-image: url("/Twitter.png");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-position: top;
     z-index: -10;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
-}
+  }
+  
