@@ -51,13 +51,13 @@ function AnimatedTabs() {
           {tab.urlStatus ? (
             <a href={tab.url} target="_blank" >
               <div className="flex items-center hover:bg-[#383838] rounded-full justify-center p-2">
-                <img src={tab.label} alt="" className={`${activeTab === tab.id? "brightness-0":"brightness-100"} w-10`}  />
+                <img src={tab.label} alt="" className={`${activeTab === tab.id? "brightness-50":"brightness-100"} w-10`}  />
               </div>
             </a>
           ) : (
             <Link to={tab.link}>
               <div className="flex items-center hover:bg-[#383838] rounded-full justify-center p-2">
-                <img src={tab.label} alt="" className={`${activeTab === tab.id? "brightness-0":"brightness-100"} w-10`}/>
+                <img src={tab.label} alt="" className={`${activeTab === tab.id? "brightness-50":"brightness-100"} w-10`}/>
               </div>
             </Link>
           )}
