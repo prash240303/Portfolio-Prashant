@@ -5,12 +5,11 @@ import Profile from '../components/Profile'
 import Navbar2 from '../components/Navbar2'
 function Layout() {
   return (
-    <div >
-   
+    <div className='flex flex-col items-center justify-center' >
         <Profile/>
         <Outlet/>
-        {/* <Navbar/> */}
         <Navbar2/>
+        {/* <Navbar/> */}
     </div>
   )
 }

@@ -162,8 +162,8 @@ function Home() {
                                         <span className="contact-title font-normal text-sm">GitHub</span>
                                         <span className="contact-link-content">
                                             <a
-                                                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-orange-500 text-sm font-normal text-zinc-500"
-                                                href="https://github.com/prash240303"
+                                                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-white text-sm font-normal text-zinc-500"
+                                                href="https://github.com/prash240303" target="_blank"
                                             >
                                                 <span className="link-text-content-wrapper">@prash240303</span>
                                                 <svg
@@ -188,8 +188,8 @@ function Home() {
                                         <span className="contact-title font-normal text-sm">Twitter</span>
                                         <span className="contact-link-content">
                                             <a
-                                                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-orange-500 text-sm font-normal text-zinc-500"
-                                                href="https://twitter.com/prash2403"
+                                                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-white text-sm font-normal text-zinc-500"
+                                                href="https://twitter.com/prash2403" target="_blank"
                                             >
                                                 <span className="link-text-content-wrapper">@prash2403</span>
                                                 <svg
@@ -214,8 +214,8 @@ function Home() {
                                         <span className="contact-title font-normal text-sm">LinkedIn</span>
                                         <span className="contact-link-content">
                                             <a
-                                                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-orange-500 text-sm font-normal text-zinc-500"
-                                                href="https://www.linkedin.com/in/prashant-012927227/"
+                                                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-white text-sm font-normal text-zinc-500"
+                                                href="https://www.linkedin.com/in/prashant-012927227/" target="_blank"
                                             >
                                                 <span className="link-text-content-wrapper">
                                                     linkedin.com/in/prashant-012927227
@@ -244,12 +244,11 @@ function Home() {
                                         <span className="contact-title font-normal text-sm">Resume</span>
                                         <span className="contact-link-content">
                                             <a
-                                                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-orange-500 text-sm font-normal text-zinc-500"
+                                                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-white-500 text-sm font-normal text-zinc-500"
                                                 href="/resume"
                                             >
                                                 <span className="link-text-content-wrapper">
-                                                    codecanvas.com/resume
-                                                </span>
+                                                portfolio-prash.vercel.app/resume  </span>
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     width="24"

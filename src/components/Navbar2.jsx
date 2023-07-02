@@ -29,7 +29,7 @@ function AnimatedTabs() {
     <motion.div initial={{ y: '100%' }}
     animate={{ y: 0 }} 
     transition={{ type: 'spring', bounce: 0.5, duration: 0.4 }}
-    className="navbar flex gap-4 w-fit rounded-full p-4 shadow-lg border border-[#ffffff14] justify-center items-center"
+    className="navbar flex gap-2 self-center w-fit rounded-full p-3  border border-[#ffffff14] justify-center items-center"
     >
       {tabs.map((tab) => (
         <button
@@ -43,21 +43,21 @@ function AnimatedTabs() {
           {activeTab === tab.id && (
             <motion.span
               layoutId="bubble"
-              className="absolute inset-0 z-10 contrast-20 rounded-full  mix-blend-difference"
+              className="absolute inset-0 z-10 contrast-100  rounded-full  mix-blend-difference"
               transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
             />
           )}
 
           {tab.urlStatus ? (
             <a href={tab.url} target="_blank" >
-              <div className="flex items-center hover:bg-[#444444] rounded-full justify-center p-2">
-                <img src={tab.label} alt="" className="w-10" />
+              <div className="flex items-center hover:bg-[#383838] rounded-full justify-center p-2">
+                <img src={tab.label} alt="" className={`${activeTab === tab.id? "brightness-0":"brightness-100"} w-10`}  />
               </div>
             </a>
           ) : (
             <Link to={tab.link}>
-              <div className="flex items-center hover:bg-[#444444] rounded-full justify-center p-2">
-                <img src={tab.label} alt="" className="w-10" />
+              <div className="flex items-center hover:bg-[#383838] rounded-full justify-center p-2">
+                <img src={tab.label} alt="" className={`${activeTab === tab.id? "brightness-0":"brightness-100"} w-10`}/>
               </div>
             </Link>
           )}

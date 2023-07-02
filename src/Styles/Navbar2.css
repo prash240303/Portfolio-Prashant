@@ -1,11 +1,11 @@
 .navbar {
-    position: fixed;
+    position: fixed;  
     z-index: 99;
     bottom: 20px;
-    left: 40%;
-    background: #333333cc;
+    background: #4e4e4ecc;
     backdrop-filter: blur(24px);
-    transform: translateX(-50%); 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px, rgba(0, 0, 0, 0.16) 0px 4px 16px 0px;
+
   }
   
   .nav-item.active {
