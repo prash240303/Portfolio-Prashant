@@ -1,83 +1,70 @@
-import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
+import { useState } from "react";
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import '../Styles/Navbar.css';
+
+let tabs = [
+  { id: "home", label: "./Home.svg", link: "/", urlStatus: false, url: "" },
+  { id: "blogs", label: "./Doc.svg", link: "/blogs", urlStatus: false, url: "" },
+  { id: "projects", label: "./Code.svg", link: "/projects", urlStatus: false, url: "" },
+  { id: "github", label: "./github.svg", link: "", urlStatus: true, url: "https://github.com/prash240303" },
+  { id: "twitter", label: "./Twitter.png", link: "", urlStatus: true, url: "https://twitter.com/prash2403" },
+  { id: "figma", label: "./Figma.svg", link: "", urlStatus: true, url: "https://www.figma.com/@prash_24" },
+];
 
 function Navbar() {
-  const [selectedRadio, setSelectedRadio] = useState('home');
+  let [activeTab, setActiveTab] = useState(tabs[0].id);
 
-  useEffect(() => {
-    console.log(selectedRadio);
+  const handleTabClick = (tab) => {
+    setActiveTab(tab.id);
 
-  }, [selectedRadio]);
-
-  const handleRadioChange = (event) => {
-    setSelectedRadio(event.target.id);
+    if (tab.id === "github" || tab.id === "twitter" || tab.id === "figma") {
+      setTimeout(() => {
+        setActiveTab("home");
+      }, 1000);
+    }
   };
 
   return (
     <motion.div initial={{ y: '100%' }}
-     animate={{ y: 0 }} 
-     transition={{ type: 'spring', bounce: 0.5, duration: 0.4 }}
-     className="toggle-container">
-      <div className="radio-tile-group">
-        <Link to="/">
-          <motion.div className={`input-container ${selectedRadio === 'home' ? 'active' : ''}`}>
-            <input
-              id="home"
-              type="radio"
-              name="radio"
-              checked={selectedRadio === 'home'}
-              onChange={handleRadioChange}
+    animate={{ y: 0 }} 
+    transition={{ type: 'spring', bounce: 0.5, duration: 0.4 }}
+    className="navbar flex gap-2 self-center w-fit rounded-full p-3  border border-[#ffffff14] justify-center items-center"
+    >
+      {tabs.map((tab) => (
+        <button
+          key={tab.id}
+          onClick={() => handleTabClick(tab)}
+          className={`nav-item ${activeTab === tab.id ? "active" : ""} relative rounded-full transition focus-visible:outline-2`}
+          style={{
+            WebkitTapHighlightColor: "transparent",
+          }}
+        >
+          {activeTab === tab.id && (
+            <motion.span
+              layoutId="bubble"
+              className="absolute inset-0 z-10 contrast-100  rounded-full  mix-blend-difference"
+              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
             />
-            <div className="radio-tile">
-              <img src="./Home.svg" alt="" />
-            </div>
-          </motion.div>
-        </Link>
-        <Link to="/blogs">
-          <motion.div className={`input-container ${selectedRadio === 'blogs' ? 'active' : ''}`}  >
-            <input
-              id="blogs"
-              type="radio"
-              name="radio"
-              checked={selectedRadio === 'blogs'}
-              onChange={handleRadioChange}
-            />
-            <div className="radio-tile">
-              <img src="./Doc.svg" alt="" />
-            </div>
-          </motion.div>
-        </Link>
-        <Link to="/projects">
-          <motion.div className={`input-container ${selectedRadio === 'projects' ? 'active' : ''}`} >
-            <input
-              id="projects"
-              type="radio"
-              name="radio"
-              checked={selectedRadio === 'projects'}
-              onChange={handleRadioChange}
-            />
-            <div className="radio-tile">
-              <img src="./Code.svg" alt="" />
-            </div>
-          </motion.div>
-        </Link>
+          )}
 
-        <div className='divider flex w-[0.5px] h-[34px] justify-center items-center border border-[#444444]'> </div>
-
-        <div className="input-container radio-tile  flex justify-center items-center">
-          <a href="https://github.com/prash240303" target="_blank" className=' flex justify-center items-center'><img src="./github.svg" alt="" /></a>
-        </div>
-
-        <div className="input-container radio-tile flex justify-center items-center">
-          <a href="https://twitter.com/prash2403" target="_blank" className='flex items-center justify-center'><img src="./Twitter.png" alt="" /></a>
-        </div>
-
-        <div className="input-container radio-tile flex justify-center items-center">
-          <a href="https://figma.com/@prash_24" target="_blank" className='flex items-center justify-center'><img src="./Figma.svg" alt="" /></a>
-        </div>
-      </div>
+          {tab.urlStatus ? (
+            <a href={tab.url} target="_blank" >
+              <div className="flex items-center hover:bg-[#383838] rounded-full justify-center p-1 md:p-2">
+                <img src={tab.label} alt="" className={`${activeTab === tab.id? "brightness-50":"brightness-100"} w-8 md:w-10`}  />
+              </div>
+            </a>
+          ) : (
+            <Link to={tab.link}>
+              <div className="flex items-center hover:bg-[#383838] rounded-full justify-center p-1 md:p-2">
+                <img src={tab.label} alt="" className={`${activeTab === tab.id? "brightness-50":"brightness-100"} w-8 md:w-10`}/>
+              </div>
+            </Link>
+          )}
+        </button>
+      ))}
     </motion.div>
   );
 }
+
 export default Navbar;
