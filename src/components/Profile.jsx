@@ -12,7 +12,7 @@ function Profile() {
                     />
                 </div>
 
-                <div className="box icon-content-wrapper animation-delay absolute px-2 py-1 bg-zinc-200 shadow rounded-full text-sm left-14 bottom-0 cursor-default select-none max-sm:left-8 max-sm:text-xs max-sm:px-1 max-sm:py-0.5">
+                <div className="box icon-content-wrapper animation-delay absolute px-2 py-1 bg-zinc-200 shadow rounded-full text-sm left-5 bottom-0 cursor-default select-none max-sm:left-8 max-sm:text-xs max-sm:px-1 max-sm:py-0.5">
                     🌻
                 </div>
             </div>

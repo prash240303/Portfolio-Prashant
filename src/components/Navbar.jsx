@@ -8,8 +8,8 @@ let tabs = [
   { id: "blogs", label: "./Doc.svg", link: "/blogs", urlStatus: false, url: "" },
   { id: "projects", label: "./Code.svg", link: "/projects", urlStatus: false, url: "" },
   { id: "github", label: "./github.svg", link: "", urlStatus: true, url: "https://github.com/prash240303" },
-  { id: "twitter", label: "./Twitter.png", link: "", urlStatus: true, url: "https://twitter.com/prash2403" },
-  { id: "figma", label: "./Figma.svg", link: "", urlStatus: true, url: "https://www.figma.com/@prash_24" },
+  { id: "linkedin", label: "./Linkedin.svg", link: "", urlStatus: true, url: "https://www.linkedin.com/in/prashant-012927227/" },
+  { id: "twitter", label: "./Twitter.svg", link: "", urlStatus: true, url: "https://twitter.com/prash2403" },
 ];
 
 function Navbar() {
