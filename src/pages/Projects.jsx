@@ -97,7 +97,7 @@ function Projects() {
         <h2 className="about-heading  mt-6 leading-snug font-medium text-2xl text-zinc-100">
         Work Experience
         </h2>
-        <section className="experience-item-list-wrapper mt-4 grid grid-cols-1 justify-start gap-8 text-white">
+        <section className="experience-item-list-wrapper mt-4 grid grid-cols-1 justify-start gap-8 text-white md:mb-10 mb-0 ">
           <Experience
             role="UI/UX designer"
             companyName="GDSC NITJ"

@@ -67,16 +67,23 @@
 }
 
 
-:root::-webkit-scrollbar
-{
-	width: 12px;
+/* General scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
   background: #1e1e1e;
 }
 
-:root::-webkit-scrollbar-thumb{
+/* Styles for the scrollbar thumb (draggable part) */
+::-webkit-scrollbar-thumb {
   border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #555;}
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+/* For Firefox */
+/* The scrollbar width and background color */
+/* Note that Firefox does not support customizing the scrollbar thumb style */
+/* For older versions of Firefox, you may use -moz prefix */
 
 .custom-gradient:hover{
 background: var(--hover-bg);

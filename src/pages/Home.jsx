@@ -50,14 +50,21 @@ function Home() {
       year: "2023",
       description: "A free svg icons hosting website build on React.js",
       image: "./projects/iconify.png",
-      githubUrl: "https://github.com/prash240303/React-Router-miniwebsite",
+      githubUrl: "https://github.com/prash240303/Iconify-Icons",
+    },
+    {
+      title: "Pixel perfect confrence website",
+      year: "2023",
+      description: "confrence website frontend made for Pixel Perfect Hackathon",
+      image: "./projects/confrence.png",
+      githubUrl: "https://pixel-perfect-website-team-zenith.vercel.app/",
     },
     {
       title: "Minecraft Clone",
       year: "2023",
       description: "A minecraft clone build with 3.js with 5 available block textures",
       image: "./projects/minecraft.png",
-      githubUrl: "https://github.com/prash240303/Gradify-Figma-plugin",
+      githubUrl: "https://github.com/prash240303/Minecraft-Clone-3.js",
     },
     {
       title: "Gradify Gradients",
@@ -71,21 +78,21 @@ function Home() {
       year: "2023",
       description: "An awesome app for renting decked-out travel vans for your next road trip adventure! 🚐",
       image: "./projects/vanslife.png",
-      githubUrl: "https://github.com/prash240303/Gradify-Figma-plugin",
+      githubUrl: "https://github.com/prash240303/React-Router-miniwebsite",
     },
     {
       title: "TRAVEL CREW - A Flutter App Built with Appwrite ",
       year: "2023",
       description: "A flutter app built on Appwrite cloud to find travel partners",
       image: "./projects/travelcrew.png",
-      githubUrl: "https://github.com/prash240303/Gradify-Figma-plugin",
+      githubUrl: "https://github.com/YuvrajSingh3110/travel_crew",
     },
     {
       title: "Equilibria ",
       year: "2023",
       description: "A Kotlin app build to manage your daily schedule",
       image: "./projects/equilbria.png",
-      githubUrl: "https://github.com/prash240303/Gradify-Figma-plugin",
+      githubUrl: "https://github.com/prash240303/equilibria",
     },
   ];
 
