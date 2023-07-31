@@ -12,3 +12,19 @@
     background-color: white ;
   }
 
+/* Add the following styles to your Navbar.css file or a separate CSS file */
+
+/* Tooltip style */
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 18px); /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 12px;
+  background-color: rgba(118, 117, 117, 0.8);
+  color: #fff;
+  border-radius: 50px;
+  font-size: 14px;
+  white-space: nowrap;
+  pointer-events: none; /* Prevent the tooltip from being interactive */
+}

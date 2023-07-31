@@ -1,7 +1,7 @@
 import React from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 // import { slideAnimation } from "../config/motion";
-import "../Styles/Projects.css";
+import "../Styles/Work.css";
 import Experience from "../components/Experience";
 
 // function ProjectCard({ title, year, description, image, githubUrl }) {
@@ -25,7 +25,7 @@ import Experience from "../components/Experience";
 //   );
 // }
 
-function Projects() {
+function Work() {
   // const variants = slideAnimation("projects", "home");
 
   // const projects = [
@@ -120,4 +120,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Work;
