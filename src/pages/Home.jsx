@@ -116,7 +116,7 @@ function Home() {
               </h2>
               <div className="about-content-wrapper leading-6 text-base font-light text-zinc-100 mt-4">
                 <p>
-                  Hey! I am an engineer (sometimes a designer), learning how to
+                  Hey! I am an engineer , learning how to
                   build and design scalable websites and applications. My focus
                   is to build with better user experience, design aesthetic,
                   good developer experience and meaningful impact.
@@ -124,7 +124,7 @@ function Home() {
               </div>
               <div className="rounded-lg bg-[#333333cc] text-zinc-100 border-[2px] border-[#ffffff14] text-base font-normal p-4 leading-6 mt-6 ">
                 <p>
-                  I am currently open for full-time engineering roles, which
+                  I am currently looking for part-time engineering roles, which
                   involves user interface and experience design, frontend
                   engineering as the core.
                 </p>

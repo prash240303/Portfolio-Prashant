@@ -27,12 +27,14 @@ function Navbar() {
 
 
 
-  // State to store the tooltip content and visibility
   const [tooltipContent, setTooltipContent] = useState("");
 
   // Function to handle mouse enter event and show tooltip
   const handleMouseEnter = (tab) => {
-    setTooltipContent(tab.id);
+    // Show tooltip only if the current tab is not the active tab
+    if (activeTab !== tab.id) {
+      setTooltipContent(tab.id);
+    }
   };
 
   // Function to handle mouse leave event and hide tooltip
