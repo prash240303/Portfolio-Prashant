@@ -22,7 +22,7 @@ function Profile() {
                 </h1>
                 <div className="leading-snug font-light text-base text-zinc-400 mt-2 lg:text-lg  ">
                     <p>
-                        A Front-End Developer with a pinch of Designer skills.
+                        A Front-End Developer with deep affection for design.
                     </p>
                     <p className='md:mt-0 mt-2'>20, He/Him</p>
                 </div>
