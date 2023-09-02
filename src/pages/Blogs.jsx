@@ -16,12 +16,12 @@ function Blogs() {
                 variants={variants}
                 className="view-container mt-[50px] mb-[150px] w-[900px] grid grid-col-1 item-center justify-center gap-6"
             >  */}
-      <div className="view-container mt-[50px] mb-[150px] w-[900px] grid grid-col-1 item-center justify-center gap-6">
+      <div className="view-container mt-[50px] mb-[150px]  grid grid-col-1 item-center justify-start gap-6">
         <div className="font-bold text-3xl mb-5  text-white">
           Blogs
         </div>
-        <div class=" rounded-xl bg-zinc-700  pb-6 overflow-hidden shadow-lg hover:scale-105 transition">
-          <img class="w-full" src="./Thumbnail.jpg" alt="Article Image" />
+        <div class=" rounded-xl md:w-[400px] w-full bg-zinc-700  pb-6 overflow-hidden shadow-lg hover:scale-104 transition">
+          <img class="w-full" src="./projects/Thumbnail.jpg" alt="Article Image" />
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">
               TRAVEL CREW - A Flutter App Built with Appwrite | Appwrite

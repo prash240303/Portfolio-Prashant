@@ -1,9 +1,37 @@
 .hover:bg-zinc-700 {
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .hover:bg-zinc-700:hover {
-    transform: scale(1.1);
-  }
-  
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover:bg-zinc-700:hover {
+  transform: scale(1.1);
+}
+
+/* Add this to your Work.css file */
+
+/* Styles for the ScrollingImageCarousel */
+#image-container {
+  width: fit-content;
+  height: 80%;
+  overflow: hidden;
+  position: relative;
+}
+
+#image-track {
+  display: flex;
+  gap: 2vmin;
+  position: relative;
+  left: 0%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  user-select: none;
+}
+
+#image-track>.image {
+  width: 25vmin;
+  height: 36vmin;
+  border-radius: 20px;
+  border: 1px solid rgba(144, 144, 144, 0.5);
+  object-fit: cover;
+  object-position: 100% center;
+}

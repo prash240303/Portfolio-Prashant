@@ -6,7 +6,7 @@ function Profile() {
             <div className="profile-icon-wrapper relative">
                 <div className="w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] flex">
                     <img
-                        src="/profile.jpg"
+                        src="/profile/profile.jpg"
                         className="w-full h-full object-cover rounded-full transition-all hover:grayscale hover:scale-110"
                         alt="Profile"
                     />

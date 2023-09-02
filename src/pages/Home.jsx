@@ -108,7 +108,9 @@ function Home() {
             variants={variants}
             className="view-container mt-6 w-[900px] grid grid-col-1 item-start justify-start gap-12"
         > */}
+        
         <div className="view-container w-[900px] grid grid-col-1 item-start justify-start gap-12">
+        <Profile/>
           <main className="hero-section" id="hero">
             <section className="my-8 py-4">
               <h2 className="about-heading leading-snug font-medium text-2xl text-zinc-300">
@@ -157,7 +159,7 @@ function Home() {
                     </svg>
                   </a>
                   <a
-                    href=""
+                    href="https://www.linkedin.com/in/prashant-012927227/"
                     className="flex flex-row items-center justify-start gap-0.5 transition-all text-zinc-300 hover:text-zinc-500 hover:gap-2 active:text-cyan-500  font-[500] text-lg"
                   >
                     <span>LinkedIn</span>
