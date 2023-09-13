@@ -8,9 +8,7 @@ const ScrollingImageCarousel = () => {
 
     function handleScroll(e) {
       if (!scrollEnabled) return;
-
       e.preventDefault();
-
       const scrollDelta = -1 * (e.deltaY || (e.detail * -20)); // Reverse the scroll direction
       const maxDelta = 2000;
 
@@ -63,23 +61,22 @@ const ScrollingImageCarousel = () => {
       onMouseLeave={() => setScrollEnabled(false)}
     >
       <div id="image-track" data-prev-percentage="0">
-      <img src="./photos/img1.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img2.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img3.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img4.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img5.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img6.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img7.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img8.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img9.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img10.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img11.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img12.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img13.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img14.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img15.jpg" className="image" alt=""   draggable="false"/>
-      <img src="./photos/img16.jpg" className="image" alt=""   draggable="false"/>
-        {/* Add more image elements here */}
+      < img src="./photos/img1.jpg" className="image" alt=""   draggable="false"/>
+      <img src="./photos/img2.jpg" className="image" alt=""  draggable="false"/>
+      <img src="./photos/img3.jpg" className="image" alt=""  draggable="false"/>
+      <img src="./photos/img4.jpg" className="image" alt=""  draggable="false"/>
+      <img src="./photos/img5.jpg" className="image" alt=""  draggable="false"/>
+      <img src="./photos/img6.jpg" className="image" alt=""  draggable="false"/>
+      <img src="./photos/img7.jpg" className="image" alt=""  draggable="false"/>
+      <img src="./photos/img8.jpg" className="image" alt=""  loading="lazy" draggable="false"/>
+      <img src="./photos/img9.jpg" className="image" alt=""  loading="lazy" draggable="false"/>
+      <img src="./photos/img10.jpg" className="image" alt=""  loading="lazy" draggable="false"/>
+      <img src="./photos/img11.jpg" className="image" alt=""  loading="lazy" draggable="false"/>
+      <img src="./photos/img12.jpg" className="image" alt=""  loading="lazy" draggable="false"/>
+      <img src="./photos/img13.jpg" className="image" alt=""  loading="lazy" draggable="false"/>
+      <img src="./photos/img14.jpg" className="image" alt=""  loading="lazy" draggable="false"/>
+      <img src="./photos/img15.jpg" className="image" alt=""  loading="lazy" draggable="false"/>
+      <img src="./photos/img16.jpg" className="image" alt=""  loading="lazy" draggable="false"/>
       </div>
     </div>
   );
