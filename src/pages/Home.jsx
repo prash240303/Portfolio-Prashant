@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-// import { slideAnimation } from "../config/motion";
+
 import Experience from "../components/Experience";
 import Profile from "../components/Profile";
 import "../Styles/Home.css" // Create a new CSS file for Home component styles

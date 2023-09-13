@@ -1,21 +1,12 @@
 import React from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-// import { slideAnimation } from "../config/motion";
+
 import Profile from "../components/Profile";
 
 function Blogs() {
-  // const variants = slideAnimation("home", "blogs");
 
   return (
     <>
-      {/* <AnimatePresence>
-       <motion.div
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                variants={variants}
-                className="view-container mt-[50px] mb-[150px] w-[900px] grid grid-col-1 item-center justify-center gap-6"
-            >  */}
+     
       <div className="view-container mt-[50px] mb-[150px]  grid grid-col-1 item-center justify-start gap-6">
         <div className="font-bold text-3xl mb-5  text-white">
           Blogs
@@ -43,8 +34,6 @@ function Blogs() {
         </div>
       </div>
 
-      {/* </motion.div> 
-     </AnimatePresence>  */}
     </>
   );
 }
