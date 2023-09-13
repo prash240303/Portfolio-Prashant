@@ -7,7 +7,6 @@ function Layout() {
        
         <Outlet/>
         <Navbar/>
-        {/* <Navbar/> */}
     </div>
   )
 }

@@ -18,15 +18,11 @@ function Work() {
               className="md:w-[200px] w-[200px] aspect-auto rounded-lg"
             />
             <div className="w-full text-base md:text-xl font-light text-gray-100">
-              I am Prashant, a Web Front-end Developer building
-              experiences for my passion for beautiful interfaces and UIs.
+              I am Prashant, a Web Front-end Developer building experiences for my passion of beautiful interfaces and UIs.
               <br className="mb-5" />
               I am a Btech undergraduate studying Computer Sciences from NIT Jalandhar.
               <br className="mb-5" />
-              More than anything, I thrive amidst ambition, passionate
-              curiosity, humility and joy. I seek brave teams where, together,
-              we can create lasting and meaningful impact on people's lives, the
-              society, and the world we live in.
+              More than anything, I thrive amid ambitious passions and joy. I seek brave teams where together we can create lasting impact on people and society through collaborative learning and shared goals, believing technology strengthens good.
             </div>
           </div>
         </section>
@@ -35,18 +31,14 @@ function Work() {
             <h2 className="leading-snug text-2xl text-zinc-100">
               Skills & Interests
             </h2>
-            <section className="mt-4 text-base font-light text-white md:mb-10 mb-0">
-              I like expanding and adapting my thought, skillset and processes
-              to the changing problems and needs in the world around us. I
-              thrive in ambitious, pro-active teams that value ethical product
-              building and cultures that facilitate belonging.
+            <section className="mt-4 text-base  leading-relaxed font-light text-white md:mb-10 mb-0">
+              I like expanding my thought, skillset and processes to changing problems and needs. I thrive in ambitious, pro-active teams that value ethical product building and cultures that facilitate belonging.
+              My development journey encompasses frontend development, coding, and engineering.
               <br className="mb-2" />
-              My development journey encompasses frontend development, coding, and software engineering. I have hands-on experience in building user-friendly interfaces, writing efficient code, and developing software solutions. 
-              <br className="mb-2" />
+              I have hands-on experience in building user-friendly interfaces, writing efficient code, and developing software.
               I have a passion for solving complex problems through coding and constantly expanding my knowledge in this domain.
               <br className="mb-2" />
-              In my free time, I'll most likely be found in my room/garden listening to music
-              while painting out my imagination, or watching anime in my cozy bed.
+              In my free time, I'll most likely be found in my room/garden listening to music while painting out imagination, or watching anime in my cozy bed.
 
             </section>
 

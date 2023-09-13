@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import '../Styles/Navbar.css';
 
@@ -42,13 +41,23 @@ function Navbar() {
     setTooltipContent("");
   };
 
+  const [showNavbar, setShowNavbar] = useState(false);
+  const toggleNavbar = () => {
+    setShowNavbar(!showNavbar);
+  };
+
+  useEffect(() => {
+    // Show the navbar with a slight delay to create the "pop" effect
+    setTimeout(() => {
+      toggleNavbar();
+    }, 500); // Adjust the delay duration as needed (in milliseconds)
+  }, []);
+
 
   return (
-    <motion.div initial={{ y: '100%' }}
-      animate={{ y: 0 }}
-      transition={{ type: 'spring', bounce: 0.5, duration: 0.4 }}
-      className="navbar flex gap-2 self-center w-fit rounded-full p-3  border border-[#ffffff14] justify-center items-center"
-    >
+    <div className={`navbar flex gap-2 self-center w-fit rounded-full p-3 border border-[#ffffff14] justify-center items-center ${
+        showNavbar ? "show" : ""
+      }`}>
       {tabs.map((tab) => (
         <button
           key={tab.id}
@@ -61,10 +70,9 @@ function Navbar() {
         // }}
         >
           {activeTab === tab.id && (
-            <motion.span
+            <span
               layoutId="bubble"
               className="absolute inset-0 z-10 rounded-full "
-              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
             />
           )}
 
@@ -88,7 +96,7 @@ function Navbar() {
           )}
         </button>
       ))}
-    </motion.div>
+    </div>
   );
 }
 

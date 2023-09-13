@@ -6,6 +6,7 @@
 
 :root{
 --hover-bg: linear-gradient(90deg,rgba(30,28,50,0.8) 0%,rgba(43,22,29,0.7) 100%);
+--bg-gradient: linear-gradient(90deg,rgba(30,28,50,1) 0%,rgba(43,22,29,1) 100%);
 }
 
 :root::-webkit-scrollbar

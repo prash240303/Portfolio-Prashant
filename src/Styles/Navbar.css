@@ -29,3 +29,18 @@
   white-space: nowrap;
   pointer-events: none; /* Prevent the tooltip from being interactive */
 }
+
+
+
+/* Navbar.css */
+
+.navbar {
+  /* Initial position: hidden at the bottom */
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar.show {
+  /* Display the navbar at the normal position */
+  transform: translateY(0);
+}
