@@ -4,8 +4,8 @@ function Resume() {
   function handleDownload(event) {
     event.preventDefault();
     const link = document.createElement('a');
-    link.href = '/Resume/Resume.pdf';
-    link.download = 'Resume.pdf';
+    link.href = '/Resume/Prashant_Prabhakar_Resume.pdf';
+    link.download = 'Prashant_Prabhakar_Resume.pdf';
     link.click();
   }
 
