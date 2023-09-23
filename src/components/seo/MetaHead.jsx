@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 const MetaHead = ({
-  title = 'Ashutosh Jha',
+  title = 'Prashant',
   description = 'Hey! I am a Software Engineer. I love developing stuff that makes people\'s lives easier.',
   embedSource = 'default',
   ...attr
@@ -15,7 +15,7 @@ const MetaHead = ({
       <meta name="description" content={description} />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.thealonemusk.com/" />
+      <meta property="og:url" content="https://portfolio-prash.vercel.app" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta
