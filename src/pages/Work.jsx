@@ -1,11 +1,8 @@
-import React from "react"
-import { useState, useEffect } from "react";
 import "../Styles/Work.css";
 import Experience from "../components/Experience";
 import ScrollingImageCarousel from "../components/ScrollingImageCarousel";
 
-function Work() {
-
+const Work=()=> {
   return (
     <>
       <div

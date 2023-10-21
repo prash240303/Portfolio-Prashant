@@ -1,6 +1,4 @@
-import React from 'react';
-
-function Resume() {
+const Resume=()=> {
   function handleDownload(event) {
     event.preventDefault();
     const link = document.createElement('a');
@@ -19,7 +17,7 @@ function Resume() {
             download Resume
           </div>
         </a>
-        <a href="https://drive.google.com/file/d/1MGPatFkkaqeCmNUBAH1soq4lltYWqLjz/view?usp=sharing" target='_blank'>
+        <a  rel="noreferrer" href="https://drive.google.com/file/d/1Nz3k9c2B_N6yUPv5sUFm92o6RLlK_VZt/view?usp=sharing" target='_blank'>
           <div className='bg-zinc-200 text-black px-3 py-2 rounded-full flex items-center justify-center hover:bg-zinc-700 hover:text-white'>
             <img src="./icons/drive.svg" alt="" className='w-[24px] inline mr-1' />
             Resume on Drive

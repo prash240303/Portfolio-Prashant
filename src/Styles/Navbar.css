@@ -1,18 +1,16 @@
 .navbar {
     position: fixed;  
     z-index: 99;
-    bottom: 20px;
+    bottom: 6em;
     background: #4e4e4ecc;
     backdrop-filter: blur(24px);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px, rgba(0, 0, 0, 0.16) 0px 4px 16px 0px;
-
   }
   
   .nav-item.active {
     background-color: white ;
   }
 
-/* Add the following styles to your Navbar.css file or a separate CSS file */
 
 /* Tooltip style */
 .tooltip {

@@ -1,14 +1,49 @@
-import { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
-import '../Styles/Navbar.css';
-
+import { useState } from "react";
+import "../Styles/Navbar.css";
+import { Link } from "react-router-dom";
 let tabs = [
-  { id: "Home", label: "./icons/Home.svg", link: "/", urlStatus: false, url: "" },
-  { id: "Blogs", label: "./icons/Doc.svg", link: "/blogs", urlStatus: false, url: "" },
-  { id: "About", label: "./icons/Code.svg", link: "/work", urlStatus: false, url: "" },
-  { id: "Github", label: "./icons/github.svg", link: "", urlStatus: true, url: "https://github.com/prash240303" },
-  { id: "Linkedin", label: "./icons/Linkedin.svg", link: "", urlStatus: true, url: "https://www.linkedin.com/in/prashant-012927227/" },
-  { id: "Twitter", label: "./icons/Twitter.svg", link: "", urlStatus: true, url: "https://twitter.com/prash2403" },
+  {
+    id: "Home",
+    label: "./icons/Home.svg",
+    link: "/",
+    urlStatus: false,
+    url: "",
+  },
+  {
+    id: "Blogs",
+    label: "./icons/Doc.svg",
+    link: "/blogs",
+    urlStatus: false,
+    url: "",
+  },
+  {
+    id: "About",
+    label: "./icons/Code.svg",
+    link: "/work",
+    urlStatus: false,
+    url: "",
+  },
+  {
+    id: "Github",
+    label: "./icons/github.svg",
+    link: "",
+    urlStatus: true,
+    url: "https://github.com/prash240303",
+  },
+  {
+    id: "Linkedin",
+    label: "./icons/Linkedin.svg",
+    link: "",
+    urlStatus: true,
+    url: "https://www.linkedin.com/in/prashant-012927227/",
+  },
+  {
+    id: "Twitter",
+    label: "./icons/Twitter.svg",
+    link: "",
+    urlStatus: true,
+    url: "https://twitter.com/prash2403",
+  },
 ];
 
 function Navbar() {
@@ -23,8 +58,6 @@ function Navbar() {
       }, 1000);
     }
   };
-
-
 
   const [tooltipContent, setTooltipContent] = useState("");
 
@@ -41,59 +74,66 @@ function Navbar() {
     setTooltipContent("");
   };
 
-  const [showNavbar, setShowNavbar] = useState(false);
-  const toggleNavbar = () => {
-    setShowNavbar(!showNavbar);
-  };
+  // const [showNavbar, setShowNavbar] = useState(false);
+  // const toggleNavbar = () => {
+  //   setShowNavbar(!showNavbar);
+  // };
 
-  useEffect(() => {
-    // Show the navbar with a slight delay to create the "pop" effect
-    setTimeout(() => {
-      toggleNavbar();
-    }, 500); // Adjust the delay duration as needed (in milliseconds)
-  }, []);
-
+  // useEffect(() => {
+  //   // Show the navbar with a slight delay to create the "pop" effect
+  //   setTimeout(() => {
+  //     toggleNavbar();
+  //   }, 500); // Adjust the delay duration as needed (in milliseconds)
+  // },);
 
   return (
-    <div className={`navbar flex gap-2 self-center w-fit rounded-full p-3 border border-[#ffffff14] justify-center items-center ${
-        showNavbar ? "show" : ""
-      }`}>
+    <div
+      className={`navbar flex gap-2 self-center w-fit rounded-full  p-3 border border-[#ffffff14] justify-center items-center `}
+    >
       {tabs.map((tab) => (
         <button
           key={tab.id}
           onClick={() => handleTabClick(tab)}
-          className={`nav-item ${activeTab === tab.id ? "active" : " "} relative rounded-full transition `}
+          className={`nav-item ${
+            activeTab === tab.id ? "active" : " "
+          } relative rounded-full transition `}
           onMouseEnter={() => handleMouseEnter(tab)} // Show tooltip on mouse enter
           onMouseLeave={handleMouseLeave} // Hide tooltip on mouse leave
-        // style={{
-        //   WebkitTapHighlightColor: "transparent",
-        // }}
+          // style={{
+          //   WebkitTapHighlightColor: "transparent",
+          // }}
         >
           {activeTab === tab.id && (
-            <span
-              layoutId="bubble"
-              className="absolute inset-0 z-10 rounded-full "
-            />
+            <span className="absolute inset-0 z-10 rounded-full " />
           )}
 
           {tab.urlStatus ? (
-            <a href={tab.url} target="_blank" >
+            <a href={tab.url} target="_blank" rel="noreferrer">
               <div className="flex items-center rounded-full justify-center hover:bg-[#2d2d2d5b]  p-1 md:p-2">
-                <img src={tab.label} alt="" className={`${activeTab === tab.id ? "brightness-50" : "brightness-100"} w-8 md:w-10`} />
+                <img
+                  src={tab.label}
+                  alt=""
+                  className={`${
+                    activeTab === tab.id ? "brightness-50" : "brightness-100"
+                  } w-8 md:w-10`}
+                />
               </div>
             </a>
           ) : (
             <Link to={tab.link}>
               <div className="flex items-center rounded-full justify-center hover:bg-[#2d2d2d5b] p-1 md:p-2">
-                <img src={tab.label} alt="" className={`${activeTab === tab.id ? "brightness-50" : "brightness-100"} w-8 md:w-10`} />
+                <img
+                  src={tab.label}
+                  alt=""
+                  className={`${
+                    activeTab === tab.id ? "brightness-50" : "brightness-100"
+                  } w-8 md:w-10`}
+                />
               </div>
             </Link>
           )}
 
-
-          {tooltipContent === tab.id && (
-            <div className="tooltip">{tab.id}</div>
-          )}
+          {tooltipContent === tab.id && <div className="tooltip">{tab.id}</div>}
         </button>
       ))}
     </div>

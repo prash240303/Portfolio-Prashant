@@ -1,34 +1,15 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 
-import Experience from "../components/Experience";
 import Profile from "../components/Profile";
 import "../Styles/Home.css" // Create a new CSS file for Home component styles
-function ProjectCard({ title, year, description, image, githubUrl }) {
-
-  return (
-    <a href={githubUrl} target="_blank">
-      <div className="p-5 mb-3 flex flex-col items-center justify-center cursor-pointer rounded-3xl custom-gradient transition-all ease-in-out ">
-        <div className="image-container rounded-xl">
-          <img src={image} className="rounded-xl" alt="project image" />
-        </div>
-        <div className="label w-fill flex flex-col items-start justify-start mt-[6px]">
-          <div className="text-lg font-semibold my-1">{title}</div>
-          <div className="text-sm opacity-30 leading-tight md:mb-0 mb-3">{year}</div>
-          <div className="text-[15px] mt-2 w-fit font-light opacity-60 leading-snug">
-            {description}
-          </div>
-        </div>
-      </div>
-    </a>
-  );
-}
+import ProjectCard from "../components/ProjectCard";
 
 function Home() {
 
   const socialLinks = [
     { name: "GitHub", url: "https://github.com/prash240303", urlTitle: "@prash240303" },
     { name: "Twitter", url: "https://twitter.com/prash2403", urlTitle: "@prash2403" },
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/prashant-012927227/", urlTitle: "prashant-012927227" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/prashant2403/", urlTitle: "prashant2403" },
     { name: "Resume", url: "/resume", urlTitle: "Resume" },
   ];
 
@@ -147,7 +128,7 @@ function Home() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/prashant-012927227/"
+                  href="https://www.linkedin.com/in/prashant2403/"
                   className="flex flex-row items-center justify-start gap-0.5 transition-all text-zinc-300 hover:text-zinc-500 hover:gap-2 active:text-cyan-500  font-[500] text-lg"
                 >
                   <span>LinkedIn</span>
@@ -200,6 +181,7 @@ function Home() {
                     href={link.url}
                     className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-100 hover:gap-1 active:text-white text-sm font-normal text-zinc-500"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <span className=" mr-2 text-white text-base">
                       {link.name}

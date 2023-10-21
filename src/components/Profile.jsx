@@ -1,6 +1,4 @@
-import React from 'react';
-
-function Profile() {
+const Profile=()=> {
     return (
         <section className="flex md:flex-row flex-col items-center md:justify-start justify-center gap-10 mx-10 mt-12">
             <div className="profile-icon-wrapper relative">

@@ -1,6 +1,5 @@
-import React from "react";
 
-function Experience({ role, companyName, companyLink ,timeLine,  descLine1 ,descLine2 }) {
+const Experience = ({ role, companyName, companyLink ,timeLine,  descLine1 ,descLine2 })=>{
   return (
     <div className="experience-item border-l-2 pl-4 border-zinc-600 hover:border-zinc-100 cursor-default transition-all ">
       <div className="flex flex-row items-start justify-between max-md:flex-col max-md:justify-start max-md:gap-2">
@@ -14,6 +13,7 @@ function Experience({ role, companyName, companyLink ,timeLine,  descLine1 ,desc
               className="flex flex-row items-center justify-start gap-0.5 transition-all text-zinc-100 hover:text-zinc-500 hover:gap-1 active:text-zinc-800 font-normal text-lg "
               target="_blank"
               href={companyLink}
+              rel="noreferrer"
             >
               <span className="link-text-content-wrapper">{companyName}</span>
               <svg
@@ -49,5 +49,4 @@ function Experience({ role, companyName, companyLink ,timeLine,  descLine1 ,desc
     </div>
   );
 }
-
 export default Experience;
