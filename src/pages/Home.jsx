@@ -18,49 +18,49 @@ function Home() {
       title: "Iconify Icons",
       year: "2023",
       description: "A free svg icons hosting website build on React.js",
-      image: "./projects/iconify.png",
+      image: "./projects/iconify.webp",
       githubUrl: "https://github.com/prash240303/Iconify-Icons",
     },
     {
       title: "Pixel perfect confrence website",
       year: "2023",
       description: "confrence website frontend made for Pixel Perfect Hackathon",
-      image: "./projects/confrence.png",
+      image: "./projects/confrence.webp",
       githubUrl: "https://pixel-perfect-website-team-zenith.vercel.app/",
     },
     {
       title: "Minecraft Clone",
       year: "2023",
       description: "A minecraft clone build with 3.js with 5 available block textures",
-      image: "./projects/minecraft.png",
+      image: "./projects/minecraft.webp",
       githubUrl: "https://github.com/prash240303/Minecraft-Clone-3.js",
     },
     {
       title: "Gradify Gradients",
       year: "2023",
       description: "A figma plugin to generate beautiful linear and mesh gradients",
-      image: "./projects/gradify.png",
+      image: "./projects/gradify.webp",
       githubUrl: "https://github.com/prash240303/Gradify-Figma-plugin",
     },
     {
       title: "Vans Life",
       year: "2023",
       description: "An awesome app for renting decked-out travel vans for your next road trip adventure! 🚐",
-      image: "./projects/vanslife.png",
+      image: "./projects/vanslife.webp",
       githubUrl: "https://github.com/prash240303/React-Router-miniwebsite",
     },
     {
       title: "TRAVEL CREW - A Flutter App Built with Appwrite ",
       year: "2023",
       description: "A flutter app built on Appwrite cloud to find travel partners",
-      image: "./projects/travelcrew.png",
+      image: "./projects/travelcrew.webp",
       githubUrl: "https://github.com/YuvrajSingh3110/travel_crew",
     },
     {
       title: "Equilibria ",
       year: "2023",
       description: "A Kotlin app build to manage your daily schedule",
-      image: "./projects/equilbria.png",
+      image: "./projects/equilbria.webp",
       githubUrl: "https://github.com/prash240303/equilibria",
     },
   ];
@@ -71,7 +71,7 @@ function Home() {
     // Use a setTimeout to delay the fade-in effect
     const timeout = setTimeout(() => {
       setShowContent(true); // Trigger the fade-in effect after a delay
-    }, 1000); // Adjust the delay duration as needed (in milliseconds)
+    }, 500); // Adjust the delay duration as needed (in milliseconds)
 
     // Cleanup the timeout when the component unmounts
     return () => clearTimeout(timeout);

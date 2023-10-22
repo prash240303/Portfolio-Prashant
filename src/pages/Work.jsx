@@ -10,7 +10,7 @@ const Work=()=> {
         <section className="experience-item-list-wrapper mt-4 grid grid-cols-1 justify-start gap-8 text-white md:mb-10 mb-0">
           <div className="flex md:flex-row flex-col md:gap-5 gap-10 items-center justify-center md:mb-10 mb-4">
             <img
-              src="./profile/profile_large.jpg"
+              src="./profile/profile_large.webp"
               alt=""
               className="md:w-[200px] w-[200px] aspect-auto rounded-lg"
             />
@@ -35,7 +35,7 @@ const Work=()=> {
               I have hands-on experience in building user-friendly interfaces, writing efficient code, and developing software.
               I have a passion for solving complex problems through coding and constantly expanding my knowledge in this domain.
               <br className="mb-2" />
-              In my free time, I'll most likely be found in my room/garden listening to music while painting out imagination, or watching anime in my cozy bed.
+              In my free time, I&apos;ll most likely be found in my room/garden listening to music while painting out imagination, or watching anime in my cozy bed.
 
             </section>
 
@@ -54,7 +54,7 @@ const Work=()=> {
             <h2 className="mt-6 leading-snug font-medium text-2xl text-zinc-100">
               Work Experience
             </h2>
-            <section className="experience-item-list-wrapper w-[420px] mt-4 grid grid-cols-1 justify-start gap-8 text-white md:mb-10 mb-0 ">
+            <section className="experience-item-list-wrapper nd:w-[600px] w-[420px] mt-4 grid grid-cols-1 justify-start gap-8 text-white md:mb-10 mb-0 ">
               <Experience
                 role="UI/UX designer"
                 companyName="GDSC NITJ"
@@ -70,6 +70,17 @@ const Work=()=> {
                 timeLine="jan - mar, 2023"
                 descLine1="under the WINTER OF CODE: GDSC IIIT kalyani, I got to work on the open source Ved Vyas Foundation "
                 descLine2="worked on the BhagavadGita.ai UI development and web design using reactjs and tailwind css"
+              />
+              <Experience
+                role="Front end developer"
+                companyName="JollySE Foundation"
+                companyLink="https://www.jollysoothingera.com/"
+                timeLine="set - oct, 2023"
+                descLine1="Led the development of the organization’s website UI and web design using Figma, creating a component library
+                for consistency"
+                descLine2="I utilized Next.js and Tailwind CSS to design and implement responsive and visually appealing front-end pages. 
+                Collaborated and contributed to the content management system(CMS) integration using Sanity.io to streamline
+                data management and website updates."
               />
             </section>
           </div>

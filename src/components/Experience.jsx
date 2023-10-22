@@ -1,14 +1,14 @@
 
 const Experience = ({ role, companyName, companyLink ,timeLine,  descLine1 ,descLine2 })=>{
   return (
-    <div className="experience-item border-l-2 pl-4 border-zinc-600 hover:border-zinc-100 cursor-default transition-all ">
-      <div className="flex flex-row items-start justify-between max-md:flex-col max-md:justify-start max-md:gap-2">
-        <span>
-          <h3 className="experience-title font-normal text-lg text-zinc-200 capitalize w-[40ch] max-md:w-[30ch] mb-1">
+    <div className="experience-item border-l-2 pl-4 border-zinc-600 w-full hover:border-zinc-100 cursor-default transition-all ">
+      <div className="flex flex-row items-start justify-between w-full md:gap-16 gap-0 max-md:flex-col max-md:justify-start max-md:gap-2">
+        <div className="mb-4">
+          <h3 className="experience-title font-normal text-lg text-zinc-500 capitalize w-[16ch] max-md:w-[30ch] mb-1">
             {role}
           </h3>
           <p className="experience-org-details-wrapper text-lg flex flex-row items-center justify-start gap-1.5">
-            at,
+            
             <a
               className="flex flex-row items-center justify-start gap-0.5 transition-all text-zinc-100 hover:text-zinc-500 hover:gap-1 active:text-zinc-800 font-normal text-lg "
               target="_blank"
@@ -33,10 +33,10 @@ const Experience = ({ role, companyName, companyLink ,timeLine,  descLine1 ,desc
               </svg>
             </a>
           </p>
-        </span>
-        <p className="font-medium text-zinc-500 text-base">
+        </div>
+        <div className="font-medium text-zinc-500 w-[300px] block text-base">
           {timeLine}
-        </p>
+        </div>
       </div>
       <ul className="experience-description-list-content-wrapper flex flex-col items-start justify-start gap-2 pl-3 list-none">
         <li className="font-normal md:w-full w-[300px] text-zinc-400 text-base list-outside">
