@@ -1,5 +1,6 @@
 import "../Styles/Work.css";
 import Experience from "../components/Experience";
+// import PhotosGallery from "../components/PhotosGallery";
 import ScrollingImageCarousel from "../components/ScrollingImageCarousel";
 
 const Work=()=> {
@@ -132,6 +133,7 @@ const Work=()=> {
             }}
           >
             <ScrollingImageCarousel />
+            {/* <PhotosGallery/> */}
           </div>{/* Use the new component here */}
         </section>
       </div>
