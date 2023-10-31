@@ -92,6 +92,7 @@ function Navbar() {
     >
       {tabs.map((tab) => (
         <button
+        aria-label="button nav"
         name="navbar"
           key={tab.id}
           onClick={() => handleTabClick(tab)}
@@ -113,7 +114,7 @@ function Navbar() {
               <div className="flex items-center rounded-full justify-center hover:bg-[#2d2d2d5b]  p-1 md:p-2">
                 <img
                   src={tab.label}
-                  alt=""
+                  alt="icon"
                   className={`${
                     activeTab === tab.id ? "brightness-50" : "brightness-100"
                   } w-8 h-8 md:h-10 md:w-10`}
@@ -125,7 +126,7 @@ function Navbar() {
               <div className="flex items-center rounded-full justify-center hover:bg-[#2d2d2d5b] p-1 md:p-2">
                 <img
                   src={tab.label}
-                  alt=""
+                  alt="icon"
                   className={`${
                     activeTab === tab.id ? "brightness-50" : "brightness-100"
                   } w-8 h-8 md:h-10 md:w-10`}

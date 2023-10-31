@@ -11,8 +11,8 @@ function Home() {
 
   const [showContent, setShowContent] = useState(false);
   useEffect(() => {
-      const timeout = setTimeout(() => {
-      setShowContent(true); // Trigger the fade-in effect after a delay
+    const timeout = setTimeout(() => {
+      setShowContent(true);
     }, 500); // Adjust the delay duration as needed (in milliseconds)
     return () => clearTimeout(timeout);
   }, []);
