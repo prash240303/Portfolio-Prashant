@@ -3,93 +3,16 @@ import { useState, useEffect } from "react";
 import Profile from "../components/Profile";
 import "../Styles/Home.css" // Create a new CSS file for Home component styles
 import ProjectCard from "../components/ProjectCard";
-
+import projects from "../data/Projects";
+import languagesAndTools from "../data/Languages";
+import socialLinks from "../data/links";
 function Home() {
 
-  const socialLinks = [
-    { name: "GitHub", url: "https://github.com/prash240303", urlTitle: "@prash240303" },
-    { name: "Twitter", url: "https://twitter.com/prash2403", urlTitle: "@prash2403" },
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/prashant2403/", urlTitle: "prashant2403" },
-    { name: "Resume", url: "/resume", urlTitle: "Resume" },
-  ];
-  const languagesAndTools = [
-    {
-      group: "Technical Languages",
-      items: ["C/C++", "TypeScript", "JavaScript", "HTML", "CSS/SCSS", "Python", "MySQL"],
-      icon: "./icons/Code.svg",
-    },
-    {
-      group: "Libraries/Frameworks",
-      items: ["Agile Methodologies", "React.js", "Svelte.js", "Next.js", "Node.js"],
-      icon: "./icons/Code.svg",
-    },
-    {
-      group: "Software, Tools, and Platforms",
-      items: ["VS Code", "Git/GitHub", "NPM", "Figma", "Postman", "TailwindCSS", "Vite", "Vercel"],
-      icon: "./icons/Code.svg",
-    },
-  ];
-  const projects = [
-    {
-      title: "Iconify Icons",
-      year: "2023",
-      description: "A free svg icons hosting website build on React.js",
-      image: "./projects/iconify.webp",
-      githubUrl: "https://github.com/prash240303/Iconify-Icons",
-    },
-    {
-      title: "Pixel perfect confrence website",
-      year: "2023",
-      description: "confrence website frontend made for Pixel Perfect Hackathon",
-      image: "./projects/confrence.webp",
-      githubUrl: "https://pixel-perfect-website-team-zenith.vercel.app/",
-    },
-    {
-      title: "Minecraft Clone",
-      year: "2023",
-      description: "A minecraft clone build with 3.js with 5 available block textures",
-      image: "./projects/minecraft.webp",
-      githubUrl: "https://github.com/prash240303/Minecraft-Clone-3.js",
-    },
-    {
-      title: "Gradify Gradients",
-      year: "2023",
-      description: "A figma plugin to generate beautiful linear and mesh gradients",
-      image: "./projects/gradify.webp",
-      githubUrl: "https://github.com/prash240303/Gradify-Figma-plugin",
-    },
-    {
-      title: "Vans Life",
-      year: "2023",
-      description: "An awesome app for renting decked-out travel vans for your next road trip adventure! 🚐",
-      image: "./projects/vanslife.webp",
-      githubUrl: "https://github.com/prash240303/React-Router-miniwebsite",
-    },
-    {
-      title: "TRAVEL CREW - A Flutter App Built with Appwrite ",
-      year: "2023",
-      description: "A flutter app built on Appwrite cloud to find travel partners",
-      image: "./projects/travelcrew.webp",
-      githubUrl: "https://github.com/YuvrajSingh3110/travel_crew",
-    },
-    {
-      title: "Equilibria ",
-      year: "2023",
-      description: "A Kotlin app build to manage your daily schedule",
-      image: "./projects/equilbria.webp",
-      githubUrl: "https://github.com/prash240303/equilibria",
-    },
-  ];
-
   const [showContent, setShowContent] = useState(false);
-
   useEffect(() => {
-    // Use a setTimeout to delay the fade-in effect
-    const timeout = setTimeout(() => {
+      const timeout = setTimeout(() => {
       setShowContent(true); // Trigger the fade-in effect after a delay
     }, 500); // Adjust the delay duration as needed (in milliseconds)
-
-    // Cleanup the timeout when the component unmounts
     return () => clearTimeout(timeout);
   }, []);
 
@@ -198,8 +121,7 @@ function Home() {
                 </div>
                 <ul className="grid grid-cols-1 gap-2 mt-3">
                   {group.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-white">
-                      {/* <span className="mr-1"> <img src={group.icon} alt="icon" className="w-5" /> </span> */}
+                    <li key={itemIndex} className="flex items-center text-gray-300">
                       {item}
                     </li>
                   ))}

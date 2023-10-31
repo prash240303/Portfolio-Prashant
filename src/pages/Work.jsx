@@ -124,16 +124,13 @@ const Work=()=> {
           <div
             className="image-carousel-container h-full"
             onMouseEnter={() => {
-              // Disable scrolling when hovering over the carousel container
               document.body.style.overflow = 'hidden';
             }}
             onMouseLeave={() => {
-              // Re-enable scrolling when leaving the carousel container
               document.body.style.overflow = 'auto';
             }}
           >
             <ScrollingImageCarousel />
-            {/* <PhotosGallery/> */}
           </div>{/* Use the new component here */}
         </section>
       </div>
