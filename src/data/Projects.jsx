@@ -42,7 +42,7 @@ const projects = [
       githubUrl: "https://github.com/prash240303/React-Router-miniwebsite",
     },
     {
-      title: "Equilibria ",
+      title: "Equilibria",
       year: "2023",
       description: "A Kotlin app build to manage your daily schedule",
       image: "./projects/equilbria.webp",
