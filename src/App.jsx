@@ -11,17 +11,29 @@ import Loading from './pages/loading'; // Import your loading component
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [appHasLoaded, setAppHasLoaded] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false); // Set isLoading to false when loading is done
-    }, 2000); // Simulate a 2-second loading time
+    // Check if the app has already loaded from localStorage
+    const hasLoadedFromStorage = localStorage.getItem('appHasLoaded');
+    
+    if (hasLoadedFromStorage) {
+      setAppHasLoaded(true);
+      setIsLoading(false);
+    } else {
+      setTimeout(() => {
+        setIsLoading(false); // Set isLoading to false when loading is done
+        setAppHasLoaded(true); // Set appHasLoaded to true
+        // Store the appHasLoaded state in localStorage
+        localStorage.setItem('appHasLoaded', 'true');
+      }, 2000); // Simulate a 2-second loading time
+    }
   }, []);
 
   return (
     <BrowserRouter>
       {/* Use conditional rendering to display the loading component */}
-      {isLoading ? (
+      {isLoading && !appHasLoaded ? (
         <Loading />
       ) : (
         <Routes>
