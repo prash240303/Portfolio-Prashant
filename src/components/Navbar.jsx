@@ -92,6 +92,7 @@ function Navbar() {
     >
       {tabs.map((tab) => (
         <button
+        name="navbar"
           key={tab.id}
           onClick={() => handleTabClick(tab)}
           className={`nav-item ${
@@ -108,17 +109,17 @@ function Navbar() {
           )}
 
           {tab.urlStatus ? (
-            <a href={tab.url} target="_blank" rel="noreferrer">
+            <Link to={tab.url} target="_blank" rel="noreferrer">
               <div className="flex items-center rounded-full justify-center hover:bg-[#2d2d2d5b]  p-1 md:p-2">
                 <img
                   src={tab.label}
                   alt=""
                   className={`${
                     activeTab === tab.id ? "brightness-50" : "brightness-100"
-                  } w-8 md:w-10`}
+                  } w-8 h-8 md:h-10 md:w-10`}
                 />
               </div>
-            </a>
+            </Link>
           ) : (
             <Link to={tab.link}>
               <div className="flex items-center rounded-full justify-center hover:bg-[#2d2d2d5b] p-1 md:p-2">
@@ -127,7 +128,7 @@ function Navbar() {
                   alt=""
                   className={`${
                     activeTab === tab.id ? "brightness-50" : "brightness-100"
-                  } w-8 md:w-10`}
+                  } w-8 h-8 md:h-10 md:w-10`}
                 />
               </div>
             </Link>

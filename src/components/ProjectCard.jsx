@@ -5,7 +5,7 @@ const ProjectCard = ({ title, year, description, image, githubUrl }) => {
     <a href={githubUrl} target="_blank" rel="noreferrer">
       <div className="p-5 mb-3 flex flex-col items-center justify-center cursor-pointer rounded-3xl custom-gradient transition-all ease-in-out">
         <div className="image-container rounded-xl">
-          <img src={image} className="rounded-xl" alt="project image" />
+          <img src={image} className="rounded-xl w-full h-full" alt="project image" />
         </div>
         <div className="label w-fill flex flex-col items-start justify-start mt-[6px]">
           <div className="text-lg font-semibold my-1">{title}</div>

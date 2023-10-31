@@ -6,6 +6,7 @@ import ProjectCard from "../components/ProjectCard";
 import projects from "../data/Projects";
 import languagesAndTools from "../data/Languages";
 import socialLinks from "../data/links";
+import { Link } from "react-router-dom";
 function Home() {
 
   const [showContent, setShowContent] = useState(false);
@@ -25,27 +26,20 @@ function Home() {
           </h2>
           <div className="about-content-wrapper leading-6 text-base font-light text-zinc-100 mt-4">
             <p>
-              Hey! I am an engineer , learning how to
-              build and design scalable websites and applications. My focus
-              is to build with better user experience, design aesthetic,
-              good developer experience and meaningful impact.
+              Hey! I am an engineer , learning how to build and design scalable websites and applications. My focus is to build with better user experience, design aesthetic, good developer experience and meaningful impact.
             </p>
           </div>
           <div className="rounded-lg bg-[#333333cc]  text-zinc-100   border-[2px] border-[#ffffff14] text-base font-normal p-4 leading-6 mt-6 ">
             <p>
-              I am currently looking for part-time engineering roles, which
-              involves user interface and experience design, frontend
-              engineering as the core.
+              I am currently looking for part-time engineering roles, which involves user interface and experience design, frontend engineering as the core.
             </p>
             <p className="mt-2 mb-4 ">
-              A group of engineers and designers are working together in a
-              collaborative effort to construct exceptional products. I am
-              highly interested in collaborating with you. Feel free to
-              contact me.
+              A group of engineers and designers are working together in a collaborative effort to construct exceptional products. I am
+              highly interested in collaborating with you. Feel free to contact me.
             </p>
             <div className="flex flex-row items-center justify-start gap-7">
-              <a
-                href="/resume"
+              <Link
+                to="/resume"
                 className="flex flex-row items-center justify-start gap-0.5 transition-all text-zinc-300 hover:text-zinc-500 hover:gap-2 active:text-cyan-500  font-[500] text-lg"
               >
                 <span>Resume</span>
@@ -65,7 +59,7 @@ function Home() {
                   <line x1="7" y1="17" x2="17" y2="7"></line>
                   <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
-              </a>
+              </Link>
               <a
                 href="https://www.linkedin.com/in/prashant2403/"
                 className="flex flex-row items-center justify-start gap-0.5 transition-all text-zinc-300 hover:text-zinc-500 hover:gap-2 active:text-cyan-500  font-[500] text-lg"
@@ -137,9 +131,9 @@ function Home() {
           <section className="project-item-list-wrapper m-4 mb-20 grid grid-cols-1 justify-start gap-4">
             <div className="flex flex-col items-start justify-start gap-7">
               {socialLinks.map((link, index) => (
-                <a
+                <Link
                   key={index}
-                  href={link.url}
+                  to={link.url}
                   className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-100 hover:gap-1 active:text-white text-sm font-normal text-zinc-500"
                   target="_blank"
                   rel="noreferrer"
@@ -163,7 +157,7 @@ function Home() {
                     <line x1="7" y1="17" x2="17" y2="7"></line>
                     <polyline points="7 7 17 7 17 17"></polyline>
                   </svg>
-                </a>
+                </Link>
               ))}
             </div>
           </section>
