@@ -110,7 +110,7 @@ function Home() {
             {languagesAndTools.map((group, index) => (
               <div key={index}>
                 <div className="flex items-center gap-2 md:mt-0 mt-4 text-white">
-                  <img src={group.icon} alt="icon" className="w-5" />
+                  <img src={group.icon} alt="icon" className="w-5 h-5" />
                   <span className="font-semibold">{group.group}</span>
                 </div>
                 <ul className="grid grid-cols-1 gap-2 mt-3">
