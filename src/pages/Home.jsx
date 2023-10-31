@@ -111,7 +111,7 @@ function Home() {
               <div key={index}>
                 <div className="flex items-center gap-2 md:mt-0 mt-4 text-white">
                   <img src={group.icon} alt="icon" className="w-6 h-6" />
-                  <span className="font-normal text-lg">{group.group}</span>
+                  <span className="font-normal">{group.group}</span>
                 </div>
                 <ul className="grid grid-cols-1 gap-2 mt-3">
                   {group.items.map((item, itemIndex) => (
