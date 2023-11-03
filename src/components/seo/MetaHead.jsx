@@ -41,7 +41,7 @@ const MetaHead = ({
         property="twitter:image"
         content={
           embedSource === 'default'
-            ? 'https://ik.imagekit.io/nbjd4tzdl/Group%206.png?updatedAt=1691563555181-auto'
+            ? 'https://ik.imagekit.io/fqtmz3ezc3/seo.png?updatedAt=1698985345666'
             : embedSource?.twitter
         }
       />

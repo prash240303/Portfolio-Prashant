@@ -8,7 +8,7 @@ import Blogs from './pages/Blogs';
 import Resume from './pages/Resume';
 import Work from './pages/Work';
 import Loading from './pages/loading'; // Import your loading component
-
+import MetaHead from './components/seo/MetaHead';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [appHasLoaded, setAppHasLoaded] = useState(false);
@@ -32,6 +32,7 @@ function App() {
 
   return (
     <BrowserRouter>
+    <MetaHead/>
       {/* Use conditional rendering to display the loading component */}
       {isLoading && !appHasLoaded ? (
         <Loading />
