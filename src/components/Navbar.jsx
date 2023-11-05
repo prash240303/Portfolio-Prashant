@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../Styles/Navbar.css";
 import { Link } from "react-router-dom";
+
 let tabs = [
   {
     id: "Home",
@@ -47,70 +48,48 @@ let tabs = [
 ];
 
 function Navbar() {
-  let [activeTab, setActiveTab] = useState(tabs[0].id);
+  const [activeTab, setActiveTab] = useState(tabs[0].id);
 
   const handleTabClick = (tab) => {
-    setActiveTab(tab.id);
-
-    if (tab.id === "github" || tab.id === "twitter" || tab.id === "figma") {
-      setTimeout(() => {
-        setActiveTab("home");
-      }, 1000);
+    if (tab.urlStatus) {
+      // If it's an external link, do not change the active tab
+      return;
+    } else {
+      // If it's a regular tab, set the active tab
+      setActiveTab(tab.id);
     }
   };
 
   const [tooltipContent, setTooltipContent] = useState("");
 
-  // Function to handle mouse enter event and show tooltip
   const handleMouseEnter = (tab) => {
-    // Show tooltip only if the current tab is not the active tab
     if (activeTab !== tab.id) {
       setTooltipContent(tab.id);
     }
   };
 
-  // Function to handle mouse leave event and hide tooltip
   const handleMouseLeave = () => {
     setTooltipContent("");
   };
 
-  // const [showNavbar, setShowNavbar] = useState(false);
-  // const toggleNavbar = () => {
-  //   setShowNavbar(!showNavbar);
-  // };
-
-  // useEffect(() => {
-  //   // Show the navbar with a slight delay to create the "pop" effect
-  //   setTimeout(() => {
-  //     toggleNavbar();
-  //   }, 500); // Adjust the delay duration as needed (in milliseconds)
-  // },);
-
   return (
-    <div
-      className={`navbar flex gap-2 self-center w-fit rounded-full  p-3 border border-[#ffffff14] justify-center items-center `}
-    >
+    <div className={`navbar flex gap-2 self-center w-fit rounded-full  p-3 border border-[#ffffff14] justify-center items-center `}>
       {tabs.map((tab) => (
         <button
-        aria-label="button nav"
-        name="navbar"
           key={tab.id}
           onClick={() => handleTabClick(tab)}
           className={`nav-item ${
             activeTab === tab.id ? "active" : " "
           } relative rounded-full transition `}
-          onMouseEnter={() => handleMouseEnter(tab)} // Show tooltip on mouse enter
-          onMouseLeave={handleMouseLeave} // Hide tooltip on mouse leave
-          // style={{
-          //   WebkitTapHighlightColor: "transparent",
-          // }}
+          onMouseEnter={() => handleMouseEnter(tab)}
+          onMouseLeave={handleMouseLeave}
         >
           {activeTab === tab.id && (
             <span className="absolute inset-0 z-10 rounded-full " />
           )}
 
           {tab.urlStatus ? (
-            <Link to={tab.url} target="_blank" rel="noreferrer">
+            <a href={tab.url} target="_blank" rel="noreferrer">
               <div className="flex items-center rounded-full justify-center hover:bg-[#2d2d2d5b]  p-1 md:p-2">
                 <img
                   src={tab.label}
@@ -120,10 +99,10 @@ function Navbar() {
                   } w-8 h-8 md:h-10 md:w-10`}
                 />
               </div>
-            </Link>
+            </a>
           ) : (
             <Link to={tab.link}>
-              <div className="flex items-center rounded-full justify-center hover:bg-[#2d2d2d5b] p-1 md:p-2">
+              <div className="flex items-center rounded-full justify-center hover-bg-[#2d2d2d5b] p-1 md:p-2">
                 <img
                   src={tab.label}
                   alt="icon"
