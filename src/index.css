@@ -39,8 +39,9 @@
     justify-content: flex-start;
     align-items: center; 
     min-width: 320px;
+    cursor: url('../public/cursor.svg'), auto;
+    
   }
-  
   
 .view-container {
   @apply box-border mx-auto;
