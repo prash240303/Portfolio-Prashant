@@ -1,13 +1,12 @@
 import "../Styles/Work.css";
 import Experience from "../components/Experience";
 // import PhotosGallery from "../components/PhotosGallery";
-import ScrollingImageCarousel from "../components/ScrollingImageCarousel";
+// import ScrollingImageCarousel from "../components/ScrollingImageCarousel";
 
 const Work = () => {
   return (
     <>
-      <div
-        className="view-container mt-10 grid grid-col-1 mb-[100px] gap-4 ">
+      <div className="view-container mt-10 grid grid-col-1 mb-[100px] gap-4 overflow:hidden ">
         <section className="experience-item-list-wrapper mt-4 grid grid-cols-1 justify-start gap-8 text-white md:mb-10 mb-0">
           <div className="flex md:flex-row flex-col md:gap-5 gap-10 items-center justify-center md:mb-10 mb-4">
             <img
@@ -131,8 +130,8 @@ const Work = () => {
               document.body.style.overflow = 'auto';
             }}
           >
-            <ScrollingImageCarousel />
-          </div>{/* Use the new component here */}
+            {/* <ScrollingImageCarousel /> */}
+          </div>
         </section>
       </div>
     </>
