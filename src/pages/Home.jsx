@@ -5,7 +5,7 @@ import "../Styles/Home.css" // Create a new CSS file for Home component styles
 import ProjectCard from "../components/ProjectCard";
 import projects from "../data/Projects";
 import languagesAndTools from "../data/Languages";
-import socialLinks from "../data/links";
+// import socialLinks from "../data/links";
 import { Link } from "react-router-dom";
 function Home() {
 
@@ -19,7 +19,8 @@ function Home() {
 
   return (
     <>
-      <div className={`view-container hero-section ${showContent ? 'fade-in' : ''}  grid grid-col-1 item-start justify-start gap-12`}>        <Profile />
+      <div className={`view-container hero-section ${showContent ? 'fade-in' : ''}  grid grid-cols-1 item-start justify-start`}>
+        <Profile />
         <section className="md:my-8 my-0 py-4">
           <h2 className="about-heading leading-snug font-medium text-2xl text-zinc-300">
             About me
@@ -102,8 +103,8 @@ function Home() {
             ))}
           </div>
         </section>
-        <section>
-          <div className="font-bold flex items-center justify-start text-2xl text-zinc-300 mb-5">
+        <section className="md:mb-24 mb-4 flex flex-col gap-3 ">
+          <div className="font-semibold  flex items-center justify-start mb-4 text-4xl text-zinc-300 ">
             Languages and Tools
           </div>
           <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
@@ -111,7 +112,7 @@ function Home() {
               <div key={index}>
                 <div className="flex items-center gap-2 md:mt-0 mt-4 text-white">
                   <img src={group.icon} alt="icon" className="w-6 h-6" />
-                  <span className="font-normal">{group.group}</span>
+                  <span className="font-normal text-lg">{group.group}</span>
                 </div>
                 <ul className="grid grid-cols-1 gap-2 mt-3">
                   {group.items.map((item, itemIndex) => (
@@ -124,7 +125,7 @@ function Home() {
             ))}
           </div>
         </section>
-        <section className="contacts-section grid grid-cols-1 justify-start gap-4 md:mb-0 mb-10">
+        {/* <section className="contacts-section grid grid-cols-1 justify-start gap-4 md:mb-0 mb-10">
           <h2 className="contact-heading leading-snug font-medium text-base text-zinc-100 mt-12 normal-case">
             Contact, Socials.
           </h2>
@@ -161,7 +162,7 @@ function Home() {
               ))}
             </div>
           </section>
-        </section>
+        </section> */}
       </div>
     </>
   );

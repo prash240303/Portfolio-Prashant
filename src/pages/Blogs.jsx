@@ -4,7 +4,7 @@ function Blogs() {
   return (
     <>
      
-      <div className="view-container mt-[50px] mb-[150px]  grid grid-col-1 item-center justify-start gap-6">
+      <div className="view-container mt-[50px] mb-[150px]  grid grid-cols-1 item-center justify-start gap-6">
         <div className="font-bold text-3xl mb-5  text-white">
           Blogs
         </div>

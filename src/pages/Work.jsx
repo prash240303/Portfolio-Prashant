@@ -6,7 +6,7 @@ import Experience from "../components/Experience";
 const Work = () => {
   return (
     <>
-      <div className="view-container mt-10 grid grid-col-1 mb-[100px] gap-4 overflow:hidden ">
+      <div className="view-container mt-10 grid grid-cols-1 md:mb-[100px] mb-12 gap-4 overflow:hidden ">
         <section className="experience-item-list-wrapper mt-4 grid grid-cols-1 justify-start gap-8 text-white md:mb-10 mb-0">
           <div className="flex md:flex-row flex-col md:gap-5 gap-10 items-center justify-center md:mb-10 mb-4">
             <img
@@ -28,7 +28,7 @@ const Work = () => {
             <h2 className="leading-snug text-2xl text-zinc-100">
               Skills & Interests
             </h2>
-            <section className="mt-4 text-base  leading-relaxed font-light text-white md:mb-10 mb-0">
+            <section className="mt-4 text-lg  leading-relaxed font-light text-white md:mb-10 mb-0">
               I like expanding my thought, skillset and processes to changing problems and needs. I thrive in ambitious, pro-active teams that value ethical product building and cultures that facilitate belonging.
               My development journey encompasses frontend development, coding, and engineering.
               <br className="mb-2" />
@@ -39,11 +39,11 @@ const Work = () => {
 
             </section>
 
-            <section className="w-[400px] mt-4 text-zinc-300 md:mb-10 mb-0">
+            <section className="md:w-[400px] w-full mt-4 text-zinc-300 md:mb-10 mb-0">
               <h2 className="md:mt-2 mt-10  mb-4 leading-snug font-medium text-2xl  text-zinc-100">
                 Education
               </h2>
-              <span className="font-semibold block text-xl text-white mb-2">
+              <span className="font-semibold block text-xl  text-white mb-2">
                 Dr B R Ambedkar National Institute of Technology
               </span>
               2021 - 2025 · B.Tech in Computer Science and Engineering
@@ -54,35 +54,40 @@ const Work = () => {
             <h2 className="mt-6 leading-snug font-medium text-2xl text-zinc-100">
               Work Experience
             </h2>
-            <section className="experience-item-list-wrapper nd:w-[600px] w-[420px] mt-4 grid grid-cols-1 justify-start gap-8 text-white md:mb-10 mb-0 ">
+            <section className="experience-item-list-wrapper md:w-[600px] w-full mt-4 grid grid-cols-1 justify-start gap-8 text-white md:mb-10 mb-0 ">
               <Experience
                 role="Front end developer"
                 companyName="JollySE Foundation"
                 companyLink="https://www.jollysoothingera.com/"
                 timeLine="sept - oct, 2023"
-                descLine1="Led the development of the organization’s website UI and web design using Figma, creating a component library
-                for consistency"
-                descLine2="I utilized Next.js and Tailwind CSS to design and implement responsive and visually appealing front-end pages. 
-                Collaborated and contributed to the content management system(CMS) integration using Sanity.io to streamline
-                data management and website updates."
+                descriptions={[
+                  "Led the development of the organization’s website UI and web design using Figma, creating a component library for consistency",
+                  "Utilized Next.js and Tailwind CSS to design and implement responsive and visually appealing front-end pages.",
+                  "Contributed to the content management system (CMS) integration using Sanity.io to streamline data management and website updates.",
+                ]}
               />
+
               <Experience
                 role="UI/UX designer"
                 companyName="GDSC NITJ"
                 companyLink="https://gdsc.community.dev/dr-b-r-ambedkar-national-institute-of-technology-nit-jalandhar/"
-                timeLine="sept , 2021 - current"
-                descLine1="organizing and hosting events organized by GDSC NITJ, as well as providing mentorship to junior members."
-                descLine2="contributed to the development of the clubs official website, and was organiser at HackMOL 4.0 Hackathon."
+                timeLine="Sept 2021 - Current"
+                descriptions={[
+                  "Organizing and hosting events organized by GDSC NITJ, as well as providing mentorship to junior members.",
+                  "Contributed to the development of the club's official website and was an organizer at HackMOL 4.0 Hackathon.",
+                  "Currently working on the development of the club's official website and organizing the upcoming HackMOL 5.0 Hackathon.",
+                ]}
               />
               <Experience
                 role="Front end developer"
                 companyName="VedVyas Foundation"
                 companyLink="https://vedvyas.org/"
-                timeLine="jan - mar, 2023"
-                descLine1="under the WINTER OF CODE: GDSC IIIT kalyani, I got to work on the open source Ved Vyas Foundation "
-                descLine2="worked on the BhagavadGita.ai UI development and web design using reactjs and tailwind css"
+                timeLine="Jan - Mar 2023"
+                descriptions={[
+                  "Under the WINTER OF CODE: GDSC IIIT Kalyani, I got to work on the open source Ved Vyas Foundation.",
+                  "Worked on the BhagavadGita.ai UI development and web design using React.js and Tailwind CSS.",
+                ]}
               />
-
             </section>
           </div>
         </section>
@@ -116,13 +121,13 @@ const Work = () => {
             /prashant-012927227
           </div>
         </section>
-        <section className="mb-20">
-          <h2 className="md:mt-6 mt-10 leading-snug font-medium text-2xl text-zinc-100">
+        <section className="md:mb-20 mb-0 font-light text-xl">
+          <h2 className="md:mt-6 mt-10 mb-4 leading-snug font-medium text-2xl text-zinc-100">
             Extra! Extra!
           </h2>
           Photography and creative arts are my passion as they fill my world with joy. Pursuing these interests allows me to nurture my imagination and think outside the box.
           <div
-            className="image-carousel-container h-full"
+            className="image-carousel-container md:h-full h-fit"
             onMouseEnter={() => {
               document.body.style.overflow = 'hidden';
             }}
@@ -131,8 +136,18 @@ const Work = () => {
             }}
           >
             {/* <ScrollingImageCarousel /> */}
+            <div className="pics md:flex md:flex-row flex-col gap-6 justify-center items-center mx-0  md:my-12 mt-6 p-0">
+              <div className="">  
+                <img src="./photos/img1.jpg" alt="Central Park, New York"  loading="lazy" className=" rounded-xl  h-[500px]  object-cover " />
+              </div>
+              <div className="">
+                <img src="./photos/img3.jpg" alt="Central Park, New York" loading="lazy" className=" rounded-xl md:h-[500px] h-[200px] w-full md:mt-0 mt-3  object-cover " />
+              </div>
+            </div>
           </div>
         </section>
+            
+
       </div>
     </>
   );
