@@ -23,8 +23,8 @@ function Home() {
       <div className={`view-container hero-section ${showContent ? 'fade-in' : ''}  grid grid-cols-1 item-start justify-start`}>
         {/* <Profile /> */}
         <Landing />
-        <section className="md:my-8 my-0 py-4">
-          <div className="about-content-wrapper leading-6 text-lg text-center font-light text-zinc-100 mt-6">
+        <section className="md:my-8 my-4 py-4">
+          <div className="about-content-wrapper leading-6 text-lg text-center font-light text-zinc-100 md:px-0 px-2 mt-6">
             <p>
               {"Hello! I'm an student/engineer focused on building scalable products with a strong emphasis on user experience, design, developer experience, and meaningful impact." }            </p>
           </div>
