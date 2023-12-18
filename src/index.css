@@ -4,14 +4,20 @@
 @tailwind utilities;
 
 
+/* styles.css */
+@font-face {
+  font-family: 'acorn';
+  src: local('acorn'), url('./fonts/acorn-8.ttf') format('opentype');
+}
+
+.heading-font {
+  font-family: 'acorn', sans-serif;
+}
+
 :root{
 --hover-bg: linear-gradient(90deg,rgba(30,28,50,0.8) 0%,rgba(43,22,29,0.7) 100%);
 --bg-gradient: linear-gradient(90deg,rgba(30,28,50,1) 0%,rgba(43,22,29,1) 100%);
 }
-
-
-
-
   :root {
     font-family: 'Outfit', sans-serif;  line-height: 1.5;
     color-scheme: light dark;
