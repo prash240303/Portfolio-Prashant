@@ -1,12 +1,9 @@
 import "../Styles/Work.css";
 import Experience from "../components/Experience";
-// import PhotosGallery from "../components/PhotosGallery";
-// import ScrollingImageCarousel from "../components/ScrollingImageCarousel";
-
 const Work = () => {
   return (
     <>
-      <div className="view-container mt-10 grid grid-cols-1 md:mb-[100px] mb-12 gap-4 overflow:hidden ">
+      <div className="view-container mt-10 grid grid-cols-1 md:mb-[100px] mb-12 gap-4 overflow-hidden">
         <section className="experience-item-list-wrapper mt-4 grid grid-cols-1 justify-start gap-8 text-white md:mb-10 mb-0">
           <div className="flex md:flex-row flex-col md:gap-5 gap-10 items-center justify-center md:mb-10 mb-4">
             <img
@@ -16,7 +13,7 @@ const Work = () => {
               className="md:w-[200px] w-[200px] aspect-auto rounded-lg"
             />
             <div className="w-full text-base md:text-xl font-light text-gray-100">
-              I am Prashant, a Web Front-end Developer building experiences for my passion of beautiful interfaces and UIs.
+              I am Prashant, a Web Front-end Developer building experiences for my passion for beautiful interfaces and UIs.
               <br className="mb-5" />
               I am a Btech undergraduate studying Computer Sciences from NIT Jalandhar.
               <br className="mb-5" />
@@ -67,7 +64,6 @@ const Work = () => {
                   "Contributed to the content management system (CMS) integration using Sanity.io to streamline data management and website updates.",
                 ]}
               />
-
               <Experience
                 role="UI/UX designer"
                 companyName="GDSC NITJ"
@@ -92,25 +88,24 @@ const Work = () => {
             </section>
           </div>
         </section>
-        <section >
+        <section>
           <h2 className="md:mt-0 mt-5 mb-5 leading-snug font-medium text-2xl  text-zinc-100">
             Contact
           </h2>
-
           <div className="flex flex-col gap-1 mb-4">
-            <span className="font-medium block  text-xl text-white ">
+            <span className="font-medium block text-xl text-white">
               Primary Email
             </span>
             prashantp.cs.21@nitj.ac.in
           </div>
           <div className="flex flex-col gap-1 mb-4">
-            <span className="font-medium block text-xl text-white ">
+            <span className="font-medium block text-xl text-white">
               Secondary Email
             </span>
             prash2402@gmail.com
           </div>
           <div className="flex flex-col gap-1 mb-4">
-            <span className="font-medium block text-xl text-white ">
+            <span className="font-medium block text-xl text-white">
               Twitter
             </span>
             @prash2403
@@ -122,7 +117,7 @@ const Work = () => {
             /prashant-012927227
           </div>
         </section>
-        <section className="md:mb-20 mb-0 font-light text-xl">
+        {/* <section className="md:mb-20 mb-0 font-light text-xl">
           <h2 className="md:mt-6 mt-10 mb-4 leading-snug font-medium text-2xl text-zinc-100">
             Extra! Extra!
           </h2>
@@ -136,19 +131,12 @@ const Work = () => {
               document.body.style.overflow = 'auto';
             }}
           >
-            {/* <ScrollingImageCarousel /> */}
             <div className="pics md:flex md:flex-row flex-col gap-6 justify-center items-center mx-0  md:my-12 mt-6 p-0">
-              <div className="">  
-                <img src="./photos/img1.jpg" alt="Central Park, New York"  loading="lazy" className=" rounded-xl  h-[500px]  object-cover " />
-              </div>
-              <div className="">
-                <img src="./photos/img3.jpg" alt="Central Park, New York" loading="lazy" className=" rounded-xl md:h-[500px] h-[200px] w-full md:mt-0 mt-3  object-cover " />
-              </div>
+                <img src="./photos/img1.jpg" alt="Central Park, New York"  loading="lazy" className=" rounded-xl   object-contain " />
+                <img src="./photos/img3.jpg" alt="Central Park, New York" loading="lazy" className=" rounded-xl   md:mt-0 mt-3  object-contain " />
             </div>
           </div>
-        </section>
-            
-
+        </section> */}
       </div>
     </>
   );
