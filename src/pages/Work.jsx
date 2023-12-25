@@ -12,6 +12,7 @@ const Work = () => {
             <img
               src="./profile/profile_large.webp"
               alt=""
+              loading="lazy"
               className="md:w-[200px] w-[200px] aspect-auto rounded-lg"
             />
             <div className="w-full text-base md:text-xl font-light text-gray-100">
