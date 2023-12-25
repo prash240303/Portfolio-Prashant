@@ -8,9 +8,8 @@ const Work = () => {
           <div className="flex md:flex-row flex-col md:gap-5 gap-10 items-center justify-center md:mb-10 mb-4">
             <img
               src="./profile/profile_large.webp"
-              alt=""
-              loading="lazy"
-              className="md:w-[200px] w-[200px] aspect-auto rounded-lg"
+              alt="prashant"
+              className="w-48 aspect-auto rounded-lg"
             />
             <div className="w-full text-base md:text-xl font-light text-gray-100">
               I am Prashant, a Web Front-end Developer building experiences for my passion for beautiful interfaces and UIs.
