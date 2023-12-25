@@ -88,7 +88,7 @@ const Work = () => {
             </section>
           </div>
         </section>
-        <section>
+        {/* <section>
           <h2 className="md:mt-0 mt-5 mb-5 leading-snug font-medium text-2xl  text-zinc-100">
             Contact
           </h2>
@@ -116,7 +116,7 @@ const Work = () => {
             </span>
             /prashant-012927227
           </div>
-        </section>
+        </section> */}
         {/* <section className="md:mb-20 mb-0 font-light text-xl">
           <h2 className="md:mt-6 mt-10 mb-4 leading-snug font-medium text-2xl text-zinc-100">
             Extra! Extra!
