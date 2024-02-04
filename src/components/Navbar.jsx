@@ -20,7 +20,7 @@ let tabs = [
   {
     id: "About",
     label: "./icons/Code.svg",
-    link: "/work",
+    link: "/about",
     urlStatus: false,
     url: "",
   },
