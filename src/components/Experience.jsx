@@ -2,15 +2,15 @@ import PropTypes from 'prop-types';
 
 const Experience = ({ role, companyName, companyLink, timeLine, descriptions }) => {
   return (
-    <div className="experience-item border-l-2 pl-4 border-zinc-600   hover:border-zinc-100  transition-all">
-      <div className="flex flex-row items-start  justify-between  md:gap-16 gap-0 max-md:flex-col max-md:justify-start ">
+    <div className="experience-item border-l-2 w-f pl-4 border-zinc-600   hover:border-zinc-100  transition-all">
+      <div className="flex flex-row items-start  justify-between  max-md:flex-col max-md:justify-start ">
         <div className="mb-4">
-          <h3 className="experience-title font-normal text-lg text-zinc-500 capitalize w-full  md:w-[30ch] mb-1">
+          <h3 className="experience-title font-normal text-lg text-zinc-300 capitalize w-full  md:w-[30ch] mb-1">
             {role}
           </h3>
           <p className="experience-org-details-wrapper w-full  text-lg flex flex-row items-center justify-start gap-1.5">
             <a
-              className="flex flex-row items-center justify-start gap-0.5 transition-all text-zinc-100 hover:text-zinc-500 hover:gap-1 active:text-zinc-800 font-normal text-lg"
+              className="flex flex-row items-center justify-start gap-0.5 transition-all text-white hover:text-zinc-500 hover:gap-1 active:text-zinc-800 font-normal text-lg"
               target="_blank"
               href={companyLink}
               rel="noreferrer"
@@ -35,7 +35,7 @@ const Experience = ({ role, companyName, companyLink, timeLine, descriptions }) 
             </a>
           </p>
         </div>
-        <div className="font-medium text-zinc-500 md:w-[300px] w-fill text-base">{timeLine}</div>
+        <div className="font-medium text-zinc-500 w-full text-right text-base">{timeLine}</div>
       </div>
       <ul className="experience-description-list-content-wrapper w-fit flex flex-col items-start justify-start gap-2 pl-3 list-none">
         {descriptions.map((desc, index) => (

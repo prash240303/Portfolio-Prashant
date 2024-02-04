@@ -1,6 +1,6 @@
 import "../Styles/Work.css";
 import Experience from "../components/Experience";
-const Work = () => {
+const About = () => {
   return (
     <>
       <div className="view-container mt-10 grid grid-cols-1 md:mb-[100px] mb-12 gap-4 overflow-hidden">
@@ -11,7 +11,7 @@ const Work = () => {
               alt="prashant"
               className="w-48 aspect-auto rounded-lg"
             />
-            <div className="w-full text-base md:text-xl font-light text-gray-100">
+            <div className="w-full text-base md:text-xl font-light text-gray-300">
               I am Prashant, a Web Front-end Developer building experiences for my passion for beautiful interfaces and UIs.
               <br className="mb-5" />
               I am a Btech undergraduate studying Computer Sciences from NIT Jalandhar.
@@ -20,12 +20,12 @@ const Work = () => {
             </div>
           </div>
         </section>
-        <section className="md:mt-4 mt-0 md:w-[400px] w-[340px]  flex md:flex-row flex-col gap-10 justify-start text-white md:mb-0 mb-0">
-          <div>
+        <section className="md:mt-4 mt-0 w-full  flex md:flex-row flex-col gap-10 justify-start text-white md:mb-0 mb-0">
+          <div className="md:w-[300px] w-[340px]" >
             <h2 className="leading-snug text-2xl text-zinc-100">
               Skills & Interests
             </h2>
-            <section className="mt-4 text-lg  leading-relaxed font-light text-white md:mb-10 mb-0">
+            <section className="mt-4 text-base  leading-relaxed font-light text-gray-300 md:mb-10 mb-0">
               I like expanding my thought, skillset and processes to changing problems and needs. I thrive in ambitious, pro-active teams that value ethical product building and cultures that facilitate belonging.
               My development journey encompasses frontend development, coding, and engineering.
               <br className="mb-2" />
@@ -33,7 +33,6 @@ const Work = () => {
               I have a passion for solving complex problems through coding and constantly expanding my knowledge in this domain.
               <br className="mb-2" />
               In my free time, I&apos;ll most likely be found in my room/garden listening to music while painting out imagination, or watching anime in my cozy bed.
-
             </section>
 
             <section className="md:w-[400px] w-full mt-4 text-zinc-300 md:mb-10 mb-0">
@@ -47,16 +46,28 @@ const Work = () => {
             </section>
           </div>
 
-          <div>
+          <div className="w-full ml-6">
             <h2 className="mt-6 leading-snug font-medium text-2xl text-zinc-100">
               Work Experience
             </h2>
-            <section className="experience-item-list-wrapper md:w-[600px] w-full mt-4 grid grid-cols-1 justify-start gap-8 text-white md:mb-10 mb-0 ">
+            <section className="experience-item-list-wrapper  w-full mt-4 grid grid-cols-1 justify-start gap-8 text-white md:mb-10 mb-0 ">
+              <Experience 
+              role="Front end developer"
+              companyName="GroVr Testing"
+              companyLink="https://www.grovrtesting.com/"
+              timeLine="Jan 2024 - Present"
+              descriptions={[
+                "Led the development of the organization’s website UI and web design using Figma, creating a component library for consistency",
+                "Utilized Next.js and Tailwind CSS to design and implement responsive and visually appealing front-end pages.",
+                "Contributed to the content management system (CMS) integration using Sanity.io to streamline data management and website updates.",
+              ]}
+            />
+
               <Experience
                 role="Front end developer"
                 companyName="JollySE Foundation"
                 companyLink="https://www.jollysoothingera.com/"
-                timeLine="sept - oct, 2023"
+                timeLine="Sept - Dec 2023"
                 descriptions={[
                   "Led the development of the organization’s website UI and web design using Figma, creating a component library for consistency",
                   "Utilized Next.js and Tailwind CSS to design and implement responsive and visually appealing front-end pages.",
@@ -65,9 +76,9 @@ const Work = () => {
               />
               <Experience
                 role="UI/UX designer"
-                companyName="GDSC NITJ"
+                companyName="GDSC NITJ (Voluteering)"
                 companyLink="https://gdsc.community.dev/dr-b-r-ambedkar-national-institute-of-technology-nit-jalandhar/"
-                timeLine="Sept 2021 - Current"
+                timeLine="Sept 2021 - Present"
                 descriptions={[
                   "Organizing and hosting events organized by GDSC NITJ, as well as providing mentorship to junior members.",
                   "Contributed to the development of the club's official website and was an organizer at HackMOL 4.0 Hackathon.",
@@ -76,7 +87,7 @@ const Work = () => {
               />
               <Experience
                 role="Front end developer"
-                companyName="VedVyas Foundation"
+                companyName="VedVyas Foundation (Volunteering)"
                 companyLink="https://vedvyas.org/"
                 timeLine="Jan - Mar 2023"
                 descriptions={[
@@ -87,35 +98,7 @@ const Work = () => {
             </section>
           </div>
         </section>
-        {/* <section>
-          <h2 className="md:mt-0 mt-5 mb-5 leading-snug font-medium text-2xl  text-zinc-100">
-            Contact
-          </h2>
-          <div className="flex flex-col gap-1 mb-4">
-            <span className="font-medium block text-xl text-white">
-              Primary Email
-            </span>
-            prashantp.cs.21@nitj.ac.in
-          </div>
-          <div className="flex flex-col gap-1 mb-4">
-            <span className="font-medium block text-xl text-white">
-              Secondary Email
-            </span>
-            prash2402@gmail.com
-          </div>
-          <div className="flex flex-col gap-1 mb-4">
-            <span className="font-medium block text-xl text-white">
-              Twitter
-            </span>
-            @prash2403
-          </div>
-          <div className="flex flex-col gap-1 mb-4">
-            <span className="font-medium block text-xl text-white">
-              Linkedin
-            </span>
-            /prashant-012927227
-          </div>
-        </section> */}
+        
         {/* <section className="md:mb-20 mb-0 font-light text-xl">
           <h2 className="md:mt-6 mt-10 mb-4 leading-snug font-medium text-2xl text-zinc-100">
             Extra! Extra!
@@ -141,4 +124,4 @@ const Work = () => {
   );
 }
 
-export default Work;
+export default About;
