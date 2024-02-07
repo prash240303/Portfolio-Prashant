@@ -4,7 +4,7 @@ const GuestBook = () => {
     <>
       <div className="view-container mt-10 grid grid-cols-1 md:mb-[100px] mb-12 gap-4 overflow-hidden">
         <section className="experience-item-list-wrapper mt-4 grid grid-cols-1 justify-start gap-6 text-white md:mb-10 mb-0">
-          <div className="w-full text-5xl font-light text-white">GuestBook</div>
+          <div className="w-full text-5xl font-semibold text-white">GuestBook</div>
           <div className="w-full text-lg font-light text-gray-100">
             Leave a message for me and other visitors here! It can be anything -
             appreciation, criticism, or just a random message. Just be nice!

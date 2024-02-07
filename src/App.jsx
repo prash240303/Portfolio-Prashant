@@ -10,6 +10,7 @@ import Loading from "./pages/loading";
 import MetaHead from "./components/seo/MetaHead";
 import GuestBook from "./pages/Guestbook";
 import About from "./pages/About";
+import Crafts from "./pages/Crafts";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [appHasLoaded, setAppHasLoaded] = useState(false);
@@ -44,6 +45,7 @@ function App() {
             <Route path="blogs" element={<Blogs />} />
             <Route path="about" element={<About />} />
             <Route path="guestbook" element={<GuestBook />} />
+            <Route path="crafts" element={<Crafts />} />
           </Route>
           <Route path="resume" element={<Resume />} />
         </Routes>
