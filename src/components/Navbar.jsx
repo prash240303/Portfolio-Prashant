@@ -114,7 +114,7 @@ function Navbar() {
             </Link>
           )}
 
-          {tooltipContent === tab.id && <div className="tooltip">{tab.id}</div>}
+            {tooltipContent === tab.id && <div className="tooltip">{tab.id}</div>}
         </button>
       ))}
     </div>
