@@ -8,7 +8,7 @@ function Landing() {
        {" Hi. I'm Prashant."}
       </div>
       <div className="heading-font text-center text-3xl  md:text-7xl lg-[80px]">
-        A Frontend Developer.
+        A Front-end Developer.
       </div>
       </div>
 
