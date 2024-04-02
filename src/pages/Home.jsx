@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
-
-// import Profile from "../components/Profile";
 import "../Styles/Home.css"; // Create a new CSS file for Home component styles
 import ProjectCard from "../components/ProjectCard";
 import projects from "../data/Projects";
-// import languagesAndTools from "../data/Languages";
-// import socialLinks from "../data/links";
 import { Link } from "react-router-dom";
 import Landing from "../components/Landing";
 function Home() {
@@ -13,7 +9,7 @@ function Home() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowContent(true);
-    }, 500); // Adjust the delay duration as needed (in milliseconds)
+    }, 500); 
     return () => clearTimeout(timeout);
   }, []);
 
@@ -24,7 +20,6 @@ function Home() {
           showContent ? "fade-in" : ""
         }  grid grid-cols-1 item-start justify-start`}
       >
-        {/* <Profile /> */}
         <Landing />
         <section className="md:my-8 my-4 py-4">
           <div className="about-content-wrapper leading-6 text-lg text-center font-light text-zinc-100 md:px-0 px-2 mt-6">
@@ -109,32 +104,6 @@ function Home() {
             ))}
           </div>
         </section>
-        {/* <section className="md:mb-24 mb-4 flex flex-col gap-3 ">
-          <div className="font-semibold  flex items-center justify-start mb-4 text-4xl text-zinc-300 ">
-            Languages and Tools
-          </div>
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
-            {languagesAndTools.map((group, index) => (
-              <div key={index}>
-                <div className="flex items-center gap-2 md:mt-0 mt-4 text-white">
-                  <img src={group.icon} alt="icon" className="w-6 h-6" />
-                  <span className="font-normal text-lg">{group.group}</span>
-                </div>
-                <ul className="grid grid-cols-1 gap-2 mt-3">
-                  {group.items.map((item, itemIndex) => (
-                    <li
-                      key={itemIndex}
-                      className="flex items-center text-gray-300"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section> */}
-
         <section className="md:mb-24 mb-4 flex flex-col gap-3 ">
           <div className="bg-dot-black/[0.1] dark:bg-dot-white/[0.1]">
             <div className="items-center justify-between sm:flex">

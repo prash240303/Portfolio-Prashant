@@ -4,7 +4,6 @@
  @tailwind utilities;
 
 
- /* styles.css */
  @font-face {
    font-family: 'acorn';
    src: local('acorn'), url('./fonts/acorn-8.ttf') format('opentype');
@@ -32,9 +31,6 @@
 
  body {
    margin: 0;
-   /* display: flex; */
-   /* flex-direction: column; */
-   /* justify-content: flex-start; */
    align-items: center;
    min-width: 320px;
    cursor: url('/cursor.svg'), auto;

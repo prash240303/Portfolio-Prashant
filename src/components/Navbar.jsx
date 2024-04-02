@@ -1,71 +1,21 @@
 import { useState } from "react";
-import "../Styles/Navbar.css";
 import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 let tabs = [
-  {
-    id: "Home",
-    label: "./icons/Home.svg",
-    link: "/",
-    urlStatus: false,
-    url: "",
-  },
-  {
-    id: "Blogs",
-    label: "./icons/Doc.svg",
-    link: "/blogs",
-    urlStatus: false,
-    url: "",
-  },
-  {
-    id: "About",
-    label: "./icons/Code.svg",
-    link: "/about",
-    urlStatus: false,
-    url: "",
-  },
-  {
-    id: "Github",
-    label: "./icons/github.svg",
-    link: "",
-    urlStatus: true,
-    url: "https://github.com/prash240303",
-  },
-  {
-    id: "Linkedin",
-    label: "./icons/Linkedin.svg",
-    link: "",
-    urlStatus: true,
-    url: "https://www.linkedin.com/in/prashant-012927227/",
-  },
-  {
-    id: "Twitter",
-    label: "./icons/Twitter.svg",
-    link: "",
-    urlStatus: true,
-    url: "https://twitter.com/prash2403",
-  },
+  { id: "Home", label: "./icons/Home.svg", Link: "/" },
+  { id: "Blogs", label: "./icons/Doc.svg", Link: "/blogs" },
+  { id: "About", label: "./icons/About.svg", Link: "/about" },
+  { id: "Guestbook", label: "./icons/Message.svg", Link: "/GuestBook" },
+  { id: "Crafts", label: "./icons/craft.svg", Link: "/Crafts" },
 ];
 
-function Navbar() {
-  const [activeTab, setActiveTab] = useState(tabs[0].id);
-
-  const handleTabClick = (tab) => {
-    if (tab.urlStatus) {
-      // If it's an external link, do not change the active tab
-      return;
-    } else {
-      // If it's a regular tab, set the active tab
-      setActiveTab(tab.id);
-    }
-  };
-
-  const [tooltipContent, setTooltipContent] = useState("");
+export default function Navbar() {
+  let [activeTab, setActiveTab] = useState(tabs[0].id);
+  let [tooltipContent, setTooltipContent] = useState("");
 
   const handleMouseEnter = (tab) => {
-    if (activeTab !== tab.id) {
-      setTooltipContent(tab.id);
-    }
+    setTooltipContent(tab.id);
   };
 
   const handleMouseLeave = () => {
@@ -73,52 +23,50 @@ function Navbar() {
   };
 
   return (
-    <div className={`navbar flex gap-2 self-center w-fit rounded-full  p-3 border border-[#ffffff14] justify-center items-center `}>
+    <div className="navbar flex gap-4 self-center w-fit rounded-full p-2 border border-zinc-600 justify-center items-center">
       {tabs.map((tab) => (
-        <button
-          key={tab.id}
-          onClick={() => handleTabClick(tab)}
-          className={`nav-item ${
-            activeTab === tab.id ? "active" : " "
-          } relative rounded-full transition `}
-          onMouseEnter={() => handleMouseEnter(tab)}
-          onMouseLeave={handleMouseLeave}
-        >
-          {activeTab === tab.id && (
-            <span className="absolute inset-0 z-10 rounded-full " />
-          )}
-
-          {tab.urlStatus ? (
-            <a href={tab.url} target="_blank" rel="noreferrer">
-              <div className="flex items-center rounded-full justify-center hover:bg-[#2d2d2d5b]  p-1 md:p-2">
-                <img
-                  src={tab.label}
-                  alt="icon"
-                  className={`${
-                    activeTab === tab.id ? "brightness-50" : "brightness-100"
-                  } w-8 h-8 md:h-10 md:w-10`}
-                />
-              </div>
-            </a>
-          ) : (
-            <Link to={tab.link}>
-              <div className="flex items-center rounded-full justify-center hover-bg-[#2d2d2d5b] p-1 md:p-2">
-                <img
-                  src={tab.label}
-                  alt="icon"
-                  className={`${
-                    activeTab === tab.id ? "brightness-50" : "brightness-100"
-                  } w-8 h-8 md:h-10 md:w-10`}
-                />
-              </div>
-            </Link>
-          )}
-
-            {tooltipContent === tab.id && <div className="tooltip">{tab.id}</div>}
-        </button>
+        <Link to={tab.Link} key={tab.id}>
+          <motion.button
+            onClick={() => setActiveTab(tab.id)}
+            className={`${
+              activeTab === tab.id ? "" : "hover:text-white/60"
+            } relative rounded-full text-sm font-medium text-white transition focus-visible:outline-2`}
+            style={{
+              WebkitTapHighlightColor: "transparent",
+            }}
+            onMouseEnter={() => handleMouseEnter(tab)}
+            onMouseLeave={handleMouseLeave}
+          >
+            {activeTab === tab.id && (
+              <motion.span
+                layoutId="bubble"
+                className="absolute inset-0 z-10 bg-white/80   mix-blend-overlay"
+                style={{ borderRadius: 9999 }}
+                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+              />
+            )}
+            <div className="flex items-center rounded-full justify-center hover:bg-white/20 p-2 ">
+              <img
+                src={tab.label}
+                alt="icon"
+                className={` w-8 h-8 md:h-10 md:w-10`}
+              />
+            </div>
+            <AnimatePresence>
+              {tooltipContent === tab.id && (
+                <motion.div
+                  className="tooltip"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  {tab.id}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.button>
+        </Link>
       ))}
     </div>
   );
 }
-
-export default Navbar;

@@ -31,7 +31,7 @@ const MetaHead = ({
         content={
           embedSource === 'default'
             ? 'summary_large_image'
-            : 'summary' // Update with appropriate twitter card type
+            : 'summary' 
         }
       />
       <meta property="twitter:url" content="https://portfolio-prash.vercel.app/" />

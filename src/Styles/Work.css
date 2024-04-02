@@ -7,9 +7,7 @@
   transform: scale(1.1);
 }
 
-/* Add this to your Work.css file */
 
-/* Styles for the ScrollingImageCarousel */
 #image-container {
   width: fit-content;
   height: 80%;
@@ -24,6 +22,7 @@
   left: 0%;
   top: 50%;
   transform: translate(0%, -50%);
+  -webkit-user-select: none;
   user-select: none;
 }
 

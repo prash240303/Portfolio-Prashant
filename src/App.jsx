@@ -16,7 +16,6 @@ function App() {
   const [appHasLoaded, setAppHasLoaded] = useState(false);
 
   useEffect(() => {
-    // Check if the app has already loaded from localStorage
     const hasLoadedFromStorage = localStorage.getItem("appHasLoaded");
 
     if (hasLoadedFromStorage) {
@@ -24,18 +23,16 @@ function App() {
       setIsLoading(false);
     } else {
       setTimeout(() => {
-        setIsLoading(false); // Set isLoading to false when loading is done
-        setAppHasLoaded(true); // Set appHasLoaded to true
-        // Store the appHasLoaded state in localStorage
+        setIsLoading(false); 
+        setAppHasLoaded(true); 
         localStorage.setItem('appHasLoaded', 'true');
-      }, 2000); // Simulate a 2-second loading time
+      }, 2000); 
     }
   }, []);
 
   return (
     <BrowserRouter>
     <MetaHead/>
-      {/* Use conditional rendering to display the loading component */}
       {isLoading && !appHasLoaded ? (
         <Loading />
       ) : (
