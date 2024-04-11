@@ -1,6 +1,6 @@
 const projects = [
   {
-    title: "Talkpdf.tech",
+    title: "talkPDF.tech",
     year: "2024",
     description: "A nextjs website for asking questions in context of pdfs",
     image: "./projects/talkpdf.png",
@@ -12,6 +12,13 @@ const projects = [
     description: "NextJs Website for the Jolly Soothing Era foundation",
     image: "./projects/jse.png",
     githubUrl: "https://www.jollysoothingera.com/",
+  },
+  {
+    title: "NITJ website Clubs section",
+    year: "2023",
+    description: "worked in XCEED for creating backend of clubs section of NITJ website",
+    image: "./projects/nitj.png",
+    githubUrl: "https://www.nitj.ac.in/",
   },
   {
     title: "Iconify Icons",
