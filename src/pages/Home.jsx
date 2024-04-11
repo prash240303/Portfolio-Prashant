@@ -4,6 +4,7 @@ import ProjectCard from "../components/ProjectCard";
 import projects from "../data/Projects";
 import { Link } from "react-router-dom";
 import Landing from "../components/Landing";
+// import AuroraBackground from "../components/ui/aurora-background.";
 function Home() {
   const [showContent, setShowContent] = useState(false);
   useEffect(() => {
@@ -15,6 +16,7 @@ function Home() {
 
   return (
     <>
+    {/* <AuroraBackground/> */}
       <div
         className={`view-container hero-section ${
           showContent ? "fade-in" : ""

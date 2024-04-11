@@ -1,9 +1,16 @@
 const projects = [
   {
+    title: "Talkpdf.tech",
+    year: "2024",
+    description: "A nextjs website for asking questions in context of pdfs",
+    image: "./projects/talkpdf.png",
+    githubUrl: "https://talkpdf.tech/",
+  },
+  {
     title: "Jolly Soothing Era",
     year: "2023",
     description: "NextJs Website for the Jolly Soothing Era foundation",
-    image: "./projects/iconify.webp",
+    image: "./projects/jse.png",
     githubUrl: "https://www.jollysoothingera.com/",
   },
   {
@@ -14,11 +21,11 @@ const projects = [
     githubUrl: "https://github.com/prash240303/Iconify-Icons",
   },
   {
-    title: "Pixel-Perfect confrence website",
+    title: "Pixel-Perfect confrence website (Depricated API)",
     year: "2023",
     description: "confrence website made for Pixel Perfect Hackathon",
     image: "./projects/confrence.webp",
-    githubUrl: "https://pixel-perfect-website-team-zenith.vercel.app/",
+    githubUrl: "https://www.figma.com/file/WkNgcWnKjuDIRPqH1JStSs/pixel-perfect-design-file?type=design&node-id=0%3A1&mode=design&t=wOcEtFGsaCEq7rJo-1",
   },
   {
     title: "Gradify Gradients",
