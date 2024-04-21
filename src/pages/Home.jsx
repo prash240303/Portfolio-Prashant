@@ -4,19 +4,20 @@ import ProjectCard from "../components/ProjectCard";
 import projects from "../data/Projects";
 import { Link } from "react-router-dom";
 import Landing from "../components/Landing";
+import Experience from "../components/Experience";
 // import AuroraBackground from "../components/ui/aurora-background.";
 function Home() {
   const [showContent, setShowContent] = useState(false);
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowContent(true);
-    }, 500); 
+    }, 500);
     return () => clearTimeout(timeout);
   }, []);
 
   return (
     <>
-    {/* <AuroraBackground/> */}
+      {/* <AuroraBackground/> */}
       <div
         className={`view-container hero-section ${
           showContent ? "fade-in" : ""
@@ -106,6 +107,8 @@ function Home() {
             ))}
           </div>
         </section>
+
+        {/* //tecch stack */}
         <section className="md:mb-24 mb-4 flex flex-col gap-3 ">
           <div className="bg-dot-black/[0.1] dark:bg-dot-white/[0.1]">
             <div className="items-center justify-between sm:flex">
@@ -122,7 +125,6 @@ function Home() {
                   Technologies that I use to get the job done.
                 </p>
               </div>
-             
             </div>
             <div className="mt-8 flex flex-wrap gap-2">
               <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-zinc-100 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
@@ -232,7 +234,7 @@ function Home() {
                       Framer Motion
                     </span>
                   </li>
-                  
+
                   <li className="group flex select-none items-center space-x-2">
                     <span>
                       <svg
@@ -249,8 +251,6 @@ function Home() {
                       Typescript
                     </span>
                   </li>
-                 
-                 
                 </ul>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -342,7 +342,6 @@ function Home() {
                       Express.js
                     </span>
                   </li>
-              
                 </ul>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -401,8 +400,7 @@ function Home() {
                       MySQL
                     </span>
                   </li>
-                 
-               
+
                   <li className="group flex select-none items-center space-x-2">
                     <span>
                       <svg
@@ -459,7 +457,6 @@ function Home() {
                   <span className="ml-3">DevOps</span>
                 </h3>
                 <ul className="flex flex-wrap items-center gap-4 pt-4 sm:block sm:space-y-2">
-                
                   <li className="group flex select-none items-center space-x-2">
                     <span>
                       <svg
@@ -517,6 +514,60 @@ function Home() {
             </div>
           </div>
         </section>
+
+        {/* work experience */}
+
+        <div className="w-full mb-12">
+          <h2 className="my-6 leading-snug font-medium text-2xl text-zinc-100">
+            Work Experience
+          </h2>
+          <section className="experience-item-list-wrapper  w-full mt-4 grid grid-cols-1 justify-start gap-12 text-white md:mb-10 mb-0 ">
+            <Experience
+              role="Front end developer"
+              companyName="GroVr Testing"
+              companyLink="https://www.grovrtesting.com/"
+              timeLine="Jan 2024 - Feb 2024"
+              descriptions={[
+                "Led the development of the organization’s website UI and web design using Figma, creating a component library for consistency",
+                "Utilized Next.js and Tailwind CSS to design and implement responsive and visually appealing front-end pages.",
+                "Contributed to the content management system (CMS) integration using Sanity.io to streamline data management and website updates.",
+              ]}
+            />
+
+            <Experience
+              role="Front end developer"
+              companyName="JollySE Foundation"
+              companyLink="https://www.jollysoothingera.com/"
+              timeLine="Sept - Dec 2023"
+              descriptions={[
+                "Led the development of the organization’s website UI and web design using Figma, creating a component library for consistency",
+                "Utilized Next.js and Tailwind CSS to design and implement responsive and visually appealing front-end pages.",
+                "Contributed to the content management system (CMS) integration using Sanity.io to streamline data management and website updates.",
+              ]}
+            />
+            <Experience
+              role="UI/UX designer"
+              companyName="GDSC NITJ (Voluteering)"
+              companyLink="https://gdsc.community.dev/dr-b-r-ambedkar-national-institute-of-technology-nit-jalandhar/"
+              timeLine="Sept 2021 - Present"
+              descriptions={[
+                "Organizing and hosting events organized by GDSC NITJ, as well as providing mentorship to junior members.",
+                "Contributed to the development of the club's official website and was an organizer at HackMOL 4.0 Hackathon.",
+                "Currently working on the development of the club's official website and organizing the upcoming HackMOL 5.0 Hackathon.",
+              ]}
+            />
+            <Experience
+              role="Fullstack developer"
+              companyName="NIT Jalandhar XCEED (Volunteering)"
+              companyLink="https://xceed.nitj.ac.in/"
+              timeLine="Jan - Mar 2023"
+              descriptions={[
+                "created new template page using HTML/TailwindCSS/vanilla js , API for fetching data from backend.",
+                " Implemented MongoDB models for clubs, routes, and configured Admin-Bro to enable club coordinators to update content via dashboard.",
+              ]}
+            />
+          </section>
+        </div>
       </div>
     </>
   );

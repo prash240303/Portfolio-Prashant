@@ -21,11 +21,11 @@ const About = () => {
           </div>
         </section>
         <section className="md:mt-4 mt-0 w-full  flex md:flex-row flex-col gap-10 justify-start text-white md:mb-0 mb-0">
-          <div className="md:w-[300px] w-[340px]" >
-            <h2 className="leading-snug text-2xl text-zinc-100">
+          <div className="" >
+            <h2 className="leading-snug text-3xl text-zinc-100">
               Skills & Interests
             </h2>
-            <section className="mt-4 text-base  leading-relaxed font-light text-gray-300 md:mb-10 mb-0">
+            <section className="mt-4 text-lg  leading-relaxed font-light text-gray-300 md:mb-10 mb-0">
               I like expanding my thought, skillset and processes to changing problems and needs. I thrive in ambitious, pro-active teams that value ethical product building and cultures that facilitate belonging.
               My development journey encompasses frontend development, coding, and engineering.
               <br className="mb-2" />
@@ -35,7 +35,7 @@ const About = () => {
               In my free time, I&apos;ll most likely be found in my room/garden listening to music while painting out imagination, or watching anime in my cozy bed.
             </section>
 
-            <section className="md:w-[400px] w-full mt-4 text-zinc-300 md:mb-10 mb-0">
+            <section className=" w-full mt-4 text-zinc-300 md:mb-10 mb-0">
               <h2 className="md:mt-2 mt-10  mb-4 leading-snug font-medium text-2xl  text-zinc-100">
                 Education
               </h2>
@@ -46,57 +46,7 @@ const About = () => {
             </section>
           </div>
 
-          <div className="w-full ml-6">
-            <h2 className="mt-6 leading-snug font-medium text-2xl text-zinc-100">
-              Work Experience
-            </h2>
-            <section className="experience-item-list-wrapper  w-full mt-4 grid grid-cols-1 justify-start gap-8 text-white md:mb-10 mb-0 ">
-              <Experience 
-              role="Front end developer"
-              companyName="GroVr Testing"
-              companyLink="https://www.grovrtesting.com/"
-              timeLine="Jan 2024 - Present"
-              descriptions={[
-                "Led the development of the organization’s website UI and web design using Figma, creating a component library for consistency",
-                "Utilized Next.js and Tailwind CSS to design and implement responsive and visually appealing front-end pages.",
-                "Contributed to the content management system (CMS) integration using Sanity.io to streamline data management and website updates.",
-              ]}
-            />
-
-              <Experience
-                role="Front end developer"
-                companyName="JollySE Foundation"
-                companyLink="https://www.jollysoothingera.com/"
-                timeLine="Sept - Dec 2023"
-                descriptions={[
-                  "Led the development of the organization’s website UI and web design using Figma, creating a component library for consistency",
-                  "Utilized Next.js and Tailwind CSS to design and implement responsive and visually appealing front-end pages.",
-                  "Contributed to the content management system (CMS) integration using Sanity.io to streamline data management and website updates.",
-                ]}
-              />
-              <Experience
-                role="UI/UX designer"
-                companyName="GDSC NITJ (Voluteering)"
-                companyLink="https://gdsc.community.dev/dr-b-r-ambedkar-national-institute-of-technology-nit-jalandhar/"
-                timeLine="Sept 2021 - Present"
-                descriptions={[
-                  "Organizing and hosting events organized by GDSC NITJ, as well as providing mentorship to junior members.",
-                  "Contributed to the development of the club's official website and was an organizer at HackMOL 4.0 Hackathon.",
-                  "Currently working on the development of the club's official website and organizing the upcoming HackMOL 5.0 Hackathon.",
-                ]}
-              />
-              <Experience
-                role="Front end developer"
-                companyName="VedVyas Foundation (Volunteering)"
-                companyLink="https://vedvyas.org/"
-                timeLine="Jan - Mar 2023"
-                descriptions={[
-                  "Under the WINTER OF CODE: GDSC IIIT Kalyani, I got to work on the open source Ved Vyas Foundation.",
-                  "Worked on the BhagavadGita.ai UI development and web design using React.js and Tailwind CSS.",
-                ]}
-              />
-            </section>
-          </div>
+          
         </section>
         
         {/* <section className="md:mb-20 mb-0 font-light text-xl">
