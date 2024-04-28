@@ -16,24 +16,20 @@ const projects = [
   {
     title: "NITJ website Clubs section",
     year: "2023",
-    description: "worked in XCEED for creating backend of clubs section of NITJ website",
+    description:
+      "worked in XCEED for creating backend of clubs section of NITJ website",
     image: "./projects/nitj.png",
     githubUrl: "https://www.nitj.ac.in/",
   },
+
   {
-    title: "Iconify Icons",
+    title: "Spotify-Clone",
     year: "2023",
-    description: "A free svg icons hosting website build on React.js",
-    image: "./projects/iconify.webp",
-    githubUrl: "https://github.com/prash240303/Iconify-Icons",
+    description: "Spotify clone build with Next.js and Spotify API",
+    image: "./projects/spotify.jpg",
+    githubUrl: "",
   },
-  {
-    title: "Pixel-Perfect confrence website (Depricated API)",
-    year: "2023",
-    description: "confrence website made for Pixel Perfect Hackathon",
-    image: "./projects/confrence.webp",
-    githubUrl: "https://www.figma.com/file/WkNgcWnKjuDIRPqH1JStSs/pixel-perfect-design-file?type=design&node-id=0%3A1&mode=design&t=wOcEtFGsaCEq7rJo-1",
-  },
+  
   {
     title: "Gradify Gradients",
     year: "2023",
@@ -65,6 +61,20 @@ const projects = [
       "An awesome app for renting decked-out travel vans for your next road trip adventure! 🚐",
     image: "./projects/vanslife.webp",
     githubUrl: "https://github.com/prash240303/React-Router-miniwebsite",
+  },{
+    title: "Pixel-Perfect confrence website (Depricated API)",
+    year: "2023",
+    description: "confrence website made for Pixel Perfect Hackathon",
+    image: "./projects/confrence.webp",
+    githubUrl:
+      "https://www.figma.com/file/WkNgcWnKjuDIRPqH1JStSs/pixel-perfect-design-file?type=design&node-id=0%3A1&mode=design&t=wOcEtFGsaCEq7rJo-1",
+  },
+  {
+    title: "Iconify Icons",
+    year: "2023",
+    description: "A free svg icons hosting website build on React.js",
+    image: "./projects/iconify.webp",
+    githubUrl: "https://github.com/prash240303/Iconify-Icons",
   },
   {
     title: "Equilibria",
