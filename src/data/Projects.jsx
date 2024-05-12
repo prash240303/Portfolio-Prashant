@@ -3,14 +3,14 @@ const projects = [
     title: "talkPDF.tech",
     year: "2024",
     description: "A nextjs website for asking questions in context of pdfs",
-    image: "./projects/talkpdf.png",
+    image: "./projects/talkpdf.webp",
     githubUrl: "https://talkpdf.tech/",
   },
   {
     title: "Jolly Soothing Era",
     year: "2023",
     description: "NextJs Website for the Jolly Soothing Era foundation",
-    image: "./projects/jse.png",
+    image: "./projects/jse.webp",
     githubUrl: "https://www.jollysoothingera.com/",
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     year: "2023",
     description:
       "worked in XCEED for creating backend of clubs section of NITJ website",
-    image: "./projects/nitj.png",
+    image: "./projects/nitj.webp",
     githubUrl: "https://www.nitj.ac.in/",
   },
 
@@ -26,7 +26,7 @@ const projects = [
     title: "Spotify-Clone",
     year: "2023",
     description: "Spotify clone build with Next.js and Spotify API",
-    image: "./projects/spotify.jpg",
+    image: "./projects/spotify.webp",
     githubUrl: "",
   },
   
