@@ -33,8 +33,13 @@
    align-items: center;
    min-width: 320px;
    cursor: url('/cursor.svg'), auto;
-
+   background-image: url("/header-gradient.svg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top;
  }
+
+ 
 
  .view-container {
    @apply box-border mx-auto;
@@ -78,3 +83,30 @@
    background: var(--hover-bg);
    transition: all 333ms ease 220s;
  }
+
+
+
+ 
+
+#blob {
+  background-color: white;
+  height: 24rem;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-20%, -20%);
+  border-radius: 50%;
+  opacity: 0.3;
+  background: linear-gradient(to right, rgb(255, 65, 65), rgb(12, 43, 215)); /* Added more colors */
+  animation: rotate 20s infinite;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  backdrop-filter: blur(12vmax);
+  -webkit-backdrop-filter: blur(12vmax);
+}

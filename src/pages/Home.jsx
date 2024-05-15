@@ -5,7 +5,6 @@ import projects from "../data/Projects";
 import { Link } from "react-router-dom";
 import Landing from "../components/Landing";
 import Experience from "../components/Experience";
-// import AuroraBackground from "../components/ui/aurora-background.";
 function Home() {
   const [showContent, setShowContent] = useState(false);
   useEffect(() => {
@@ -23,8 +22,8 @@ function Home() {
           showContent ? "fade-in" : ""
         }  grid grid-cols-1 item-start justify-start`}
       >
-        <Landing />
         <section className="md:my-8 my-4 py-4">
+          <Landing />
           <div className="about-content-wrapper leading-6 text-lg text-center font-light text-zinc-100 md:px-0 px-2 mt-6">
             <p>
               {
@@ -32,7 +31,10 @@ function Home() {
               }{" "}
             </p>
           </div>
-          <div className="rounded-lg bg-[#333333cc]  text-zinc-100   border-[2px] border-[#ffffff14] text-base font-normal p-4 leading-6 mt-12 ">
+          <div
+            style={{ backgroundColor: "rgba(51, 51, 51, 0.4)" }}
+            className="rounded-lg bg-opacity-5 overflow-hidden  text-zinc-100 border-[2px] border-[#ffffff14] text-base font-normal p-4 leading-6 mt-12 "
+          >
             <p>
               I am actively seeking part-time engineering roles that revolve
               around user interface and experience design, with a focus on
