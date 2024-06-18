@@ -1,9 +1,7 @@
-"use client"
-
-
+"use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 let tabs = [
@@ -14,15 +12,21 @@ let tabs = [
 ];
 
 export default function Navbar() {
-  let [activeTab, setActiveTab] = useState(tabs[0].id);
+  const [activeTab, setActiveTab] = useState(tabs[0].id);
+  const router = useRouter();
+
+  const handleTabClick = (tabId:string, link:string) => {
+    setActiveTab(tabId);
+    router.push(link);
+  };
 
   return (
-    <div className="navbar z-10 flex fixed left-1/2 -translate-x-1/2 bottom-6 backdrop-blur-xl bg-[#4e4e4ecc] shadow-sm md:shadow-lg gap-4 self-center w-fit  rounded-full p-2 border border-zinc-600 justify-center items-center">
+    <div className="navbar z-10 flex fixed left-1/2 -translate-x-1/2 bottom-6 backdrop-blur-xl bg-[#4e4e4ecc] shadow-sm md:shadow-lg gap-4 self-center w-fit rounded-full p-2 border border-zinc-600 justify-center items-center">
       {tabs.map((tab) => (
         <button
           type="button"
           key={tab.id}
-          onClick={() => setActiveTab(tab.id)}
+          onClick={() => handleTabClick(tab.id, tab.Link)}
           className={`${activeTab === tab.id ? "" : "hover:text-white/60"
             } relative rounded-full px-3 py-1.5 text-lg font-light text-white outline-sky-400 transition focus-visible:outline-2`}
           style={{
@@ -37,9 +41,7 @@ export default function Navbar() {
               transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
             />
           )}
-          <Link href={tab.Link}>
-            {tab.label}
-          </Link>
+          {tab.label}
         </button>
       ))}
     </div>

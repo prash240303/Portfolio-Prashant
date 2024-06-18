@@ -4,23 +4,22 @@ import ProjectCard from "../components/ProjectCard";
 import projects from "../data/Projects";
 import Landing from "../components/Landing";
 import Link from "next/link";
+import ThemeSwitch from "@/components/ui/LightDarkSwitch";
 // import AuroraBackground from "../components/ui/aurora-background.";
 function Home() {
   const [showContent, setShowContent] = useState(false);
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowContent(true);
-    }, 500); 
+    }, 500);
     return () => clearTimeout(timeout);
   }, []);
 
   return (
     <>
-    {/* <AuroraBackground/> */}
       <div
-        className={`view-container hero-section ${
-          showContent ? "fade-in" : ""
-        }  grid grid-cols-1 item-start justify-start`}
+        className={`view-container hero-section ${showContent ? "fade-in" : ""
+          }  grid grid-cols-1 item-start justify-start`}
       >
         <Landing />
         <section className="md:my-8 my-4 py-4">
@@ -122,7 +121,7 @@ function Home() {
                   Technologies that I use to get the job done.
                 </p>
               </div>
-             
+
             </div>
             <div className="mt-8 flex flex-wrap gap-2">
               <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-zinc-100 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
@@ -232,7 +231,7 @@ function Home() {
                       Framer Motion
                     </span>
                   </li>
-                  
+
                   <li className="group flex select-none items-center space-x-2">
                     <span>
                       <svg
@@ -249,8 +248,8 @@ function Home() {
                       Typescript
                     </span>
                   </li>
-                 
-                 
+
+
                 </ul>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -342,7 +341,7 @@ function Home() {
                       Express.js
                     </span>
                   </li>
-              
+
                 </ul>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -401,8 +400,8 @@ function Home() {
                       MySQL
                     </span>
                   </li>
-                 
-               
+
+
                   <li className="group flex select-none items-center space-x-2">
                     <span>
                       <svg
@@ -459,7 +458,7 @@ function Home() {
                   <span className="ml-3">DevOps</span>
                 </h3>
                 <ul className="flex flex-wrap items-center gap-4 pt-4 sm:block sm:space-y-2">
-                
+
                   <li className="group flex select-none items-center space-x-2">
                     <span>
                       <svg
