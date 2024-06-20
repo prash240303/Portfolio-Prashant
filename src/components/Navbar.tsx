@@ -47,7 +47,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`navbar ${shrink ? "view-container-shrinked" : "view-container"} z-10 flex fixed left-1/2 border bg-neutral-50/85 bg-blur-lg -translate-x-1/2 top-6 backdrop-blur-xl md:gap-4 gap-2 w-full rounded-full justify-between items-center transition-all md:p-2 p-1 duration-300 `}
+    className={`navbar ${shrink ? "view-container-shrinked" : "view-container-nonshrinked"} z-10 flex fixed left-1/2 border bg-neutral-50/85 bg-blur-lg -translate-x-1/2 top-6 backdrop-blur-xl md:gap-4 gap-2 w-full rounded-full justify-between items-center transition-all md:p-2 p-1 duration-300 `}
     >
       <div className="flex place-items-center h-full gap-3 transition-all duration-300">
         <motion.span

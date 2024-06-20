@@ -35,6 +35,13 @@ body {
   @apply w-full max-w-screen-md; /* Adjust max-width as per your design needs */
 }
 
+.view-container-nonshrinked {
+  width: 100%;
+  max-width: calc(1024px - 1rem); /* 1024px is the default max-width for max-w-screen-lg in Tailwind */
+  /* Adjust the max-width value if your tailwind config has a different value for max-w-screen-lg */
+}
+
+
 .mdx-content > h1,
 .mdx-content > * > h1 {
   @apply text-2xl my-2;
@@ -76,6 +83,7 @@ body {
     @apply my-3 leading-5 text-sm;
   }
 }
+
 
 
 @layer utilities {

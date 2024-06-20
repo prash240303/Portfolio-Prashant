@@ -2,10 +2,8 @@
 import { useState, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
 import projects from "../data/Projects";
-import Landing from "../components/Landing";
 import Link from "next/link";
-import ThemeSwitch from "@/components/ui/LightDarkSwitch";
-// import AuroraBackground from "../components/ui/aurora-background.";
+import Hero from "../components/Landing";
 function Home() {
   const [showContent, setShowContent] = useState(false);
   useEffect(() => {
@@ -18,10 +16,10 @@ function Home() {
   return (
     <>
       <div
-        className={`view-container hero-section ${showContent ? "fade-in" : ""
+        className={`hero-section ${showContent ? "fade-in" : ""
           }  grid grid-cols-1 item-start justify-start`}
       >
-        <Landing />
+        <Hero />
         <section className="md:my-8 my-4 py-4">
           <div className="about-content-wrapper leading-6 text-lg text-center font-light text-zinc-100 md:px-0 px-2 mt-6">
             <p>
