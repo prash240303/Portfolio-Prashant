@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); */
+
 
 @tailwind base;
 @tailwind components;
@@ -6,20 +7,8 @@
 
 
 
-
-@font-face {
-  font-family: 'acorn';
-  src: local('acorn'), url('../fonts/acorn-8.ttf') format('opentype');
-}
-
-.heading-font {
-  font-family: 'acorn', sans-serif;
-}
-
-
-
 :root {
-  font-family: 'Outfit', sans-serif;
+  /* font-family: 'Figtree', sans-serif; */
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -36,34 +25,57 @@ body {
   cursor: url('/cursor.svg'), auto;
 
 }
-
 .view-container {
   @apply box-border mx-auto;
-  @apply w-[900px] max-2xl:w-[920px] max-xl:w-[720px] max-lg:w-[640px] max-md:w-[560px] max-sm:w-[300px];
+  @apply w-full max-w-screen-lg; /* Adjust max-width as per your design needs */
 }
 
-.mdx-content>h1,
-.mdx-content>*>h1 {
-  @apply text-2xl my-2 max-md:text-xl max-sm:text-lg;
+.view-container-shrinked {
+  @apply box-border mx-auto;
+  @apply w-full max-w-screen-md; /* Adjust max-width as per your design needs */
 }
 
-.mdx-content>h2,
-.mdx-content>*>h2 {
-  @apply text-xl my-2 max-md:text-lg max-sm:text-base;
+.mdx-content > h1,
+.mdx-content > * > h1 {
+  @apply text-2xl my-2;
 }
 
-.mdx-content>h3,
-.mdx-content>*>h3 {
-  @apply text-lg my-2 max-md:text-base max-sm:text-sm;
+.mdx-content > h2,
+.mdx-content > * > h2 {
+  @apply text-xl my-2;
 }
 
-.mdx-content>p,
-.mdx-content>*>p {
-  @apply  my-4 leading-6 text-base max-md:text-sm;
+.mdx-content > h3,
+.mdx-content > * > h3 {
+  @apply text-lg my-2;
 }
 
+.mdx-content > p,
+.mdx-content > * > p {
+  @apply my-4 leading-6 text-base;
+}
 
+@media (max-width: 768px) {
+  .mdx-content > h1,
+  .mdx-content > * > h1 {
+    @apply text-xl my-2;
+  }
 
+  .mdx-content > h2,
+  .mdx-content > * > h2 {
+    @apply text-lg my-2;
+  }
+
+  .mdx-content > h3,
+  .mdx-content > * > h3 {
+    @apply text-base my-2;
+  }
+
+  .mdx-content > p,
+  .mdx-content > * > p {
+    @apply my-3 leading-5 text-sm;
+  }
+}
 
 
 @layer utilities {

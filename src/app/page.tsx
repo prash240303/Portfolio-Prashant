@@ -92,15 +92,15 @@ function Home() {
           <div className="font-bold flex items-center justify-start text-2xl text-zinc-300 mb-5">
             Projects
           </div>
-          <div className="grid md:grid-cols-3 grid-cols-1 md:gap-4 gap-0 p-1 text-white">
+          <div className="grid md:grid-cols-3 grid-cols-1 md:gap-4 gap-0 p-1 ">
             {projects.map((project, index) => (
               <ProjectCard
+                tags={project.tags}
                 key={index}
                 title={project.title}
-                year={project.year}
-                description={project.description}
+                subtitle={project.subtitle}
                 image={project.image}
-                githubUrl={project.githubUrl}
+                link={project.link}
               />
             ))}
           </div>
@@ -117,7 +117,7 @@ function Home() {
                     My Tech Stack
                   </h2>
                 </a>
-                <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400">
+                <p className="mt-2 text-base text-zinc-600 ">
                   Technologies that I use to get the job done.
                 </p>
               </div>
@@ -125,7 +125,7 @@ function Home() {
             </div>
             <div className="mt-8 flex flex-wrap gap-2">
               <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-zinc-100 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
-                <h3 className="flex text-sm font-semibold text-zinc-700 dark:text-zinc-300">
+                <h3 className="flex text-sm font-semibold text-zinc-700 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
