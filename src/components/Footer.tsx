@@ -1,12 +1,14 @@
+import { GithubIcon } from "lucide-react";
 import socialLinks from "../data/links";
 import Link from "next/link";
+import ThemeSwitch from "./ui/LightDarkSwitch";
 const Footer = () => {
   return (
     <>
       <main>
-        <div className="view-container mt-10 grid md:grid-cols-2 grid-cols-1 mb-[150px] gap-4 overflow:hidden ">
-          <div className="flex flex-col font-medium w-full  text-xl text-white  gap-1 mb-4">
-            <div className=" border md:mb-2 mb-6  hover:scale-105 transition duration-300 ease-in-out border-zinc-500 w-full h-fit py-2 px-4 bg-zinc-950 rounded-full flex gap-4 items-center">
+        <div className="view-container px-4 mt-10 grid md:grid-cols-2 grid-cols-1 mb-[150px] gap-4 overflow:hidden ">
+          <div className="flex flex-col font-medium w-full  text-xl dark:text-white  gap-1 mb-4">
+            <div className=" border md:mb-2 mb-6  hover:scale-105 transition duration-300 ease-in-out border-zinc-500 w-full h-fit py-2 px-4 dark:bg-zinc-950 bg-zinc-100 rounded-full flex gap-4 items-center">
               <svg
                 width="48"
                 className="h-16 w-16"
@@ -34,13 +36,16 @@ const Footer = () => {
               Made with lots of 🍵 and ❤️ by{" "}
               <Link
                 href="https://twitter.com/prash2403"
-                className="text-zinc-100 pl-1 hover:text-zinc-500"
+                className="dark:text-zinc-100 pl-1 hover:text-zinc-500"
                 target="_blank"
                 rel="noreferrer"
               >
                 {" "}
                 Prashant
               </Link>
+            </div>
+            <div className="flex mt-4 space-x-4">
+              <ThemeSwitch />
             </div>
           </div>
           <div className="flex gap-4 justify-evenly">
@@ -51,11 +56,11 @@ const Footer = () => {
                   <Link
                     key={index}
                     href={link.url}
-                    className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-100 hover:gap-1 active:text-white text-sm font-normal text-zinc-500"
+                    className="flex flex-row items-center  gap-0.5 transition-all dark:hover:text-zinc-100 hover:text-zinc-900 hover:gap-1 active:text-white text-sm hover:font-semibold font-normal text-zinc-500"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span className=" mr-2 text-white text-base">
+                    <span className=" mr-2  text-base">
                       {link.name}
                     </span>
                     <span>{link.urlTitle}</span>
@@ -86,9 +91,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
       </main>
     </>
   );
 }
 
 export default Footer;
+
+

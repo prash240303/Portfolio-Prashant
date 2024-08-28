@@ -1,36 +1,6 @@
-// import Image from 'next/image';
-// interface propTypes {
-//   title: string,
-//   year: string,
-//   description: string,
-//   image: string,
-//   githubUrl: string,
-// };
-
-// const ProjectCard = ({ title, year, description, image, githubUrl }: propTypes) => {
-//   return (
-//     <a href={githubUrl} target="_blank" rel="noreferrer">
-//       <div className="p-5 mb-3 flex flex-col items-center justify-center cursor-pointer rounded-3xl custom-gradient transition-all ease-in-out">
-//         <div className="image-container rounded-xl">
-//           <Image width={1000} height={1000} src={image} className="rounded-xl w-full h-[180px]" alt="project image" />
-//         </div>
-//         <div className="label w-full flex flex-col items-start justify-start mt-[6px]">
-//           <div className="text-lg font-semibold my-1">{title}</div>
-//           <div className="text-sm opacity-30 leading-tight md:mb-0 mb-3">{year}</div>
-//           <div className="text-[15px] mt-2 w-fit font-light opacity-60 leading-snug">
-//             {description}
-//           </div>
-//         </div>
-//       </div>
-//     </a>
-//   );
-// }
-
-
-// export default ProjectCard;
-
-
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 
 interface PropTypes {
   title: string;
@@ -40,35 +10,68 @@ interface PropTypes {
   link: string;
 }
 
+const colors = ['#6c5ce7', '#218c74', '#d4748d', '#f39c12'];
+
+const getRandomColor = () => {
+  return colors[Math.floor(Math.random() * colors.length)];
+};
+
+const getRGBAColor = (hex: string, opacity: number) => {
+  const bigint = parseInt(hex.slice(1), 16);
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+  return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+};
+
 const ProjectCard = ({ title, subtitle, tags, image, link }: PropTypes) => {
+  const [color, setColor] = useState(getRandomColor());
+
+  useEffect(() => {
+    setColor(getRandomColor());
+  }, []);
+
   return (
-    <a href={link} target="_blank" rel="noreferrer">
-      <div className="p-6 mb-3 flex flex-col items-center justify-center cursor-pointer rounded-3xl bg-purple-100 transition-all ease-in-out">
-        <div className="text-center w-full">
-          <div className="text-xl font-bold">{title}</div>
-          <div className="text-gray-600 mt-2">{subtitle}</div>
+    <div
+      className={`pt-6 px-6 rounded-3xl group cursor-pointer transition-all duration-300 ease-in-out `}
+      style={{ backgroundColor: getRGBAColor(color, 0.2) }}
+    >
+      <div className="flex justify-between items-start mb-4">
+        <div>
+          <h2 className="text-2xl font-bold mb-2" style={{ color }}>{title}</h2>
+          <p className="text-gray-500">{subtitle}</p>
         </div>
-        <div className="flex flex-row justify-center mt-4 gap-2">
-          {tags.map((tag, index) => (
-            <div key={index} className="bg-purple-200 rounded-2xl p-2 text-purple-600 text-sm font-bold">
-              {tag}
-            </div>
-          ))}
-        </div>
-        <div className="w-full border-2 border-purple-300 rounded-xl mt-4 flex justify-center items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(108, 92, 231, 0.2)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </div>
-        <div className="w-full bg-purple-100 h-px opacity-100 mt-4"></div>
-        <div className="w-full mt-4 relative h-[180px]">
-          <Image src={image} layout="fill" objectFit="contain" className="rounded-xl" alt="prescription image" />
+        <div
+          className="p-2 rounded-full transition-transform duration-300 ease-in-out group-hover:-rotate-45 group-hover:opacity-100 opacity-30 group-hover:scale-110"
+          style={{ border: `2px solid ${color}` }}
+        >
+          <ArrowRight size={24} className=" group-hover:opacity-85" style={{ color }} />
         </div>
       </div>
-    </a>
+      <div className="flex flex-wrap gap-2 mb-4">
+        {tags.map((tag, index) => (
+          <span
+            key={index}
+            className="font-semibold px-4 py-2 rounded-full text-sm transition-all duration-300 ease-in-out group-hover:bg-opacity-50"
+            style={{ backgroundColor: getRGBAColor(color, 0.2), color }}
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+      <div className="relative w-full h-[300px] overflow-hidden">
+        <div className="absolute bottom-0 w-full h-full transition-transform duration-300 ease-in-out group-hover:-translate-y-[100px]">
+          <Image
+            src={image}
+            width={500}
+            height={300}
+            alt="Project screenshot"
+            className="rounded-2xl object-contain scale-125 object-top"
+          />
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
 export default ProjectCard;
-

@@ -28,13 +28,6 @@ const projects = [
     link: "https://github.com/prash240303/Gradify-Figma-plugin",
   },
   {
-    title: "TRAVEL CREW - A Flutter App Built with Appwrite",
-    subtitle: "A flutter app built on Appwrite cloud to find travel partners - 2023",
-    tags: ["Flutter", "Appwrite"],
-    image: "/projects/travelcrew.webp",
-    link: "https://github.com/YuvrajSingh3110/travel_crew",
-  },
-  {
     title: "Minecraft Clone",
     subtitle: "A minecraft clone built with 3.js with 5 available block textures - 2023",
     tags: ["3.js", "Game"],
@@ -47,13 +40,6 @@ const projects = [
     tags: ["Travel", "App"],
     image: "/projects/vanslife.webp",
     link: "https://github.com/prash240303/React-Router-miniwebsite",
-  },
-  {
-    title: "Equilibria",
-    subtitle: "A Kotlin app built to manage your daily schedule - 2023",
-    tags: ["Kotlin", "App"],
-    image: "/projects/equilbria.webp",
-    link: "https://github.com/prash240303/equilibria",
   },
 ];
 

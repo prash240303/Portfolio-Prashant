@@ -1,21 +1,21 @@
-"use client";
-
+'use client';
+import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
 
-let tabs = [
+const tabs = [
   { id: "Home", label: "Home", Link: "/" },
   { id: "Blogs", label: "Blogs", Link: "/blogs" },
   { id: "About", label: "About", Link: "/about" },
   { id: "Crafts", label: "Crafts", Link: "/crafts" },
 ];
 
-export default function Navbar() {
+const Navbar = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
   const [hover, setHover] = useState(false);
   const [shrink, setShrink] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
 
   const handleTabClick = (tabId: string, link: string) => {
@@ -25,31 +25,39 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setShrink(true);
-      } else {
-        setShrink(false);
-      }
+      setShrink(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNameHoverStart = () => {
-    setHover(true);
-  };
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768); // Mobile view for screens smaller than 768px
+    };
 
-  const handleNameHoverEnd = () => {
-    setHover(false);
-  };
+    // Initial check
+    checkIsMobile();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIsMobile);
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
 
   return (
     <div
-    className={`navbar ${shrink ? "view-container-shrinked" : "view-container-nonshrinked"} z-10 flex fixed left-1/2 border bg-neutral-50/85 bg-blur-lg -translate-x-1/2 top-6 backdrop-blur-xl md:gap-4 gap-2 w-full rounded-full justify-between items-center transition-all md:p-2 p-1 duration-300 `}
+      className={`navbar ${
+        isMobile
+          ? ""
+          : shrink
+          ? "view-container-shrinked"
+          : "view-container-nonshrinked"
+      } z-10 flex fixed left-1/2 border bg-neutral-50/85 dark:bg-neutral-800/85 bg-blur-lg -translate-x-1/2 top-6 backdrop-blur-xl md:gap-4 gap-2 md:w-full w-fit rounded-full justify-between items-center transition-all md:p-2 p-1 duration-300`}
     >
-      <div className="flex place-items-center h-full gap-3 transition-all duration-300">
+      {/* Your navbar content */}
+      <div className="md:flex place-items-center hidden h-full gap-3 transition-all duration-300">
         <motion.span
           className="relative md:h-12 md:w-12 w-10 h-10"
           whileHover={{ rotate: 360 }}
@@ -62,43 +70,47 @@ export default function Navbar() {
             alt="logo"
             layout="fill"
             objectFit="cover"
-            className={`p-1 bg-neutral-50 hover:shadow-none ${hover ? "rounded-2xl" : "rounded-full"
-              } transform transition duration-300 ease-in-out`}
+            className={`p-1 bg-neutral-50 dark:bg-neutral-700 hover:shadow-none ${
+              hover ? "rounded-3xl" : "rounded-full"
+            } transform transition duration-300 ease-in-out`}
           />
         </motion.span>
         <motion.span
-          className={`text-2xl text-black ${shrink ? "text-xl" : ""} hidden md:inline`}
+          className={`text-2xl text-black dark:text-white ${
+            shrink ? "text-xl" : ""
+          } hidden md:inline`}
         >
           Prashant
         </motion.span>
       </div>
 
-      <div className="flex gap-4 w-fit rounded-full justify-center items-center">
+      <div className="flex md:gap-4 gap-2 w-fit rounded-full justify-center items-center">
         {tabs.map((tab) => (
           <div key={tab.id} className="hover:shadow-xl rounded-full">
             <button
               type="button"
               onClick={() => handleTabClick(tab.id, tab.Link)}
-              className={`relative rounded-full px-3 py-1.5 text-lg transition ${activeTab === tab.id
-                  ? "text-black  bg-white hover:shadow-inner-white hover:bg-gradient-to-b from-white via-gray-100 to-gray-100"
-                  : "hover:text-gray-700 hover:ring-1 text-neutral-400 hover:ring-gray-200 hover:shadow-inner-white hover:bg-gradient-to-b from-white via-gray-100 to-neutral-100"
-                }`}
+              className={`relative rounded-full md:px-3 md:py-1.5 p-2 md:text-lg text-md transition ${
+                activeTab === tab.id
+                  ? "text-black dark:text-white bg-white dark:bg-neutral-700 hover:shadow-inner-white dark:hover:shadow-inner-neutral-600 hover:bg-gradient-to-b from-white via-gray-100 to-gray-100 dark:hover:bg-gradient-to-b dark:from-neutral-700 dark:via-neutral-600 dark:to-neutral-600"
+                  : "hover:text-gray-700 dark:hover:text-gray-300 hover:ring-1 text-neutral-400 dark:text-neutral-400 hover:ring-gray-200 dark:hover:ring-gray-600 hover:shadow-inner-white dark:hover:shadow-inner-neutral-700 hover:bg-gradient-to-b from-white via-gray-100 to-neutral-100 dark:hover:bg-gradient-to-b dark:from-neutral-800 dark:via-neutral-700 dark:to-neutral-700"
+              }`}
             >
               {tab.label}
               {activeTab === tab.id && (
                 <motion.span
                   layoutId="bubble"
-                  className="absolute inset-0 z-10 border-gray-400/70 text-black ring-1 ring-neutral-300 rounded-full pointer-events-none"
+                  className="absolute inset-0 z-10 border-gray-400/70 dark:border-gray-500/70 text-black dark:text-white ring-1 ring-neutral-300 dark:ring-neutral-600 rounded-full pointer-events-none"
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />
               )}
             </button>
           </div>
         ))}
-        <div className="shadow-lg rounded-full overflow-hidden mr-1">
+        <div className="shadow-lg rounded-full w-full overflow-hidden md:mr-1 mr-0">
           <button
             type="button"
-            className="rounded-full px-3 py-2 text-lg transition flex w-fit shrink-0 text-gray-100 hover:ring-1 hover:-translate-y-[1px] ring-gray-200 shadow-inner-gray bg-black hover:bg-neutral-700"
+            className="rounded-full md:px-3 md:py-2 p-2 md:text-lg text-md transition flex md:w-full w-28 shrink-0 text-gray-100 hover:ring-1 hover:-translate-y-[1px] ring-gray-200 dark:ring-gray-600 shadow-inner-gray bg-black dark:bg-white dark:text-gray-800 hover:bg-neutral-700 dark:hover:bg-neutral-200"
           >
             {`Say "Hello!"`}
           </button>
@@ -106,4 +118,6 @@ export default function Navbar() {
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;
