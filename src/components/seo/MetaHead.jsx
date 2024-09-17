@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import PropTypes from 'prop-types';
 
 const MetaHead = ({
@@ -7,7 +8,7 @@ const MetaHead = ({
   ...attr
 }) => {
   return (
-    <head {...attr}>
+    <Head {...attr}>
       <title>{title}</title>
       <link rel="shortcut icon" href="/media/icon.ico" />
       <meta name="title" content={title} />
@@ -45,7 +46,7 @@ const MetaHead = ({
             : embedSource?.twitter
         }
       />
-    </head>
+    </Head>
   );
 };
 

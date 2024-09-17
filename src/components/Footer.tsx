@@ -1,4 +1,3 @@
-import { GithubIcon } from "lucide-react";
 import socialLinks from "../data/links";
 import Link from "next/link";
 import ThemeSwitch from "./ui/LightDarkSwitch";
@@ -8,7 +7,8 @@ const Footer = () => {
       <main>
         <div className="view-container px-6 mt-10 grid md:grid-cols-2 grid-cols-1 mb-[150px] gap-4 overflow:hidden ">
           <div className="flex flex-col font-medium w-full  text-xl dark:text-white  gap-1 mb-4">
-            <div className=" border md:mb-2 mb-6  hover:scale-105 transition duration-300 ease-in-out border-zinc-500 w-full h-fit py-2 px-4 dark:bg-zinc-950 bg-zinc-100 rounded-full flex gap-4 items-center">
+            {/* spoify card */}
+            {/* <div className=" border md:mb-2 mb-6  hover:scale-105 transition duration-300 ease-in-out border-zinc-500 w-full h-fit py-2 px-4 dark:bg-zinc-950 bg-zinc-100 rounded-full flex gap-4 items-center">
               <svg
                 width="48"
                 className="h-16 w-16"
@@ -26,23 +26,16 @@ const Footer = () => {
                 href="https://open.spotify.com/track/7bUbLYm0GJoTF7ct92WnXm?si=c938e28a9e3c4319"
                 className="track-list ml-3 w-full"
               >
-                <p className="font-semibold md:text-lg text-base mb-1">On repeat</p>
+                <p className="font-semibold md:text-lg text-base mb-1">
+                  On repeat
+                </p>
                 <p className="md:text-lg text-base w-full">
                   Pocket Full Of Rain ~The Paper Kites
                 </p>
               </a>
-            </div>
+            </div> */}
             <div className=" w-fit mt-3 ">
-              Made with lots of 🍵 and ❤️ by{" "}
-              <Link
-                href="https://twitter.com/prash2403"
-                className="dark:text-zinc-100 pl-1 hover:text-zinc-500"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {" "}
-                Prashant
-              </Link>
+              Created with lots of Procrastination 🥲 & Inspiration ☕️
             </div>
             <div className="flex mt-4 space-x-4">
               <ThemeSwitch />
@@ -60,9 +53,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <span className=" mr-2  text-base">
-                      {link.name}
-                    </span>
+                    <span className=" mr-2  text-base">{link.name}</span>
                     <span>{link.urlTitle}</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -91,12 +82,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
       </main>
     </>
   );
-}
+};
 
 export default Footer;
-
-

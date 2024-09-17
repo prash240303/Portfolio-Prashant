@@ -62,7 +62,7 @@ const WorkExp = (props: Props) => {
                   decoding="async"
                   data-nimg="1"
                   className="p-1 rounded-full"
-                  src="/icons/kofferx-logo.png"
+                  src="/logos/kofferx-logo.png"
                 />
               </div>
               <dl className="flex flex-auto flex-wrap gap-x-2">
@@ -91,7 +91,7 @@ const WorkExp = (props: Props) => {
                   decoding="async"
                   data-nimg="1"
                   className="p-1 rounded-full"
-                  src="/icons/jse-logo.webp"
+                  src="/logos/jse-logo.webp"
                 />
               </div>
               <dl className="flex flex-auto flex-wrap gap-x-2">
@@ -120,7 +120,7 @@ const WorkExp = (props: Props) => {
                   decoding="async"
                   data-nimg="1"
                   className="p-1 rounded-full"
-                  src="/icons/grovr-logo.webp"
+                  src="/logos/grovr-logo.webp"
                 />
               </div>
               <dl className="flex flex-auto flex-wrap gap-x-2">
@@ -196,7 +196,7 @@ const WorkExp = (props: Props) => {
                   decoding="async"
                   data-nimg="1"
                   className="p-1 rounded-full"
-                  src="/icons/nitj-logo.png"
+                  src="/logos/nitj-logo.png"
                 />
               </div>
               <dl className="flex flex-auto flex-wrap gap-x-2">
