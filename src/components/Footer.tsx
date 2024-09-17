@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
       <main>
-        <div className="view-container px-4 mt-10 grid md:grid-cols-2 grid-cols-1 mb-[150px] gap-4 overflow:hidden ">
+        <div className="view-container px-6 mt-10 grid md:grid-cols-2 grid-cols-1 mb-[150px] gap-4 overflow:hidden ">
           <div className="flex flex-col font-medium w-full  text-xl dark:text-white  gap-1 mb-4">
             <div className=" border md:mb-2 mb-6  hover:scale-105 transition duration-300 ease-in-out border-zinc-500 w-full h-fit py-2 px-4 dark:bg-zinc-950 bg-zinc-100 rounded-full flex gap-4 items-center">
               <svg
@@ -32,7 +32,7 @@ const Footer = () => {
                 </p>
               </a>
             </div>
-            <div className="flex w-fit mt-3 ">
+            <div className=" w-fit mt-3 ">
               Made with lots of 🍵 and ❤️ by{" "}
               <Link
                 href="https://twitter.com/prash2403"
@@ -48,7 +48,7 @@ const Footer = () => {
               <ThemeSwitch />
             </div>
           </div>
-          <div className="flex gap-4 justify-evenly">
+          <div className="flex gap-4 justify-between md:ml-8 ml-0">
             <div className="flex flex-col gap-2">
               <span className="text-3xl">Elsewhere</span>
               <div className="flex flex-col mt-2 items-start justify-start gap-7">
