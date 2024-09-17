@@ -22,13 +22,13 @@ function Home() {
       <div
         className={`hero-section ${
           showContent ? "fade-in" : ""
-        } grid grid-cols-1 md:gap-24 gap-12 item-start justify-start`}
+        } grid grid-cols-1 md:gap-6 gap-12 item-start justify-start`}
       >
         <div className="md:px-0 px-2">
-        <Hero />
+          <Hero />
         </div>
 
-        <section className="view-container px-4">
+        <section className="view-container mt-24 mb-6 px-4">
           <div className="relative w-[99vw] bg-black dark:bg-neutral-800 text-white dark:text-gray-200 py-2 left-1/2 right-1/2  -mx-[50vw] mb-5">
             <div className="overflow-hidden whitespace-nowrap w-full">
               <div
@@ -80,8 +80,10 @@ function Home() {
             ))}
           </div>
         </section>
-        <TechStack />
-        <WorkExp />
+        <div className="flex flex-col gap-4">
+          <TechStack />
+          <WorkExp />
+        </div>
       </div>
     </>
   );

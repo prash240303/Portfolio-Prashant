@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const TechStack = (props: Props) => {
   return (
-    <section className="md:mb-24 px-4 view-container mb-4 flex flex-col gap-3 ">
+    <section className="md:mt-24 mt-4 px-4 view-container flex flex-col gap-3 ">
       <div className="bg-dot-black/[0.1] dark:bg-dot-white/[0.1]">
         <div className="items-center justify-between sm:flex">
           <div>
@@ -20,7 +20,6 @@ const TechStack = (props: Props) => {
               Technologies that I use to get the job done.
             </p>
           </div>
-
         </div>
         <div className="mt-8 flex flex-wrap gap-2">
           <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-zinc-100 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
@@ -147,8 +146,6 @@ const TechStack = (props: Props) => {
                   Typescript
                 </span>
               </li>
-
-
             </ul>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -182,22 +179,8 @@ const TechStack = (props: Props) => {
                 strokeLinejoin="round"
                 className="lucide lucide-server h-6 w-6 flex-none"
               >
-                <rect
-                  width="20"
-                  height="8"
-                  x="2"
-                  y="2"
-                  rx="2"
-                  ry="2"
-                ></rect>
-                <rect
-                  width="20"
-                  height="8"
-                  x="2"
-                  y="14"
-                  rx="2"
-                  ry="2"
-                ></rect>
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect>
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect>
                 <line x1="6" x2="6.01" y1="6" y2="6"></line>
                 <line x1="6" x2="6.01" y1="18" y2="18"></line>
               </svg>
@@ -240,7 +223,6 @@ const TechStack = (props: Props) => {
                   Express.js
                 </span>
               </li>
-
             </ul>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -300,7 +282,6 @@ const TechStack = (props: Props) => {
                 </span>
               </li>
 
-
               <li className="group flex select-none items-center space-x-2">
                 <span>
                   <svg
@@ -357,7 +338,6 @@ const TechStack = (props: Props) => {
               <span className="ml-3">DevOps</span>
             </h3>
             <ul className="flex flex-wrap items-center gap-4 pt-4 sm:block sm:space-y-2">
-
               <li className="group flex select-none items-center space-x-2">
                 <span>
                   <svg
@@ -415,7 +395,7 @@ const TechStack = (props: Props) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default TechStack
+export default TechStack;
