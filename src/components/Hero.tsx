@@ -16,8 +16,8 @@ const Hero = () => {
           {` Yo, I'm Prashant, a cracked frontend developer and ...`}
         </div>
         <div className="text-left font-semibold text-3xl md:text-7xl lg:text-[80px] text-neutral-800 dark:text-neutral-100">
-          I seek challenge , people and tech that excite my core, and to live on
-          the edge
+          I seek challenge, people and tech that excite my core, and to live on
+          the edge.
         </div>
       </div>
     </section>
