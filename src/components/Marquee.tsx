@@ -16,7 +16,7 @@ export default function WorkExperienceMarquee({}: Props) {
           {/* Adding react-fast-marquee */}
           {[...Array(2)].map((_, i) => (
             <div key={i}>
-              Work Experience &nbsp;
+              Works &nbsp;
               <Image
                 src="/star.svg"
                 alt="star"
@@ -24,7 +24,7 @@ export default function WorkExperienceMarquee({}: Props) {
                 height={48}
                 className="inline-block"
               />
-              &nbsp; Work Experience &nbsp;
+              &nbsp; Works &nbsp;
               <Image
                 src="/star.svg"
                 alt="star"
@@ -32,16 +32,7 @@ export default function WorkExperienceMarquee({}: Props) {
                 height={48}
                 className="inline-block"
               />
-              &nbsp; Work Experience &nbsp;
-              <Image
-                src="/star.svg"
-                alt="star"
-                width={48}
-                height={48}
-                className="inline-block"
-              />
-              &nbsp;
-              &nbsp; Work Experience &nbsp;
+              &nbsp; Works &nbsp;
               <Image
                 src="/star.svg"
                 alt="star"
@@ -50,7 +41,16 @@ export default function WorkExperienceMarquee({}: Props) {
                 className="inline-block"
               />
               &nbsp;
-              &nbsp; Work Experience &nbsp;
+              &nbsp; Works &nbsp;
+              <Image
+                src="/star.svg"
+                alt="star"
+                width={48}
+                height={48}
+                className="inline-block"
+              />
+              &nbsp;
+              &nbsp;Works&nbsp;
               <Image
                 src="/star.svg"
                 alt="star"
