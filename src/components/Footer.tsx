@@ -76,7 +76,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col gap-3">
               <span className="text-3xl">contact</span>
-              <a href="" className="mt-2 font-normal">
+              <a href="mailto:prashantp.cs.21@nitj.ac.in" className="mt-2  dark:hover:text-zinc-100 hover:text-zinc-900 hover:gap-1 active:text-white text-sm hover:font-semibold font-normal text-zinc-500">
                 Message
               </a>
             </div>

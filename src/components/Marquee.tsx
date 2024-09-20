@@ -10,7 +10,7 @@ export default function WorkExperienceMarquee({}: Props) {
   return (
     <section className="view-container mt-24 mb-6 px-4">
       {/* Marquee Section */}
-      <div className="relative w-[99vw] bg-black dark:bg-neutral-800 text-white dark:text-gray-200 py-2 left-1/2 right-1/2 -mx-[50vw] mb-5 overflow-hidden">
+      <div className="relative w-[99vw] text-xl bg-black dark:bg-neutral-800 text-white dark:text-gray-200 py-2 left-1/2 right-1/2 -mx-[50vw] mb-5 overflow-hidden">
         <Marquee gradient={false} speed={80}>
           {" "}
           {/* Adding react-fast-marquee */}

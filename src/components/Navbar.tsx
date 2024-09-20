@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const tabs = [
   { id: "Home", label: "Home", Link: "/" },
@@ -52,38 +53,40 @@ const Navbar = () => {
           : "view-container-nonshrinked"
       } z-10 flex fixed left-1/2 border bg-neutral-50/85 dark:bg-neutral-800/85 bg-blur-lg -translate-x-1/2 top-2 sm:top-4 md:top-6 backdrop-blur-xl gap-2 rounded-full justify-between items-center transition-all p-2  duration-300`}
     >
-      <motion.div
-        className="flex place-items-center h-full gap-3 transition-all duration-300"
-        onHoverStart={() => setHover(true)}
-        onHoverEnd={() => setHover(false)}
-      >
-        <motion.span
-          className="relative   hover:cursor-pointer h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12"
-          animate={{ rotate: hover ? 360 : 0 }}
-          transition={{ duration: 0.3, ease: "linear" }}
+      <Link href="/">
+        <motion.div
+          className="flex place-items-center h-full gap-3 transition-all duration-300"
+          onHoverStart={() => setHover(true)}
+          onHoverEnd={() => setHover(false)}
         >
-          <Image
-            src={hover ? "/emojis/smilyheart.png" : "/emojis/smily.png"}
-            alt="logo"
-            width={48}
-            height={48}
-            className={`p-1 object-fill bg-neutral-50 dark:bg-neutral-700 hover:shadow-none ${
-              hover ? "rounded-3xl" : "rounded-full"
-            } transform transition duration-300 ease-in-out`}
-          />
-        </motion.span>
-        <motion.span
-          className={`text-lg hover:cursor-pointer sm:text-xl md:text-2xl text-black dark:text-white ${
-            shrink ? "text-base sm:text-lg md:text-xl" : ""
-          }`}
-          animate={{
-            scale: hover ? 1.05 : 1,
-          }}
-          transition={{ duration: 0.1 }}
-        >
-          Prashant
-        </motion.span>
-      </motion.div>
+          <motion.span
+            className="relative   hover:cursor-pointer h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12"
+            animate={{ rotate: hover ? 360 : 0 }}
+            transition={{ duration: 0.3, ease: "linear" }}
+          >
+            <Image
+              src={hover ? "/emojis/smilyheart.png" : "/emojis/smily.png"}
+              alt="logo"
+              width={48}
+              height={48}
+              className={`p-1 object-fill bg-neutral-50 dark:bg-neutral-700 hover:shadow-none ${
+                hover ? "rounded-3xl" : "rounded-full"
+              } transform transition duration-300 ease-in-out`}
+            />
+          </motion.span>
+          <motion.span
+            className={`text-lg hover:cursor-pointer sm:text-xl md:text-2xl text-black dark:text-white ${
+              shrink ? "text-base sm:text-lg md:text-xl" : ""
+            }`}
+            animate={{
+              scale: hover ? 1.05 : 1,
+            }}
+            transition={{ duration: 0.1 }}
+          >
+            Prashant
+          </motion.span>
+        </motion.div>
+      </Link>
 
       {isMobile ? (
         <button
@@ -119,10 +122,12 @@ const Navbar = () => {
           <div className="shadow-lg rounded-full w-full overflow-hidden md:mr-1 mr-0">
             <button
               type="button"
-              className="group rounded-full px-2 py-1 sm:px-3 sm:py-2 text-sm sm:text-base md:text-lg transition flex w-full shrink-0 text-gray-100 hover:ring-1 hover:-translate-y-[1px] ring-gray-200 dark:ring-gray-600 shadow-inner-gray bg-black dark:bg-white dark:text-gray-800 relative overflow-hidden"
+              className="group rounded-full px-2 py-1 sm:px-3 sm:py-2 text-sm sm:text-base md:text-lg transition flex w-full shrink-0 text-gray-100 hover:ring-1 hover:-translate-y-[1px] ring-gray-400 dark:ring-gray-600 shadow-inner-gray bg-black dark:bg-neutral-900 dark:text-gray-400 relative overflow-hidden"
             >
-              <span className="relative z-10 w-full text-center">{`Say "Hello!"`}</span>
-              <div className="absolute inset-0 z-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:animate-shine" />
+              <a target="_blank" href="https://twitter.com/prash2403">
+                <span className="relative z-10 w-full text-center">{`Say "Hello!"`}</span>
+                <div className="absolute inset-0 z-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 translate-x-[-100%] group-hover:animate-shine" />
+              </a>
             </button>
           </div>
         </div>

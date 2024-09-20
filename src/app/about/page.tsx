@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Experience from "@/components/Experience";
 
 const About = () => {
   return (
@@ -27,79 +26,18 @@ const About = () => {
             </div>
           </div>
         </section>
-        
-        <section className="flex flex-col md:flex-row gap-8 text-gray-900 dark:text-white">
-          <div className="md:w-1/3">
-            <div className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 dark:text-zinc-100 mb-4">
-                Education
-              </h2>
-              <p className="font-semibold text-xl text-gray-900 dark:text-white mb-2">
-                Dr B R Ambedkar National Institute of Technology
-              </p>
-              <p className="text-gray-700 dark:text-zinc-300">
-                2021 - 2025 · B.Tech in Computer Science and Engineering
-              </p>
-            </div>
-          </div>
 
-          <div className="md:w-2/3">
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-zinc-100 mb-6">
-              Work Experience
+        <section className="text-center py-8">
+          <div className="flex flex-col items-center justify-center">
+            <h2 className="text-4xl font-semibold text-gray-900 dark:text-white mb-4">
+              Page Under Construction 🚧 
             </h2>
-            <div className="grid gap-8">
-              <Experience 
-                role="Front end developer"
-                companyName="GroVr Testing"
-                companyLink="https://www.grovrtesting.com/"
-                timeLine="Jan 2024 - Present"
-                descriptions={[
-                  "Led the development of the organization's website UI and web design using Figma, creating a component library for consistency.",
-                  "Utilized Next.js and Tailwind CSS to design and implement responsive and visually appealing front-end pages.",
-                  "Contributed to the content management system (CMS) integration using Sanity.io to streamline data management and website updates.",
-                ]}
-              />
-
-              <Experience
-                role="Front end developer"
-                companyName="JollySE Foundation"
-                companyLink="https://www.jollysoothingera.com/"
-                timeLine="Sept - Dec 2023"
-                descriptions={[
-                  "Led the development of the organization's website UI and web design using Figma, creating a component library for consistency.",
-                  "Utilized Next.js and Tailwind CSS to design and implement responsive and visually appealing front-end pages.",
-                  "Contributed to the content management system (CMS) integration using Sanity.io to streamline data management and website updates.",
-                ]}
-              />
-
-              <Experience
-                role="UI/UX designer"
-                companyName="GDSC NITJ (Volunteering)"
-                companyLink="https://gdsc.community.dev/dr-b-r-ambedkar-national-institute-of-technology-nit-jalandhar/"
-                timeLine="Sept 2021 - Present"
-                descriptions={[
-                  "Organizing and hosting events organized by GDSC NITJ, as well as providing mentorship to junior members.",
-                  "Contributed to the development of the club's official website and was an organizer at HackMOL 4.0 Hackathon.",
-                  "Currently working on the development of the club's official website and organizing the upcoming HackMOL 5.0 Hackathon.",
-                ]}
-              />
-
-              <Experience
-                role="Front end developer"
-                companyName="VedVyas Foundation (Volunteering)"
-                companyLink="https://vedvyas.org/"
-                timeLine="Jan - Mar 2023"
-                descriptions={[
-                  "Under the WINTER OF CODE: GDSC IIIT Kalyani, I got to work on the open source Ved Vyas Foundation.",
-                  "Worked on the BhagavadGita.ai UI development and web design using React.js and Tailwind CSS.",
-                ]}
-              />
-            </div>
+            <p>will update soon : )</p>
           </div>
         </section>
       </div>
     </div>
   );
-}
+};
 
 export default About;

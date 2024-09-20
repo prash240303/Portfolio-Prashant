@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface PropTypes {
   title: string;
@@ -12,7 +13,7 @@ interface PropTypes {
 }
 
 const colors = ["#6c5ce7", "#218c74", "#d4748d", "#f39c12"];
-const hexToRgb = (hex:string) => {
+const hexToRgb = (hex: string) => {
   let r = parseInt(hex.slice(1, 3), 16);
   let g = parseInt(hex.slice(3, 5), 16);
   let b = parseInt(hex.slice(5, 7), 16);
@@ -46,7 +47,9 @@ const ProjectCard = ({
   }, [index]);
 
   return (
-    <div
+    <a
+      href={link}
+      target="_blank"
       className={`pt-6 px-6 rounded-3xl group cursor-pointer transition-all duration-300 ease-in-out `}
       style={{ backgroundColor: getRGBAColor(color, 0.1) }}
     >
@@ -55,7 +58,7 @@ const ProjectCard = ({
           <h2 className="text-2xl font-bold mb-2" style={{ color }}>
             {title}
           </h2>
-          <p className="text-sm font-light text-gray-500">{subtitle}</p>
+          <p className="text-sm font-light text-gray-500 dark:text-gray-300">{subtitle}</p>
         </div>
         <div
           className="p-2 rounded-full transition-transform duration-300 ease-in-out group-hover:-rotate-45 group-hover:opacity-100 opacity-30 group-hover:scale-110"
@@ -95,7 +98,7 @@ const ProjectCard = ({
           />
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
