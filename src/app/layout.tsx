@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Inter } from 'next/font/google';
- 
-export const inter = Inter({ subsets: ['latin'] });
+import { Inter } from "next/font/google";
+
+export const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Prashant's Portfolio",
@@ -18,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.gif" />{" "}
+      </head>
       <body className={`${inter.className} `}>
         <Navbar />
         {children}
