@@ -24,7 +24,7 @@ const projects = [
     title: "SQLHub: Online SQL editor",
     subtitle: "Online SQL query simulator",
     tags: ["Next.Js", "Ace-Editor", "Typescript"],
-    image: "/projects/sql-editor.png ",
+    image: "/projects/sql-editor.png",
     link: "https://sql-editor-nextjs.vercel.app/",
   },
   {
