@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <main>
-        <div className="view-container px-6 mt-10 grid md:grid-cols-2 grid-cols-1 mb-[150px] gap-4 overflow:hidden ">
+        <div className="view-container px-6 mt-10 grid md:grid-cols-2 grid-cols-1 mb-[50px] gap-4 overflow:hidden ">
           <div className="flex flex-col font-medium w-full  text-xl dark:text-white  gap-1 mb-4">
             {/* spoify card */}
             {/* <div className=" border md:mb-2 mb-6  hover:scale-105 transition duration-300 ease-in-out border-zinc-500 w-full h-fit py-2 px-4 dark:bg-zinc-950 bg-zinc-100 rounded-full flex gap-4 items-center">
