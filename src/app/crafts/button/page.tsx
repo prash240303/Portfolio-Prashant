@@ -1,6 +1,7 @@
 "use client";
 import CodeBlock from "@/components/ui/CodeBlock";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect } from "react";
 
 const codeSnippet = `
@@ -97,7 +98,6 @@ const codeSnippetPulsatingCSS = `
 
 function CraftsButtonPage() {
   useEffect(() => {
-    // This ensures that the Twitter widgets script is loaded after component mounts
     const script = document.createElement("script");
     script.src = "https://platform.twitter.com/widgets.js";
     script.async = true;
@@ -107,6 +107,9 @@ function CraftsButtonPage() {
   return (
     <div className="view-container mt-12 md:mt-24 mb-12 md:mb-[100px] overflow-hidden">
       <section className="py-4 md:py-8 px-4 md:px-6 max-w-[600px] mx-auto ">
+        <Link href="/crafts">
+          <span className="text-sm mb-4 text-neutral-500">Back to Crafts</span>
+        </Link>
         <h1 className="text-xl mb-1 font-semibold">
           Animated Button component
         </h1>
@@ -125,7 +128,13 @@ function CraftsButtonPage() {
         <div className="text-base mt-4 text-neutral-700">
           Recently I came across a tweet by very respected{" "}
           <span className="font-medium text-blue-500">
-            <a href="https://x.com/mannupaaji">@mannupaaji</a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://x.com/mannupaaji"
+            >
+              @mannupaaji
+            </a>
           </span>
           Here is the reference tweet
           <div>
@@ -144,7 +153,9 @@ function CraftsButtonPage() {
           </div>
           where he referenced the website for{" "}
           <span className="font-medium text-lime-500">
-            <a href="https://antimetal.com/">Antimetal</a>
+            <a target="_blank" href="https://antimetal.com/">
+              Antimetal
+            </a>
           </span>{" "}
           where the CTA button struck my mind and I also in motivated mind
           thought to recreate that button.
@@ -205,7 +216,7 @@ function CraftsButtonPage() {
             </p>
             <div>
               <iframe
-                src="https://codesandbox.io/p/devbox/wptx23?embed=1&file=%2Fapp%2Fpage.tsx"
+                src="https://codesandbox.io/p/devbox/wptx23?embed=1"
                 style={{
                   width: "100%",
                   height: "500px",
