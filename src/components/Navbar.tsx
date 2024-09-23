@@ -75,7 +75,7 @@ const Navbar = () => {
             />
           </motion.span>
           <motion.span
-            className={`text-lg hover:cursor-pointer sm:text-xl md:text-2xl text-black dark:text-white ${
+            className={`text-lg hover:cursor-pointer font-medium sm:text-xl md:text-2xl text-black dark:text-white ${
               shrink ? "text-base sm:text-lg md:text-xl" : ""
             }`}
             animate={{
@@ -102,7 +102,7 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={() => handleTabClick(tab.id, tab.Link)}
-                className={`relative rounded-full px-2 py-1 sm:px-3 sm:py-1.5 text-sm sm:text-base md:text-lg transition ${
+                className={`relative font-medium rounded-full px-2 py-1 sm:px-3 sm:py-1.5 text-sm sm:text-base md:text-lg transition ${
                   activeTab === tab.id
                     ? "text-black dark:text-white bg-white dark:bg-neutral-700 hover:shadow-inner-white dark:hover:shadow-inner-neutral-600 hover:bg-gradient-to-b from-white via-gray-100 to-gray-100 dark:hover:bg-gradient-to-b dark:from-neutral-700 dark:via-neutral-600 dark:to-neutral-600"
                     : "hover:text-gray-700 dark:hover:text-gray-300 hover:ring-1 text-neutral-400 dark:text-neutral-400 hover:ring-gray-200 dark:hover:ring-gray-600 hover:shadow-inner-white dark:hover:shadow-inner-neutral-700 hover:bg-gradient-to-b from-white via-gray-100 to-neutral-100 dark:hover:bg-gradient-to-b dark:from-neutral-800 dark:via-neutral-700 dark:to-neutral-700"

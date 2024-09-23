@@ -21,7 +21,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.gif" />{" "}
       </head>
-      <body className={`${inter.className} `}>
+      <body suppressHydrationWarning className={`${inter.className} `}>
         <Navbar />
         {children}
         <Footer />

@@ -1,18 +1,56 @@
+import Link from "next/link";
 import React from "react";
-
-const crafts = () => {
+const componentList = [
+  {
+    title: "Animated Button component",
+    description: "CTA button with animation using pure js.",
+    slug: "button",
+  },
+  {
+    title: "What's playing loading component",
+    description:
+      "Transition components for music site exploration → What's playing Beno!",
+    slug: "whats-playing",
+  },
+  {
+    title: "Reward claiming interaction",
+    description: "A quick fun interaction built with Next & Framer Motion.",
+    slug: "reward-claiming",
+  },
+  {
+    title: "Amie calendar tab switch",
+    description: "Recreating the Amie Calendar Tab Switch",
+    slug: "amie-calendar",
+  },
+];
+const Crafts = () => {
   return (
-    <div className="view-container mt-24 grid grid-cols-1 md:mb-[100px] mb-12 gap-4 overflow-hidden">
-      <section className="text-center py-8">
-        <div className="flex flex-col items-center justify-center">
-          <h2 className="text-4xl font-semibold text-gray-900 dark:text-white mb-4">
-            Page Under Construction 🚧
-          </h2>
-          <p>will update soon : )</p>
+    <div className="view-container mt-12 md:mt-24 mb-12 md:mb-[100px] overflow-hidden">
+      <section className="py-4 md:py-8 px-4 md:px-6 max-w-3xl mx-auto">
+        <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8">
+          Components
+        </h2>
+        <div className="space-y-4">
+          {componentList.map((component, index) => (
+            <Link
+              href={`/crafts/${component.slug}`}
+              key={index}
+              className="block hover:bg-neutral-200/50 rounded-xl p-4 md:p-6 text-left transition-colors duration-200"
+            >
+              <div>
+                <h3 className="text-base md:text-lg font-semibold mb-2">
+                  {component.title}
+                </h3>
+                <p className="text-sm md:text-base text-gray-600">
+                  {component.description}
+                </p>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
     </div>
   );
 };
 
-export default crafts;
+export default Crafts;

@@ -18,7 +18,6 @@ const projects = [
     image: "/projects/vro.png",
     link: "https://walmart-hackathon-frontend.vercel.app/",
   },
-
   {
     id: 3,
     title: "SQLHub: Online SQL editor",
