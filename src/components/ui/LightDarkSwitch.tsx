@@ -6,9 +6,9 @@ import { Sun, Moon, Monitor } from 'lucide-react';
 const ThemeSwitch = () => {
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.theme || 'system'; // Default theme system
+      return localStorage.theme || 'dark'; // Default theme system
     }
-    return 'light';
+    return 'dark';
   });
 
   useEffect(() => {
