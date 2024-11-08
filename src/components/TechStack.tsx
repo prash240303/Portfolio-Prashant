@@ -23,7 +23,7 @@ const TechStack = (props: Props) => {
         </div>
         <div className="mt-8 flex flex-wrap gap-2">
           <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-zinc-100 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
-            <h3 className="flex text-sm font-semibold text-zinc-700 ">
+            <h3 className="flex text-sm font-semibold text-zinc-700 dark:text-zinc-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
