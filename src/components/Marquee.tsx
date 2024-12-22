@@ -1,12 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import projects from "../data/Projects";
 import ProjectCard from "../components/ProjectCard";
 import Marquee from "react-fast-marquee"; // Importing the react-fast-marquee
-
+import Projects from "../data/Projects"
 type Props = {};
 
-export default function WorkExperienceMarquee({}: Props) {
+export default function WorkExperienceMarquee({ }: Props) {
   return (
     <section className="view-container mt-24 mb-6 px-4">
       {/* Marquee Section */}
@@ -16,7 +15,7 @@ export default function WorkExperienceMarquee({}: Props) {
           {/* Adding react-fast-marquee */}
           {[...Array(2)].map((_, i) => (
             <div key={i}>
-              Projects &nbsp;
+              Open to work &nbsp;
               <Image
                 src="/star.svg"
                 alt="star"
@@ -24,7 +23,7 @@ export default function WorkExperienceMarquee({}: Props) {
                 height={48}
                 className="inline-block"
               />
-              &nbsp; Projects &nbsp;
+              &nbsp; Open to work &nbsp;
               <Image
                 src="/star.svg"
                 alt="star"
@@ -32,16 +31,7 @@ export default function WorkExperienceMarquee({}: Props) {
                 height={48}
                 className="inline-block"
               />
-              &nbsp; Projects &nbsp;
-              <Image
-                src="/star.svg"
-                alt="star"
-                width={48}
-                height={48}
-                className="inline-block"
-              />
-              &nbsp;
-              &nbsp; Projects &nbsp;
+              &nbsp; Open to work &nbsp;
               <Image
                 src="/star.svg"
                 alt="star"
@@ -50,7 +40,7 @@ export default function WorkExperienceMarquee({}: Props) {
                 className="inline-block"
               />
               &nbsp;
-              &nbsp;Projects&nbsp;
+              &nbsp; Open to work &nbsp;
               <Image
                 src="/star.svg"
                 alt="star"
@@ -59,7 +49,7 @@ export default function WorkExperienceMarquee({}: Props) {
                 className="inline-block"
               />
               &nbsp;
-              &nbsp;Projects&nbsp;
+              &nbsp;Open to work&nbsp;
               <Image
                 src="/star.svg"
                 alt="star"
@@ -68,7 +58,7 @@ export default function WorkExperienceMarquee({}: Props) {
                 className="inline-block"
               />
               &nbsp;
-              &nbsp;Projects&nbsp;
+              &nbsp;Open to work&nbsp;
               <Image
                 src="/star.svg"
                 alt="star"
@@ -77,7 +67,16 @@ export default function WorkExperienceMarquee({}: Props) {
                 className="inline-block"
               />
               &nbsp;
-              &nbsp;Projects&nbsp;
+              &nbsp;Open to work&nbsp;
+              <Image
+                src="/star.svg"
+                alt="star"
+                width={48}
+                height={48}
+                className="inline-block"
+              />
+              &nbsp;
+              &nbsp;Open to work&nbsp;
               <Image
                 src="/star.svg"
                 alt="star"
@@ -91,9 +90,24 @@ export default function WorkExperienceMarquee({}: Props) {
         </Marquee>
       </div>
 
-      {/* Projects Grid */}
-      <div className="grid md:grid-cols-2 mt-12 grid-cols-1 gap-8 p-1">
-        {projects.map((project, index) => (
+      {/* Open to work Grid */}
+      <div className="items-center justify-between mt-12 sm:flex mb-6">
+        <div>
+          <a href="#my-tech-stack">
+            <h2
+              className="text-3xl font-semibold tracking-tighttext-zinc-100"
+              id="my-tech-stack"
+            >
+              My Projects
+            </h2>
+          </a>
+          <p className="mt-2 text-base text-zinc-600 ">
+            Building beautiful things.
+          </p>
+        </div>
+      </div>
+      <div className="grid md:grid-cols-2  grid-cols-1 gap-8 p-1">
+        {Projects.map((project, index) => (
           <ProjectCard key={project.id} {...project} index={index} />
         ))}
       </div>

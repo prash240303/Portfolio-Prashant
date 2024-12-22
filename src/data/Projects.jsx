@@ -1,6 +1,5 @@
-import { title } from "process";
 
-const projects = [
+const Projects = [
   {
     id: 1,
     title: "TalkPDF",
@@ -72,4 +71,4 @@ const projects = [
   },
 ];
 
-export default projects;
+export default Projects;
