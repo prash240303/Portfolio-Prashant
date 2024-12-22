@@ -25,26 +25,18 @@ const Projects = [
     image: "/projects/sql-editor.png",
     link: "https://sql-editor-nextjs.vercel.app/",
   },
+ 
   {
     id: 4,
-    title: "Iconify Icons",
-    subtitle: "A free svg icons hosting website build on React.js - 2023",
-    tags: ["React.js", "Icons"],
-    image: "/projects/iconify.png",
-    link: "https://github.com/prash240303/Iconify-Icons",
-  },
-
-  {
-    id: 5,
     title: "Gradify Gradients",
     subtitle:
-      "A figma plugin to generate beautiful linear and mesh gradients - 2023",
+      "A figma plugin to generate beautiful linear and mesh gradients",
     tags: ["Figma", "Plugin"],
     image: "/projects/gradify.png",
     link: "https://www.figma.com/community/plugin/1187380125870182667/gradify",
   },
   {
-    id: 6,
+    id: 5,
     title: "Travel crew",
     subtitle: "A flutter app built on Appwrite cloud to find travel partners",
     tags: ["flutter app", "travel"],
@@ -52,23 +44,15 @@ const Projects = [
     link: "https://github.com/YuvrajSingh3110/travel_crew",
   },
   {
-    id: 7,
+    id: 6,
     title: "Minecraft Clone",
     subtitle:
-      "A minecraft clone built with 3.js with 5 available block textures - 2023",
+      "A minecraft clone built with 3.js with 5 available block textures",
     tags: ["3.js", "Game"],
     image: "/projects/minecraft.png",
     link: "https://github.com/prash240303/Minecraft-Clone-3.js",
   },
-  {
-    id: 8,
-    title: "Vans Life",
-    subtitle:
-      "An awesome app for renting decked-out travel vans for your next road trip adventure! 🚐 - 2023",
-    tags: ["Travel", "App"],
-    image: "/projects/vans.png",
-    link: "https://github.com/prash240303/React-Router-miniwebsite",
-  },
+  
 ];
 
 export default Projects;

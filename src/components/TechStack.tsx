@@ -16,13 +16,13 @@ const TechStack = (props: Props) => {
                 My Tech Stack
               </h2>
             </a>
-            <p className="mt-2 text-base text-zinc-600 ">
+            <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400 ">
               Technologies that I use to get the job done.
             </p>
           </div>
         </div>
         <div className="mt-8 flex flex-wrap gap-2">
-          <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-zinc-100 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
+          <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-black-10 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
             <h3 className="flex text-sm font-semibold text-zinc-700 dark:text-zinc-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +165,7 @@ const TechStack = (props: Props) => {
               <rect width="6" height="10" x="16" y="12" rx="2"></rect>
             </svg>
           </div>
-          <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-zinc-100 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
+          <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-black-10 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
             <h3 className="flex text-sm font-semibold text-zinc-700 dark:text-zinc-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -242,7 +242,7 @@ const TechStack = (props: Props) => {
               <line x1="6" x2="6.01" y1="18" y2="18"></line>
             </svg>
           </div>
-          <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-zinc-100 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
+          <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-black-10 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
             <h3 className="flex text-sm font-semibold text-zinc-700 dark:text-zinc-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -317,7 +317,7 @@ const TechStack = (props: Props) => {
               <path d="M3 12A9 3 0 0 0 21 12"></path>
             </svg>
           </div>
-          <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-zinc-100 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
+          <div className="group/techitem relative w-full space-y-4 divide-y divide-dashed divide-zinc-100 overflow-hidden rounded-2xl border border-black-10 p-6 dark:divide-zinc-700/40 dark:border-zinc-700/40 sm:flex-1">
             <h3 className="flex text-sm font-semibold text-zinc-700 dark:text-zinc-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

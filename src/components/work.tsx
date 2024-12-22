@@ -16,14 +16,14 @@ const WorkExp = (props: Props) => {
               Work Experience and Education
             </h2>
           </a>
-          <p className="mt-2 text-base text-zinc-600 ">
+          <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400">
             Places I have gained tech-experiences and my education 🎓
           </p>
         </div>
       </div>
       <div className="  grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-4 ">
         {/* Work Experience  */}
-        <div className="rounded-2xl mt-4 border view-container border-zinc-100 p-6 dark:border-zinc-700/40 flex-1">
+        <div className="rounded-2xl mt-4 border view-container border-black-10 p-6 dark:border-zinc-700/40 flex-1">
           <div className="flex w-full items-center justify-between">
             <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
               <svg
@@ -44,12 +44,7 @@ const WorkExp = (props: Props) => {
               </svg>
               <span className="ml-3">Work</span>
             </h2>
-            <a
-              className="text-xs italic underline decoration-dotted underline-offset-4 hover:decoration-solid"
-              href="mailto:prash2402@gmail.com"
-            >
-              hire me
-            </a>
+           
           </div>
           <ol className="mt-6 space-y-4">
             <li className="flex gap-4">
@@ -140,31 +135,10 @@ const WorkExp = (props: Props) => {
               </dl>
             </li>
           </ol>
-          <a
-            className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 group mt-6 w-full"
-            download=""
-            target="_blank"
-            href="https://drive.google.com/file/d/1wkYxQO2XK6280JiK5wrMog4dwL5h5yaw/view?usp=sharing"
-          >
-            Download Resume
-            <svg
-              viewBox="0 0 16 16"
-              fill="none"
-              aria-hidden="true"
-              className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50"
-            >
-              <path
-                d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-          </a>
         </div>
 
         {/* Education Section */}
-        <div className="rounded-2xl mt-4 border view-container border-zinc-100 p-6 dark:border-zinc-700/40 flex-1">
+        <div className="rounded-2xl mt-4 border view-container border-black-10 p-6 dark:border-zinc-700/40 flex-1">
           <div className="flex w-full items-center justify-between">
             <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
               <svg
@@ -187,23 +161,23 @@ const WorkExp = (props: Props) => {
           </div>
           <ol className="mt-6 space-y-4">
             <li className="flex gap-4">
-              <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <div className="relative mt-1 flex h-16  w-16 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   alt="University Logo"
                   loading="lazy"
-                  width="48"
-                  height="48"
+                  width="500"
+                  height="500"
                   decoding="async"
                   data-nimg="1"
-                  className="p-1 rounded-full"
+                  className="p-1 w-16 h-16 rounded-full"
                   src="/logos/nitj-logo.png"
                 />
               </div>
-              <dl className="flex flex-auto flex-wrap gap-x-2">
+              <dl className="flex flex-auto flex-wrap ">
                 <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
                   Dr B R Ambedkar National Institute of Technology Jalandhar
                 </dd>
-                <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+                <dd className="text-xs text-zinc-500 mt-1 dark:text-zinc-400">
                   Bachelor of Computer Science
                 </dd>
                 <dd
