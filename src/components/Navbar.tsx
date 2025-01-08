@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 
 const tabs = [
@@ -13,18 +13,27 @@ const tabs = [
 ];
 
 const Navbar = () => {
-  const [activeTab, setActiveTab] = useState(tabs[0].id);
+  const [activeTab, setActiveTab] = useState<string>("");
   const [hover, setHover] = useState(false);
   const [shrink, setShrink] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleTabClick = (tabId: string, link: string) => {
     setActiveTab(tabId);
     router.push(link);
     if (isMobile) setIsMenuOpen(false);
+
+    localStorage.setItem("activeTab", tabId);
   };
+
+  useEffect(() => {
+    const storedTab = localStorage.getItem("activeTab");
+    const currentTab = tabs.find((tab) => tab.Link === pathname);
+    setActiveTab(storedTab || currentTab?.id || tabs[0].id);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
