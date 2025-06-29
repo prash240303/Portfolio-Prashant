@@ -45,7 +45,7 @@ import AvatarHairpin from "@/components/Home/AvatarHairpin";
 import Bento from "@/components/Home/Bento";
 import { Intro } from "@/components/Home/Intro";
 import BlurFade from "@/components/ui/BlurFade";
-import WorkPage from "./work/page";
+import WorkExperience from "@/components/work";
 
 const page = () => {
   return (
@@ -77,7 +77,7 @@ const page = () => {
       </BlurFade>
 
       <BlurFade delay={0.7}>
-        <WorkPage isHomeView={true} />
+        <WorkExperience isHomeView={true} />
       </BlurFade>
     </section>
   );
