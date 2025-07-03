@@ -18,14 +18,6 @@ const MetaHead = ({
       <meta property="og:url" content="https://portfolio-prash.vercel.app" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta
-        property="og:image"
-        content={
-          embedSource === 'default'
-            ? 'https://ik.imagekit.io/nbjd4tzdl/Group%206.png?updatedAt=1691563555181-auto'
-            : embedSource?.og
-        }
-      />
 
       <meta
         property="twitter:card"
@@ -38,14 +30,6 @@ const MetaHead = ({
       <meta property="twitter:url" content="https://portfolio-prash.vercel.app/" />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
-      <meta
-        property="twitter:image"
-        content={
-          embedSource === 'default'
-            ? 'https://ik.imagekit.io/fqtmz3ezc3/seo.png?updatedAt=1698985345666'
-            : embedSource?.twitter
-        }
-      />
     </Head>
   );
 };

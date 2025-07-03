@@ -16,8 +16,8 @@ const info = {
   twitter: "@prash2403",
   description:
     "Full-Stack Developer, Next.js Buff, Freelancer, Always Evolving. Crafting web apps to ignite ideas.",
-  url: "https://rohitsinghrawat.tech",
-  image: "/images/RohitSinghRawat.png",
+  url: "https://portfolio-prash.vercel.app/",
+  image: "/seo.png",
 };
 
 export const metadata: Metadata = {
