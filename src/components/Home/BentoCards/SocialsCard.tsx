@@ -1,6 +1,6 @@
 import { Discord } from '@/components/Icons/socials/Discord'
 import { Linkedin } from '@/components/Icons/socials/Linkedin'
-import { PeerList } from '@/components/Icons/socials/PeerList'
+import { GitHub } from '@/components/Icons/socials/GitHub'
 import { Spotify } from '@/components/Icons/socials/Spotify'
 import { Twitter } from '@/components/Icons/socials/Twitter'
 import BentoCard from './BentoCard'
@@ -35,9 +35,9 @@ const socials = [
     zIndex: 3,
   },
   {
-    name: 'PeerList',
-    icon: PeerList,
-    link: 'https://peerlist.io/prash2402828',
+    name: 'GitHub',
+    icon: GitHub,
+    link: 'https://github.com/prash240303',
     translateX: '-4px',
     rotate: '3deg',
     zIndex: 2,
@@ -62,7 +62,7 @@ const socials = [
 
 const SocialsCard = () => {
   return (
-    <BentoCard className="group-social col-span-5 row-span-1 h-56 p-4 xs:col-span-3 xs:row-span-2 lg:p-6">
+    <BentoCard className="group-social cursor-pointer row-span-1 col-span-5 h-56 p-4 lg:p-6">
       {' '}
       <h2 className="bg-gradient-to-r from-[#3a5454] via-[#101c20] to-[#091113] bg-clip-text font-neu text-sm font-medium text-transparent">
         Socials
