@@ -4,19 +4,20 @@ export const neu = localFont({
   src: [
     {
       path: '../../public/font/NeueMachina-Light.otf',
-      weight: '200',
+      weight: '300',
     },
     {
-      path: '../../public/font/NeueMachina-Regular.otf',
+      path: '../../public/font/NeueMachina-Regular.otf', 
       weight: '400',
     },
     {
       path: '../../public/font/NeueMachina-Ultrabold.otf',
-      weight: '700',
+      weight: '800',
     },
   ],
   variable: '--font-neu',
 })
+
 export const lombok = localFont({
   src: [
     {
@@ -26,6 +27,7 @@ export const lombok = localFont({
   ],
   variable: '--font-lombok',
 })
+
 export const cath = localFont({
   src: [
     {

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import React from "react";
@@ -9,7 +8,6 @@ import { Analytics } from "@/components/shared/Analytics";
 import ScrollToTopButton from "@/components/shared/ScrollToTop";
 import Footer from "@/components/layout/Nav/Footer";
 import Header from "@/components/layout/Nav/Header";
-const inter = Inter({ subsets: ["latin"] });
 
 const info = {
   name: "Prashant",
@@ -53,7 +51,7 @@ export default function RootLayout({ children }: ChildrenProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${neu.variable} ${inter.className} ${cath.variable} ${lombok.variable}`}
+        className={`${neu.variable} ${cath.variable} ${lombok.variable} font-sans antialiased`}
       >
         <Providers>
           <div className="relative dark:bg-black">

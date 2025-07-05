@@ -1,5 +1,5 @@
-import AnimeCard2 from "./BentoCards/AnimeCard2";
-import GithubCard from "./BentoCards/Githubcard";
+// import AnimeCard2 from "./BentoCards/AnimeCard2";
+// import GithubCard from "./BentoCards/Githubcard";
 import SocialsCard from "./BentoCards/SocialsCard";
 import StacksCard from "./BentoCards/StacksCard";
 
