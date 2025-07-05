@@ -171,18 +171,6 @@ const page = () => {
           </p>
         </div>
       </div>
-      <div className="mt-10">
-        <h1 className="text-2xl font-bold tracking-tight">Logo</h1>
-        <p className="my-7">Unique emblem capturing my personal essence.</p>
-        <div className="my-12 flex justify-around gap-5 max-xs:flex-col">
-          <div className="flex h-40 w-full items-center justify-center rounded-md bg-black">
-            <Logo className="size-20 fill-white" />
-          </div>
-          <div className="flex h-40 w-full items-center justify-center rounded-md bg-white">
-            <Logo className="size-20 fill-black" />
-          </div>
-        </div>
-      </div>
       <CdBack />
     </section>
   )
