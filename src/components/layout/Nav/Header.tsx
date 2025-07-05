@@ -5,7 +5,7 @@ import NavBar from "./Navbar";
 
 function Header() {
   return (
-    <header className="relative mt-4 bg-transparent flex items-center justify-between">
+    <header className="relative mt-4 bg-transparent flex items-center z-10">
       <Link href={"/"} className="absolute left-4 md:left-10 md:top-4">
         <Image
           alt="logo-prashant"

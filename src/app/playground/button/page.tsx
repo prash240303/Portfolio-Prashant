@@ -1,4 +1,5 @@
 "use client";
+import CustomButton from "@/components/Playground/CustomButton";
 import CodeBlock from "@/components/ui/CodeBlock";
 import Image from "next/image";
 import Link from "next/link";
@@ -131,6 +132,8 @@ function CraftsButtonPage() {
           className="md:h-64 w-auto aspect-auto h-24"
         />
       </div>
+        <CustomButton/>
+
 
       <div className="text-base mt-4 text-neutral-700 dark:text-neutral-300">
         Recently I came across a tweet by very respected{" "}

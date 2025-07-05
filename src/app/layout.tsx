@@ -8,6 +8,7 @@ import { Analytics } from "@/components/shared/Analytics";
 import ScrollToTopButton from "@/components/shared/ScrollToTop";
 import Footer from "@/components/layout/Nav/Footer";
 import Header from "@/components/layout/Nav/Header";
+import Head from "next/head";
 
 const info = {
   name: "Prashant",

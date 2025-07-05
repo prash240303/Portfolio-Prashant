@@ -389,3 +389,79 @@ body::-webkit-scrollbar-track {
 .animate-spinSlow {
   animation: spin 5s linear infinite;
 }
+
+
+
+
+
+
+.moving-arrows-item {
+  display: none;
+}
+
+.moving-arrows-item.block {
+  display: block;
+}
+
+.moving-arrows-item.group-hover\\:block {
+  display: none;
+}
+
+.group:hover .moving-arrows-item.group-hover\\:block {
+  display: block;
+}
+
+.moving-arrows-item div {
+  background-color: rgb(255, 255, 255);
+  opacity: 0.3;
+}
+
+.wave {
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.wave-1 {
+  animation-delay: 0s;
+}
+
+.wave-2 {
+  animation-delay: 0.1s; /* 0.2s delay for the second arrow */
+}
+
+.wave-3 {
+  animation-delay: 0.2s; /* 0.4s delay for the third arrow */
+}
+
+.wave-4 {
+  animation-delay: 0.3s; /* 0.6s delay for the fourth arrow */
+}
+
+.wave-5 {
+  animation-delay: 0.4s; /* 0.8s delay for the fifth arrow */
+}
+
+.wave-6 {
+  animation-delay: 0.5s; /* 1s delay for the sixth arrow */
+}
+
+.wave-7 {
+  animation-delay: 0.6s; /* 1.2s delay for the seventh arrow */
+}
+
+.wave-8 {
+  animation-delay: 0.7s; /* 1.4s delay for the eighth arrow */
+}
+
+.group:hover .moving-arrows-item:first-child {
+  display: none;
+}

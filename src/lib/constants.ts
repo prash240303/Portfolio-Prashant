@@ -52,12 +52,6 @@ export const iconData: IconData[] = [
     label: "Animation",
   },
   {
-    Component: MdxIcon,
-    href: "https://mdxjs.com",
-    className: "size-12",
-    label: "Markdown",
-  },
-  {
     Component: Umami,
     href: "https://umami.is",
     className: "size-12 dark:invert",
@@ -77,16 +71,12 @@ export const iconData: IconData[] = [
   },
 ];
 export const inspirationWebsites = [
+  { name: "manuarora.in", url: "https://manuarora.in/" },
   { name: "antfu.me", url: "https://antfu.me/" },
   { name: "beta.vimfn.in", url: "https://beta.vimfn.in" },
   { name: "honghong.me", url: "https://honghong.me" },
   { name: "leerob.io", url: "https://leerob.io" },
-  { name: "manuarora.in", url: "https://manuarora.in/" },
   { name: "canvas.hrcd.fr", url: "https://canvas.hrcd.fr/" },
-  { name: "marcbouchenoire.com", url: "https://marcbouchenoire.com" },
-  { name: "magicui.design", url: "https://magicui.design/" },
-  { name: "augen.pro", url: "https://augen.pro/" },
-  { name: "ui.aceternity.com", url: "https://ui.aceternity.com/" },
 ];
 export const topProjects = [
   {

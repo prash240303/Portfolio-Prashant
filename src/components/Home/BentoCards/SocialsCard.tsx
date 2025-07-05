@@ -64,7 +64,7 @@ const SocialsCard = () => {
   return (
     <BentoCard className="group-social cursor-pointer row-span-1 col-span-5 h-56 p-4 lg:p-6">
       {' '}
-      <h2 className="bg-gradient-to-r from-[#3a5454] via-[#101c20] to-[#091113] bg-clip-text font-neu text-sm font-medium text-transparent">
+      <h2 className="text-neutral-800 dark:text-neutral-300 font-neu text-sm font-medium text-transparent">
         Socials
       </h2>
       <div className="flex size-full items-center justify-center gap-[5px]">

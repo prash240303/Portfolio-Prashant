@@ -1,81 +1,190 @@
-import ImageStack from "@/components/ui/ImageStack";
-import Image from "next/image";
+import PolaroidPhoto from '@/components/About/PolaroidPhoto'
 
-const images = [
-  {
-    src: "/profile/pic2.webp?height=380&width=280",
-    alt: "Image 1",
-  },
-  {
-    src: "/profile/pic1.jpeg?height=380&width=280",
-    alt: "Image 2",
-  },
-  {
-    src: "/profile/pic3.jpeg?height=380&width=280",
+import p1 from '../../../public/profile/pic1.jpeg'
+import p2 from '../../../public/profile/pic2.webp'
+import p3 from '../../../public/profile/pic3.jpeg'
+import { SpacingWhale } from '@/components/Home/SpacingWhle'
+import Logo from '@/components/Icons/Logo'
+import CdBack from '@/components/shared/CdBack'
+import { iconData, inspirationWebsites } from '@/lib/constants'
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
-    alt: "Image 3",
-  },
-];
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'Meet me and my portfolio, Space.',
+}
 
-const About = () => {
+const page = () => {
   return (
-    <div className="max-w-5xl h-full mx-auto px-4 sm:px-6 lg:px-8 mt-32 mb-12 md:mb-[200px]">
-      <div className="flex  gap-x-20 gap-y-7">
-        <div className="flex flex-col items-start gap-5 w-full max-w-xl">
-          <div className="whoami-animation flex flex-col gap-5 justify-center w-full max-w-xl border border-black-10 bg-black-2 rounded-[25px] p-5 sm:p-8">
-            <h1 className="text-xl md:text-2xl text-black-80 leading-loose font-semibold">
-              whoami
-            </h1>
-            <span className="whitespace-pre-line text-base font-light text-black-70 ">
-              {" "}
-              <p>
-                {`Hey, I'm a 21yrs old, fullstack developer who cares about great user experience, enthusiastic about frontend and always eager to learn new technologies and build valuable products with them.`}
-                <br />
-                <br />
-
-                {`I love to cook, code and travel. Currently, studying computer science and engineering at NIT Jalandhar. Over the years, I have learnt various computer science concepts, studied about fundamentals, and built projects out of them. I believe that the craft we make, should always add some value to user's life.`}
-                <br />
-                <br />
-
-                {`As a community builder, I have organised and participated several hackathons, competitions and coding events.`}
-
-                <br />
-                {` Currently, I am looking for frontend-developer roles. Previously, I have worked with startup in past to help them solve problems related to user and developer experience.`}
-              </p>
-            </span>
+    <section className="pb-3 pt-8 md:mt-8 md:pb-16 lg:mt-10">
+      <div className="flex items-end gap-5">
+        <h1 className="text-4xl font-bold tracking-tight">about me</h1>
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-5 py-20 md:gap-20">
+        <PolaroidPhoto
+          altText="image"
+          imageSrc={p1}
+          rotation={-7}
+          text="11/04/2025"
+        />
+        <PolaroidPhoto
+          altText="image"
+          imageSrc={p2}
+          rotation={5}
+          text="24/05/2023"
+        />
+        <PolaroidPhoto
+          altText="image"
+          imageSrc={p3}
+          rotation={2}
+          text="19/11/2024"
+        />
+      </div>
+      <div className="group space-y-5 leading-relaxed">
+        <p>
+          Hey there! I&apos;m Prashant Prabhakar, a{' '}
+          {Math.floor(
+            (new Date().getTime() - new Date(2003, 3, 24).getTime()) /
+              (365.25 * 24 * 60 * 60 * 1000)
+          )}
+          -year-old Full-Stack developer from India who thrives on crafting
+          intuitive and dynamic <span className="text-teal-500">UIs</span>,
+          especially with{' '}
+          <Link
+            href="https://nextjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="wavvy under underline-offset-4"
+          >
+            Next.js
+          </Link>
+          .
+        </p>
+        <p>
+          I began my tech journey at the end of 2022, and since then, I’ve
+          developed a strong expertise in building responsive and secure web
+          applications that offer a seamless user experience. Along with my love
+          for animation and UI design, I find full-stack development incredibly
+          fascinating.
+        </p>
+        <p>
+          I enjoy building robust applications and exploring new technologies to
+          enhance my skills.
+        </p>
+        <p>
+          Currently, I&apos;m diving into Backend Developement, Python, and GenAI development, expanding my skills in these innovative areas.
+        </p>
+      </div>
+      <div>
+        <h1 className="mt-20 text-4xl font-bold tracking-tight">
+          About this site
+        </h1>
+        <p className="my-7 text-lg"> Curious about this site? It features:</p>
+        <div className="mt-10">
+          <h1 className="text-2xl font-bold tracking-tight">Tech stack</h1>
+          <p className="my-7">
+            This site is crafted with Next.js, Tailwind CSS, and uses
+            Umami for analytics, with Vercel handling the hosting. Check out the
+            code on{' '}
+            <Link
+              href="https://github.com/prash240303/Portfolio-Prashant"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-zinc-500 decoration-2 underline-offset-2"
+            >
+              GitHub
+            </Link>
+          </p>
+          <div className="grid grid-cols-4 grid-rows-2 content-center gap-10 p-3">
+            {iconData.map(({ Component, href, className, label }) => (
+              <div key={label} className="group relative w-fit pb-3">
+                <Link href={href} target="_blank" rel="noopener noreferrer">
+                  <Component className={className} />
+                </Link>
+                <span className="absolute left-[-30%] mt-3 w-20 rounded px-2 py-1 text-center text-xs font-semibold opacity-0 blur-lg transition-all duration-500 group-hover:opacity-100 group-hover:blur-none dark:text-white">
+                  {label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
-        <div className=" flex flex-col gap-3 md:gap-5">
-          <div className="flex items-center gap-5 mx-2">
-            <h1 className="photos-title-animation text-xl md:text-2xl font-semibold relative w-fit text-black-80 select-none">
-              photos
-              <svg
-                width="62"
-                height="10"
-                className="absolute -right-1 -bottom-1 bg-transparent select-none pointer-events-none"
-                viewBox="0 0 62 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M61.8713 1.93981C61.265 2.11052 60.6283 2.50215 60.0593 2.41846C55.4394 1.75236 51.2531 3.4193 46.9957 4.69461C43.7984 5.65193 40.7603 6.07368 37.4986 4.42682C36.1642 3.75402 34.0541 4.2059 32.408 4.59419C29.7628 5.21678 27.1819 6.15066 24.618 7.07116C22.1963 7.9381 20.093 7.30547 18.5722 5.52473C16.9024 3.56992 14.9515 3.50633 12.8516 4.08205C9.1361 5.09628 5.84734 7.00087 2.79229 9.30044C1.84055 10.0168 0.14706 9.50128 0.00480682 8.33309C-0.0493848 7.88121 0.363829 7.11133 0.780427 6.9038C3.42565 5.58163 6.10136 4.29963 8.83126 3.15152C11.2699 2.12725 13.8169 1.09964 16.5028 1.90298C17.8271 2.30131 19.1141 3.14148 20.1573 4.06532C21.4816 5.24021 22.8195 5.12305 24.2962 4.71803C27.6357 3.79753 30.9482 2.76658 34.3284 2.01345C35.5105 1.74901 36.994 1.85948 38.0846 2.35152C40.5232 3.44943 42.8771 3.40591 45.3361 2.66951C48.2658 1.78918 51.1752 0.808426 54.1524 0.125584C55.453 -0.172322 56.906 0.142327 58.2879 0.226008C58.989 0.269523 59.7104 0.326421 60.3709 0.533951C60.95 0.714703 61.4581 1.11638 62 1.42098C61.9594 1.5917 61.9187 1.76575 61.8747 1.93646L61.8713 1.93981Z"
-                  fill="#FF9500"
-                ></path>
-              </svg>
-            </h1>
-            <div className="photos-animation select-none whitespace-nowrap text-lg md:text-sm text-[#FF9500] px-2 py-[2px] rounded-full border border-black-40 border-dashed w-fit flex items-center gap-2">
-              glimpse of my life
-            </div>
+      </div>{' '}
+      <div className="mt-10">
+        <h1 className="text-2xl font-bold tracking-tight">Inspiration</h1>
+        <p className="my-7">
+          I’m thankful to the fantastic websites listed below for sparking the
+          inspiration behind this site.
+        </p>
+        <div>
+          {' '}
+          <ul className="list-disc space-y-1">
+            {inspirationWebsites.map((site) => (
+              <li key={site.url} className="ml-4">
+                <Link
+                  href={site.url}
+                  className="transform-gpu bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-500 hover:bg-[length:100%_2px]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {site.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-7">
+            Uncover even more sources of inspiration in the{' '}
+            <Link
+              className="underline decoration-2"
+              href="https://github.com/Rohit-Singh-Rawat/Space/#inspiration"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              README
+            </Link>
+          </p>
+        </div>
+      </div>
+      <div className="mt-10">
+        <h1 className="text-2xl font-bold tracking-tight">Typography</h1>
+        <p className="my-7">
+          For typography, <span>Inter</span> sets the stage with body text,{' '}
+          <span className="font-neu">Neue Montreal</span> emphasizes special
+          words, <span className="font-lombok">Lombok</span> makes playground
+          headings pop, and{' '}
+          <span className="font-cath">Catholic School Girls BB</span> adds flair
+          to Polaroid images. Each font is uniquely styled to highlight its
+          role.
+        </p>
+        <div className="grid border-collapse grid-cols-1 place-items-center items-center border border-dashed border-emerald-900/60 md:grid-cols-2">
+          <p className="w-full border border-dashed border-emerald-900/60 p-4 text-center font-normal">
+            Inter
+          </p>
+          <p className="w-full border border-dashed border-emerald-900/60 p-4 text-center font-neu font-medium">
+            Neue Monstreal
+          </p>
+          <p className="w-full border border-dashed border-emerald-900/60 p-4 text-center font-lombok">
+            LOMBOK
+          </p>
+          <p className="w-full border border-dashed border-emerald-900/60 p-4 text-center font-cath">
+            Catholic School Girls BB
+          </p>
+        </div>
+      </div>
+      <div className="mt-10">
+        <h1 className="text-2xl font-bold tracking-tight">Logo</h1>
+        <p className="my-7">Unique emblem capturing my personal essence.</p>
+        <div className="my-12 flex justify-around gap-5 max-xs:flex-col">
+          <div className="flex h-40 w-full items-center justify-center rounded-md bg-black">
+            <Logo className="size-20 fill-white" />
           </div>
-
-          <div className="mt-12">
-            {/* <Image alt="" width="450" height="450" decoding="async" data-nimg="1" className="h-[450px] w-[450px] photos-animation object-contain select-none pointer-events-none" src="/profile/profile_large.webp" /> */}
-            <ImageStack images={images} />
+          <div className="flex h-40 w-full items-center justify-center rounded-md bg-white">
+            <Logo className="size-20 fill-black" />
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default About;
+      <CdBack />
+    </section>
+  )
+}
+export default page

@@ -60,7 +60,7 @@ const StacksCard = ({ isForSmall = false }: { isForSmall?: boolean }) => {
     <BentoCard className="group/stack row-span-1 col-span-5 h-56 p-4 lg:p-6">
       <div className="mb-3 flex items-center gap-2">
         <Stack className="size-4" />
-        <h2 className="bg-gradient-to-r from-[#8ebac7] via-[#4d8b9d] to-[#2a4b55] bg-clip-text font-neu text-sm font-medium text-transparent">
+        <h2 className="text-neutral-800 dark:text-neutral-300 font-neu text-sm font-medium text-transparent">
           Stacks
         </h2>
       </div>
