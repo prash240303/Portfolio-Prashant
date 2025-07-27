@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <BlurFade delay={delay}>
-      <div className="flex flex-col gap-10 sm:flex-row">
+      <div className="flex w-full  flex-col gap-10 sm:flex-row">
         <Link
           className="flex-1"
           href={liveDemoHref}

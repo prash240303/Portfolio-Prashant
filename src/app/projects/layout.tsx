@@ -4,7 +4,7 @@ interface ChildrenProps {
 }
 
 function WorkLayout({ children }: ChildrenProps) {
-  return <div className="md:max-w-7xl w-full">{children}</div>;
+  return <div className="w-full">{children}</div>;
 }
 
 export default WorkLayout;

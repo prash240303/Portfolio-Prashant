@@ -73,11 +73,11 @@ const page = () => {
         </div>
       </div>{" "}
       <div>
-        <h1 className="my-14 text-xl">
+        <h1 className="my-14 text-black dark:text-white text-xl">
           View more on{" "}
           <Link
             href="https://github.com/prash240303?tab=repositories"
-            className="peer inline-flex items-center justify-start text-black font-neu "
+            className="peer inline-flex items-center justify-start font-neu  font-bold"
             target="_blank"
           >
             Github
@@ -85,7 +85,7 @@ const page = () => {
           {" & "}
           <Link
             href="https://rsrcraft.me"
-            className="peer inline-flex items-center justify-start text-black "
+            className="peer inline-flex items-center justify-start font-bold "
             target="_blank"
           >
             crafts

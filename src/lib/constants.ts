@@ -101,16 +101,6 @@ export const topProjects = [
   },
   {
     videoSrc: "",
-    imageSrc: "/projects/sql-editor.png",
-    title: "SQLHub: Online SQL editor",
-    tags: ["Next.js", "Ace-Editor", "Typescript"],
-    timeline: "2025",
-    tagline: "Interactive SQL query simulator",
-    sourceCodeHref: "", // Add GitHub link if available
-    liveDemoHref: "https://sql-editor-nextjs.vercel.app/",
-  },
-  {
-    videoSrc: "",
     imageSrc: "/projects/gradify.png",
     title: "Gradify Gradients Figma Plugin",
     tags: ["Figma", "Plugin"],
