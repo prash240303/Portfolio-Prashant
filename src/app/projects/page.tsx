@@ -84,8 +84,8 @@ const page = () => {
           </Link>
           {" & "}
           <Link
-            href="https://rsrcraft.me"
-            className="peer inline-flex items-center justify-start font-bold "
+            href="https://crafts-three.vercel.app/"
+            className="peer inline-flex items-center justify-start font-bold font-neu"
             target="_blank"
           >
             crafts

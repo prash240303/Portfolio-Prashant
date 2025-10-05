@@ -7,22 +7,6 @@ const componentList = [
     description: "CTA button with animation using pure js.",
     slug: "button",
   },
-  {
-    title: "What's playing loading component",
-    description:
-      "Transition components for music site exploration → What's playing Beno!",
-    slug: "whats-playing",
-  },
-  {
-    title: "Reward claiming interaction",
-    description: "A quick fun interaction built with Next & Framer Motion.",
-    slug: "reward-claiming",
-  },
-  {
-    title: "Amie calendar tab switch",
-    description: "Recreating the Amie Calendar Tab Switch",
-    slug: "amie-calendar",
-  },
 ];
 
 const Crafts = () => {
