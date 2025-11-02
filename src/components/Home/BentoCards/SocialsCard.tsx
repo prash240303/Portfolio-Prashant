@@ -43,14 +43,6 @@ const socials = [
     zIndex: 2,
   },
   {
-    name: 'Spotify',
-    icon: Spotify,
-    link: 'https://open.spotify.com/user/t88u10snq9q3n9lfnfyvv424n',
-    translateX: '-12px',
-    rotate: '10deg',
-    zIndex: 1,
-  },
-  {
     name: 'YouTube',
     icon: YT,
     link: 'https://www.youtube.com/@Prashant-ql4zh',
