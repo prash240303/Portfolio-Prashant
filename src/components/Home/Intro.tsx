@@ -9,10 +9,14 @@ export const Intro = () => {
         <p>
           Hi, I&apos;m Prashant, a Front-end developer from India. I love
           crafting intuitive and dynamic{" "}
-          <span className="bg-gradient-to-l from-purple-400 to-yellow-400 bg-clip-text text-transparent">
-            UIs
+          <span className="relative inline-block group">
+            <span className="relative z-10 bg-gradient-to-l from-purple-400 to-yellow-400 bg-clip-text text-transparent">
+              UIs
+            </span>
+            <span className="absolute inset-0 bg-gradient-to-l from-purple-400 to-yellow-400 blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300" />
+            <span className="absolute inset-0 bg-gradient-to-l from-purple-400 to-yellow-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
           </span>{" "}
-          with Next.js.
+          with Next.js. 
         </p>
         <p>
           I specialize in building responsive and user-friendly websites,
@@ -21,8 +25,14 @@ export const Intro = () => {
 
         <p>
           I enjoy browsing the web and crafting components. You can find my{" "}
-          <Link href="" target="_blank">
-            <span className="wavvy underline-offset-2">crafts</span>
+          <Link href="https://crafts-three.vercel.app" target="_blank">
+            <span className="wavvy relative inline-block text-black dark:text-white underline-offset-2 cursor-pointer group transition-all duration-300">
+              <span className="relative z-10 bg-gradient-to-r from-red-500 via-orange-500 to-pink-500 bg-clip-text transition-all duration-300 group-hover:text-transparent">
+                crafts
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-red-500 via-orange-500 to-pink-500 blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300 -z-10" />
+              <span className="absolute -inset-1 bg-gradient-to-r from-red-500 via-orange-500 to-pink-500 rounded-lg opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500 group-hover:animate-none" />
+            </span>
           </Link>{" "}
           here. Currently, I&apos;m exploring AI and backend technologies.
         </p>
@@ -45,12 +55,14 @@ export const Intro = () => {
           Find me on twitter at{" "}
           <Link
             href={"https://x.com/prash2403"}
+            target="_blank"
             className="wavvy underline-offset-2"
           >
             x.com
           </Link>{" "}
           or drop a{" "}
           <Link
+            target="_blank"
             href={"mailto:prash2402@gmail.com"}
             className="wavvy underline-offset-2"
           >
