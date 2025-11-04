@@ -36,12 +36,7 @@ const socials = [
 
 const SocialsCard = () => {
   return (
-    <div className=" cursor-pointer col-span-5 h-28 flex items-center justify-center ">
-      {' '}
-      <h2 className="text-neutral-800 dark:text-neutral-300 text-sm font-medium">
-        Socials
-      </h2>
-      <div className="flex size-full  items-center justify-center gap-[5px]">
+      <div className="flex items-center py-6 justify-center gap-[5px]">
         {socials.map((social) => (
           <SocialCard
             key={social.name}
@@ -50,7 +45,6 @@ const SocialsCard = () => {
           />
         ))}
       </div>
-    </div>
   )
 }
 

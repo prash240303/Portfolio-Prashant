@@ -1,5 +1,4 @@
 import React from "react";
-import { cn } from "@/lib/utils";
 import { Separator } from "../../ui/separator";
 import ThemeSwitch from "../../shared/ThemeSwitch";
 import SocialsCard from "../../Home/BentoCards/SocialsCard";
@@ -14,7 +13,7 @@ const Footer = () => {
         <time className="hidden sm:inline" dateTime={String(year)}>
           {year}{" "}
         </time>{" "}
-        <p> © Prashant Prabhakar</p>
+        <p> © {year} Prashant Prabhakar</p>
         <ThemeSwitch />
       </div>
     </footer>
