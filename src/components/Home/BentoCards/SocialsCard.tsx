@@ -1,50 +1,32 @@
-import { Discord } from '@/components/Icons/socials/Discord'
-import { Linkedin } from '@/components/Icons/socials/Linkedin'
-import { GitHub } from '@/components/Icons/socials/GitHub'
-import { Spotify } from '@/components/Icons/socials/Spotify'
-import { Twitter } from '@/components/Icons/socials/Twitter'
-import BentoCard from './BentoCard'
-import { YT } from '@/components/Icons/socials/YT'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import React from 'react'
+import { ArrowRight } from 'lucide-react'
 
 const socials = [
   {
-    name: 'Discord',
-    icon: Discord,
-    link: 'https://discord.com',
-    translateX: '24px',
-    rotate: '-20deg',
-    zIndex: 0,
-  },
-  {
     name: 'LinkedIn',
-    icon: Linkedin,
     link: 'https://www.linkedin.com/in/prashant2403/',
     translateX: '12px',
     rotate: '-10deg',
     zIndex: 1,
   },
   {
-    name: 'Twitter',
-    icon: Twitter,
-    link: 'https://x.com/prash2403',
-    translateX: '4px',
-    rotate: '-3deg',
-    zIndex: 3,
-  },
-  {
     name: 'GitHub',
-    icon: GitHub,
     link: 'https://github.com/prash240303',
     translateX: '-4px',
     rotate: '3deg',
     zIndex: 2,
   },
   {
+    name: 'Twitter',
+    link: 'https://x.com/prash2403',
+    translateX: '4px',
+    rotate: '-3deg',
+    zIndex: 3,
+  },
+  {
     name: 'YouTube',
-    icon: YT,
     link: 'https://www.youtube.com/@Prashant-ql4zh',
     translateX: '-24px',
     rotate: '20deg',
@@ -54,38 +36,30 @@ const socials = [
 
 const SocialsCard = () => {
   return (
-    <BentoCard className="group-social cursor-pointer row-span-1 col-span-5 h-56 p-4 lg:p-6">
+    <div className=" cursor-pointer col-span-5 h-28 flex items-center justify-center ">
       {' '}
-      <h2 className="text-neutral-800 dark:text-neutral-300 font-neu text-sm font-medium text-transparent">
+      <h2 className="text-neutral-800 dark:text-neutral-300 text-sm font-medium">
         Socials
       </h2>
-      <div className="flex size-full items-center justify-center gap-[5px]">
+      <div className="flex size-full  items-center justify-center gap-[5px]">
         {socials.map((social) => (
           <SocialCard
             key={social.name}
-            icon={social.icon}
             link={social.link}
             name={social.name}
-            style={{
-              transform: `translateX(${social.translateX}) rotate(${social.rotate})`,
-              zIndex: social.zIndex,
-              transformOrigin: 'top center',
-            }}
           />
         ))}
       </div>
-    </BentoCard>
+    </div>
   )
 }
 
 const SocialCard = ({
-  icon: Icon,
   link,
   className,
   style,
   name,
 }: {
-  icon: React.ComponentType<{ className: string }>
   link: string
   className?: string
   style?: React.CSSProperties
@@ -97,14 +71,13 @@ const SocialCard = ({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        'p social flex h-fit min-w-[54px] max-w-[54px] flex-col items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white py-3 transition-all duration-500 dark:border-white/[0.1] dark:bg-black',
-        '[box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05),0_-20px_30px_-25px_#E8FFDB_inset] dark:[box-shadow:-20px_-15px_20px_-25px_#4b523d_inset]', // Ensure this class is correctly applied
+        ' group  flex h-fit hover:text-green-600 dark:hover:text-green-600 font-semibold hover:scale-105 transition-all duration-300 ease-in-out items-center justify-center gap-2 rounded-xl  py-3 px-2',
         className
       )}
       style={style}
     >
-      <Icon className="size-5" />
-      <p className="text-[8px]"> {name}</p>
+        {name}
+        <ArrowRight className="size-4 hover:scale-105 rotate-0 group-[hover]:rotate-45 rounded-full border border-transparent stroke-1 transition-all duration-300 ease-linear group-hover:-rotate-45 group-hover:border-slate-50 group-hover:stroke-[2px] dark:group-hover:border-slate-950" />
     </Link>
   )
 }

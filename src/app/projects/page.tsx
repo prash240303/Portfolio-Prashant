@@ -92,7 +92,7 @@ const page = () => {
           </Link>
           <ArrowRight className="ml-2 inline-block size-4 rounded-full border border-transparent stroke-black stroke-1 transition-all duration-300 ease-linear peer-hover:-rotate-45 peer-hover:border-slate-950 peer-hover:stroke-[2px] dark:stroke-white dark:peer-hover:border-slate-50" />
         </h1>
-        <h1 className="mt-24 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 bg-clip-text text-center font-neu text-4xl font-extrabold text-transparent opacity-30 md:text-7xl">
+        <h1 className="mt-24 bg-gradient-to-r hover:animate-pulse from-gray-400 via-gray-600 to-gray-800 bg-clip-text text-center font-neu text-4xl font-extrabold text-transparent opacity-30 md:text-7xl">
           Shipping More Soon
         </h1>
       </div>

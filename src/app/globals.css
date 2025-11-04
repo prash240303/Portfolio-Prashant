@@ -465,3 +465,19 @@ body::-webkit-scrollbar-track {
 .group:hover .moving-arrows-item:first-child {
   display: none;
 }
+
+/* Left-to-right gradient background animation for text gradients */
+@keyframes bg-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@layer utilities {
+  .animate-bg-move {
+    animation: bg-move 3s linear infinite;
+  }
+}
