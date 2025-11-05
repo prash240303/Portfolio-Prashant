@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <BlurFade delay={delay}>
-      <div className="flex w-full  flex-col gap-10 sm:flex-row">
+      <div className="flex min-w-4xl flex-col gap-10 sm:flex-row">
         <Link
           className="flex-1"
           href={liveDemoHref}
@@ -82,7 +82,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
           </div>
         </Link>
-        <div className="flex-1 space-y-3 p-4">
+        <div className="flex-col flex w-full space-y-3 p-4">
           <h2 className="mb-2 text-xl font-semibold dark:text-white">
             {title}
           </h2>
@@ -100,27 +100,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               </div>
             ))}
           </div>
-          <div className="flex gap-4">
+          <div className="flex w-full gap-4">
             <Link
               href={sourceCodeHref}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${title} source code link`}
-              className="flex items-center justify-around gap-2 rounded-md bg-black/85 px-3 py-2 text-xs font-semibold text-white dark:bg-white dark:text-black"
+              className="flex items-center w-32 justify-start gap-2 rounded-md bg-black/85 px-3 py-2 text-xs font-semibold text-white dark:bg-white dark:text-black"
             >
               <Github className="inline-block size-4 invert dark:invert-0" />
               Source Code
             </Link>
-            <Link
+            {liveDemoHref && <Link
               href={liveDemoHref}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${title} live demo link`}
-              className="group flex items-center justify-around gap-2 rounded-md bg-black/85 px-3 py-2 text-xs font-semibold text-white dark:bg-white dark:text-black"
+              className="group flex w-28 items-center justify-start gap-2 rounded-md bg-black/85 px-3 py-2 text-xs font-semibold text-white dark:bg-white dark:text-black"
             >
               Live Demo
               <ArrowRight className="size-4 rounded-full border border-transparent stroke-1 transition-all duration-300 ease-linear group-hover:-rotate-45 group-hover:border-slate-50 group-hover:stroke-[2px] dark:group-hover:border-slate-950" />
-            </Link>
+            </Link>}
           </div>
         </div>
       </div>

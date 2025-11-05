@@ -81,10 +81,40 @@ export const inspirationWebsites = [
 export const topProjects = [
   {
     videoSrc: "",
+    imageSrc: "/projects/gradify.png",
+    title: "Margdarshak AI-Chatbot",
+    tags: ["Langchain","GPT-4o mini","ChromaDB","AWS S3", "React.js", "Python"],
+    timeline: "2025",
+    tagline: "Developed an AI chatbot for handling admission-related queries on the college website using RAG architecture.",
+    sourceCodeHref: "https://github.com/prash240303/major-project", 
+    liveDemoHref:"",
+  },
+  {
+    videoSrc: "",
+    imageSrc: "/projects/gradify.png",
+    title: "Shh: Real-time Chatrooms App",
+    tags: ["Django","Channels","Websocket","React", "React/TailwindCSS", "Axios"],
+    timeline: "2025",
+    tagline: "Built a Chatroom app with Typescript, ShadCN Components, custom themes & socket-based real-time messaging.",
+    sourceCodeHref: "https://github.com/prash240303/shh-chatroom", 
+    liveDemoHref:"",
+  },
+  {
+    videoSrc: "",
+    imageSrc: "/projects/gradify.png",
+    title: "WDMC NITJ Feature Contribution ",
+    tags: ["MongoDB","Mongoose","Admin-Bro","Javascript", "HTML/CSS", "RBAC"],
+    timeline: "2023",
+    tagline: "Created a new Dynamic HTML template page using TailwindCSS and RESTful APIs for showcasing different NITJ Clubs.",
+    sourceCodeHref: "http://github.com/wdmc-nitj/nitj-website-deploy/pull/721", 
+    liveDemoHref:"https://www.nitj.ac.in/clubs/template.html?id=dance",
+  },
+  {
+    videoSrc: "",
     imageSrc: "/projects/talkpdf.png",
     title: "TalkPDF",
     tags: ["Next.js", "OpenAI", "PineCone", "AWS S3"],
-    timeline: "2025",
+    timeline: "2023",
     tagline: "AI-SaaS product using RAG for knowledgebase training",
     sourceCodeHref: "", // Add GitHub link if available
     liveDemoHref: "https://talkpdf.tech/",
@@ -94,7 +124,7 @@ export const topProjects = [
     imageSrc: "/projects/vro.png",
     title: "VRO: Vehicle Routing System",
     tags: ["Next.js", "MapBox", "Python"],
-    timeline: "2025",
+    timeline: "2024",
     tagline: "Routing management using Genetic Algorithm",
     sourceCodeHref: "", // Add GitHub link if available
     liveDemoHref: "https://walmart-hackathon-frontend.vercel.app/",
@@ -104,7 +134,7 @@ export const topProjects = [
     imageSrc: "/projects/gradify.png",
     title: "Gradify Gradients Figma Plugin",
     tags: ["Figma", "Plugin"],
-    timeline: "2025",
+    timeline: "2022",
     tagline: "Generate beautiful linear and mesh gradients in Figma",
     sourceCodeHref: "", // Usually no source code for Figma plugins
     liveDemoHref:
