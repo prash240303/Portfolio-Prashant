@@ -101,7 +101,7 @@ export const topProjects = [
   },
   {
     videoSrc: "",
-    imageSrc: "/projects/gradify.png",
+    imageSrc: "/projects/wdmc.png",
     title: "WDMC NITJ Feature Contribution ",
     tags: ["MongoDB","Mongoose","Admin-Bro","Javascript", "HTML/CSS", "RBAC"],
     timeline: "2023",
