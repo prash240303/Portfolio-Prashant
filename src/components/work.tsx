@@ -62,9 +62,7 @@ export default function WorkExperience({ isHomeView }: prop) {
         </p>
         
         <ul className="list-inside list-disc space-y-2 leading-relaxed">
-          <li>Develop and maintain PowerShell/Batch scripts for automated software deployment, GPO enforcement, and security incident response across enterprise endpoints</li>
-          <li>Administer endpoint security and configuration through Microsoft Intune, Azure AD, and Microsoft 365 Admin Center, including device enrollment, compliance policies, and conditional access</li>
-          <li>Manage hybrid identity infrastructure using Active Directory and Azure AD Connect, implementing user provisioning, group policies, and RBAC controls</li>
+          <li>Administer endpoint security and configuration through Microsoft Intune, Azure AD, and Microsoft 365 Admin Center, compliance policies, and conditional access</li>
         </ul>
       </div>
 
