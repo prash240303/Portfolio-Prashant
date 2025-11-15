@@ -31,7 +31,7 @@ export default function WorkExperience({ isHomeView }: prop) {
           Exploring new technologies and creating engaging web experiences,
           while continuously learning and growing as a developer.
         </p>
-        <p>Here's a snapshot of my journey so far.</p>
+        <p>Here`&apos;`s a snapshot of my journey so far.</p>
       </div>
 
       <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
@@ -53,7 +53,7 @@ export default function WorkExperience({ isHomeView }: prop) {
           </Link>
           
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            Management Trainee | July '25 - Present
+            Management Trainee | July `&apos;`25 - Present
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function WorkExperience({ isHomeView }: prop) {
           </Link>
           
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            Frontend Developer | January '25 - June '25
+            Frontend Developer | January `&apos;`25 - June `&apos;`25
           </p>
         </div>
 
@@ -120,7 +120,7 @@ export default function WorkExperience({ isHomeView }: prop) {
           <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
 
           <p className="mt-6 leading-relaxed">
-            I'm constantly learning and experimenting with new
+            I`&apos;`m constantly learning and experimenting with new
             technologies. Stay tuned for more exciting projects and experiences
             coming soon...
           </p>
