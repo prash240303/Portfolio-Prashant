@@ -40,7 +40,7 @@ export default function WorkExperience({ isHomeView }: prop) {
       <div className="space-y-6 text-sm">
         <div className="space-y-2">
           <Link
-            href="https://www.bharatpetroleum.in/"
+            href=""
             target="_blank"
             className="group flex items-center justify-start gap-3 overflow-hidden"
           >
