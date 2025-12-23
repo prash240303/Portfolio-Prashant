@@ -4,6 +4,13 @@ import React from 'react'
 import { ArrowRight } from 'lucide-react'
 
 const socials = [
+   {
+    name: 'Email',
+    link: 'mailto:prash2402works@gmail.com',
+    translateX: '-24px',
+    rotate: '20deg',
+    zIndex: 0,
+  },
   {
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/prashant2403/',
@@ -24,13 +31,6 @@ const socials = [
     translateX: '4px',
     rotate: '-3deg',
     zIndex: 3,
-  },
-  {
-    name: 'YouTube',
-    link: 'https://www.youtube.com/@Prashant-ql4zh',
-    translateX: '-24px',
-    rotate: '20deg',
-    zIndex: 0,
   },
 ]
 

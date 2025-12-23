@@ -49,7 +49,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col gap-3">
               <span className="text-3xl">contact</span>
-              <a href="mailto:prash2402@gmail.com" className="mt-2  dark:hover:text-zinc-100 hover:text-zinc-900 hover:gap-1 active:text-white text-sm hover:font-semibold font-normal text-zinc-400">
+              <a href="mailto:prash2402works@gmail.com" className="mt-2  dark:hover:text-zinc-100 hover:text-zinc-900 hover:gap-1 active:text-white text-sm hover:font-semibold font-normal text-zinc-400">
                 Message
               </a>
             </div>

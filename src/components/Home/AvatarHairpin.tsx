@@ -15,13 +15,13 @@ const AvatarHairpin = () => {
             className="relative z-[5] mt-4 transition-all duration-700 mr-4 block size-28 max-w-28 max-h-28 overflow-hidden rounded-lg bg-white shadow-xl "
           >
             <Image
-              src="/profile/pic2.webp"
+              src="/profile/pic4.webp"
               placeholder="blur"
               alt="avatar"
               height={80}
               blurDataURL="data:image/webp;base64,UklGRjoAAABXRUJQVlA4ICwAAAAQAgCdASoEAAQAASpIAAgAAkA+JaQAA=="
               width={80}
-              className="grayscale hover:grayscale-0 object-cover w-full h-full rounded-lg"
+              className="grayscale hover:grayscale-0 object-top w-full h-full rounded-lg"
             />
           </motion.div>
       </Link>

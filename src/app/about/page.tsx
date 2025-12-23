@@ -132,17 +132,7 @@ const page = () => {
               </li>
             ))}
           </ul>
-          <p className="mt-7">
-            Uncover even more sources of inspiration in the{' '}
-            <Link
-              className="underline decoration-2"
-              href="https://github.com/Rohit-Singh-Rawat/Space/#inspiration"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              README
-            </Link>
-          </p>
+        
         </div>
       </div>
       <div className="mt-10">
@@ -162,12 +152,6 @@ const page = () => {
           </p>
           <p className="w-full border border-dashed border-emerald-900/60 p-4 text-center font-neu font-medium">
             Neue Monstreal
-          </p>
-          <p className="w-full border border-dashed border-emerald-900/60 p-4 text-center font-lombok">
-            LOMBOK
-          </p>
-          <p className="w-full border border-dashed border-emerald-900/60 p-4 text-center font-cath">
-            Catholic School Girls BB
           </p>
         </div>
       </div>

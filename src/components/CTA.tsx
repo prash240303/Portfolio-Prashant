@@ -27,7 +27,7 @@ function CTAComponent() {
               </div>
               open for work
             </div>
-            <a href="mailto:prash2402@gmail.com">
+            <a href="mailto:prash2402works@gmail.com">
               <button className="select-none whitespace-nowrap text-xs text-white bg-green-500 border-2 border-green-500 font-medium px-3 py-[2px] rounded-full w-fit cursor-pointer hover:scale-105 transition-all duration-150 ease-in-out">
                 hire me
               </button>
@@ -39,9 +39,9 @@ function CTAComponent() {
           Whether you have a question or just want to say hi, I'll try my best to
           get back to you!`}
         </p>
-        <a href="mailto:prash2402@gmail.com">
+        <a href="mailto:prash2402works@gmail.com">
           <p  className="text-base text-black-70 font-semibold relative w-fit group cursor-pointer">
-          prash2402@gmail.com{" "}
+          prash2402works@gmail.com{" "}
             <span className="font-bold absolute -right-5 group-hover:translate-x-1 transition-all duration-150 ease-in-out">
               -&gt;
             </span>

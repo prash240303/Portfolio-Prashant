@@ -63,7 +63,7 @@ export const Intro = () => {
           or drop a{" "}
           <Link
             target="_blank"
-            href={"mailto:prash2402@gmail.com"}
+            href={"mailto:prash2402works@gmail.com"}
             className="wavvy underline-offset-2"
           >
             email
