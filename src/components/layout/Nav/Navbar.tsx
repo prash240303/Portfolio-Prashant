@@ -9,9 +9,8 @@ import { usePathname } from 'next/navigation'
 const navItems = [
   { name: 'Work', href: '/work' },
   { name: 'Projects', href: '/projects' },
-  { name: 'Blog', href: '/blogs' },
   { name: 'About', href: '/about' },
-  { name: 'Playground', href: '/playground' },
+  { name: 'Crafts', href: 'https://crafts-three.vercel.app/' },
 ]
 
 const NavBar = () => {
