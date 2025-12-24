@@ -1,10 +1,8 @@
 import PolaroidPhoto from '@/components/About/PolaroidPhoto'
 
 import p1 from '../../../public/profile/pic1.jpeg'
-import p2 from '../../../public/profile/pic2.webp'
-import p3 from '../../../public/profile/pic3.jpeg'
-import { SpacingWhale } from '@/components/Home/SpacingWhle'
-import Logo from '@/components/Icons/Logo'
+import p2 from '../../../public/profile/pic4.webp'
+import p3 from '../../../public/profile/pic5.jpg'
 import CdBack from '@/components/shared/CdBack'
 import { iconData, inspirationWebsites } from '@/lib/constants'
 import type { Metadata } from 'next'

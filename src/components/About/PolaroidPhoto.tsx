@@ -23,7 +23,7 @@ const PolaroidPhoto: FC<PolaroidPhotoProps> = ({
       style={{ transform: `rotate(${rotation}deg)`, transformOrigin: 'center' }}
       viewport={{ once: true }}
       transition={{ duration: 0.3, ease: 'linear' }}
-      className={`polaroid hover:scale-105 group h-[215px] w-40 rounded-[1px] bg-white p-2 shadow-md transition-all duration-200 hover:scale-105 dark:shadow-md dark:shadow-emerald-900`}
+      className={`polaroid hover:scale-105 group h-[215px] w-40 rounded-[1px] bg-white p-2 shadow-md transition-all duration-200 dark:shadow-md dark:shadow-emerald-900`}
     >
       <Image
         width={300}
