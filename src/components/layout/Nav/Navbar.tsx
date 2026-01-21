@@ -5,13 +5,7 @@ import MobileNavBar from '@/components/shared/MobileNavbar'
 import ThemeSwitch from '@/components/shared/ThemeSwitch'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-
-const navItems = [
-  { name: 'Work', href: '/work' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'About', href: '/about' },
-  { name: 'Crafts', href: 'https://crafts-three.vercel.app/' },
-]
+import { navItems } from '@/lib/constants'
 
 const NavBar = () => {
   const path = usePathname()
