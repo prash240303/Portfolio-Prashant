@@ -31,7 +31,7 @@ const PolaroidPhoto: FC<PolaroidPhotoProps> = ({
         alt={altText}
         placeholder="blur"
         src={imageSrc}
-        className="size-40 object-cover grayscale transition-all delay-150 duration-300 group-hover:grayscale-0"
+        className="size-40 object-cover transition-all delay-150 duration-300"
       />
       {text && (
         <p className={'mt-4 text-center text-sm font-neu font-light text-black'}>

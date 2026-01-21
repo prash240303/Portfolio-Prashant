@@ -21,7 +21,7 @@ const AvatarHairpin = () => {
               height={80}
               blurDataURL="data:image/webp;base64,UklGRjoAAABXRUJQVlA4ICwAAAAQAgCdASoEAAQAASpIAAgAAkA+JaQAA=="
               width={80}
-              className="grayscale hover:grayscale-0 object-top w-full h-full rounded-lg"
+              className="object-top w-full h-full rounded-lg"
             />
           </motion.div>
       </Link>
