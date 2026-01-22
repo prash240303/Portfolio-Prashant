@@ -19,41 +19,76 @@ import { VsCode } from "@/components/Icons/StackIcons/VS";
 import React from "react";
 import { NodejsIcon } from "@/components/Icons/StackIcons/nodejsIcon";
 import Stack from "@/components/Icons/Stack";
-import BentoCard from "./BentoCard";
 import Vite from "@/components/Icons/StackIcons/vite";
-import { GithubActions } from "@/components/Icons/StackIcons/githubactions";
-import { Cloudflare } from "@/components/Icons/StackIcons/Cloudflare";
 import { WebSocket } from "@/components/Icons/StackIcons/Websocket";
 import { Express } from "@/components/Icons/StackIcons/express";
+import BentoCard from "./BentoCard";
 
-const frontendTech: React.FC<React.SVGProps<SVGSVGElement>>[] = [
-  Html,
-  Css,
-  JS,
-  Typescript,
-  ReactIcon,
-  Nextjs,
-  Tailwind,
-  Sass,
-  FramerMotion,
-  Figma,
-  Shadcn,
-  Vite,
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+type TechItem = {
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  name: string;
+};
+
+const frontendTech: TechItem[] = [
+  { Icon: Html, name: "HTML" },
+  { Icon: Css, name: "CSS" },
+  { Icon: JS, name: "JavaScript" },
+  { Icon: Typescript, name: "TypeScript" },
+  { Icon: ReactIcon, name: "React" },
+  { Icon: Nextjs, name: "Next.js" },
+  { Icon: Tailwind, name: "Tailwind CSS" },
+  { Icon: Sass, name: "Sass" },
+  { Icon: FramerMotion, name: "Framer Motion" },
+  { Icon: Figma, name: "Figma" },
+  { Icon: Shadcn, name: "shadcn/ui" },
+  { Icon: Vite, name: "Vite" },
 ];
 
-const backendAndTools: React.FC<React.SVGProps<SVGSVGElement>>[] = [
-  NodejsIcon,
-  Express,
-  Postgresql,
-  Mongodb,
-  Postman,
-  GithubActions,
-  WebSocket,
-  Cloudflare,
-  VsCode,
-  Git,
-  Github,
+const backendAndTools: TechItem[] = [
+  { Icon: NodejsIcon, name: "Node.js" },
+  { Icon: Express, name: "Express" },
+  { Icon: Postgresql, name: "PostgreSQL" },
+  { Icon: Mongodb, name: "MongoDB" },
+  { Icon: Postman, name: "Postman" },
+  { Icon: WebSocket, name: "WebSocket" },
+  { Icon: VsCode, name: "VS Code" },
+  { Icon: Git, name: "Git" },
+  { Icon: Github, name: "GitHub" },
 ];
+
+// const frontendTech: React.FC<React.SVGProps<SVGSVGElement>>[] = [
+//   Html,
+//   Css,
+//   JS,
+//   Typescript,
+//   ReactIcon,
+//   Nextjs,
+//   Tailwind,
+//   Sass,
+//   FramerMotion,
+//   Figma,
+//   Shadcn,
+//   Vite,
+// ];
+
+// const backendAndTools: React.FC<React.SVGProps<SVGSVGElement>>[] = [
+//   NodejsIcon,
+//   Express,
+//   Postgresql,
+//   Mongodb,
+//   Postman,
+//   WebSocket,
+//   VsCode,
+//   Git,
+//   Github,
+// ];
 
 const StacksCard = ({ isForSmall = false }: { isForSmall?: boolean }) => {
   return (
@@ -64,24 +99,42 @@ const StacksCard = ({ isForSmall = false }: { isForSmall?: boolean }) => {
           Stacks
         </h2>
       </div>
-      <Marquee gap="20px" className="py-4" fade pauseOnHover>
-        {frontendTech.map((TechComponent, index) => (
-          <TechComponent
-            key={index}
-            id={isForSmall ? `s-${index}` : `${index}`}
-            className="size-10 grayscale transition-all duration-500 ease-in-out hover:grayscale-0 dark:invert dark:hover:invert-0"
-          />
-        ))}
-      </Marquee>
-      <Marquee gap="20px" className="py-4" reverse fade pauseOnHover>
-        {backendAndTools.map((TechComponent, index) => (
-          <TechComponent
-            key={index}
-            id={isForSmall ? `s2-${index}` : `${index}2`}
-            className="size-10 grayscale transition-all duration-500 ease-in-out hover:grayscale-0 dark:invert dark:hover:invert-0"
-          />
-        ))}
-      </Marquee>
+      <TooltipProvider>
+        <Marquee gap="20px" className="py-4" fade pauseOnHover>
+          {frontendTech.map(({ Icon, name }, index) => (
+            <Tooltip key={index}>
+              <TooltipTrigger asChild>
+                <Icon
+                  id={isForSmall ? `s-${index}` : `${index}`}
+                  className="size-10 cursor-pointer transition-all duration-100 ease-in-out hover:-translate-y-1"
+                />
+              </TooltipTrigger>
+
+              <TooltipContent className="bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-300" side="top">
+                <p className="text-sm">{name}</p>
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </Marquee>
+      </TooltipProvider>
+      <TooltipProvider>
+        <Marquee gap="20px" className="py-4" reverse fade pauseOnHover>
+          {backendAndTools.map(({ Icon, name }, index) => (
+            <Tooltip  key={index}>
+              <TooltipTrigger asChild>
+                <Icon
+                  id={isForSmall ? `s2-${index}` : `${index}2`}
+                 className="size-10 cursor-pointer transition-all duration-100 hover:-translate-y-1"
+                />
+              </TooltipTrigger>
+
+              <TooltipContent className="bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-300" side="top">
+                <p className="text-sm ">{name}</p>
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </Marquee>
+      </TooltipProvider>
     </BentoCard>
   );
 };

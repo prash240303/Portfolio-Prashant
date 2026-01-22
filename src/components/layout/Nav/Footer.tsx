@@ -13,7 +13,7 @@ const Footer = () => {
         <time className="hidden sm:inline" dateTime={String(year)}>
           {year}{" "}
         </time>{" "}
-        <p> © {year} Prashant Prabhakar</p>
+        <p> Prashant Prabhakar</p>
         <ThemeSwitch />
       </div>
     </footer>

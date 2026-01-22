@@ -23,11 +23,7 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
       </mask>
     </defs>
 
-    {/* Original colored version */}
-    <g
-      mask="url(#framer-mask)"
-      className="group-hover:opacity-100 opacity-0 transition-opacity duration-300"
-    >
+    <g mask="url(#framer-mask)">
       <path
         d="m47.3 3.7v21.8l-10.9 10.9-10.9 10.9-10.9-10.9 10.9-10.9v.1-.1z"
         fill="#59529d"
@@ -36,22 +32,6 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
       <path
         d="m25.5 25.5-10.9 10.9-10.9 10.9v-43.6l10.9 10.9z"
         fill="#bb4b96"
-      />
-    </g>
-
-    {/* Grayscale version */}
-    <g
-      mask="url(#framer-mask)"
-      className="group-hover:opacity-0 opacity-100 transition-opacity duration-300"
-    >
-      <path
-        d="m47.3 3.7v21.8l-10.9 10.9-10.9 10.9-10.9-10.9 10.9-10.9v.1-.1z"
-        fill="#888888"
-      />
-      <path d="m47.3 25.5v21.8l-10.9-10.9z" fill="#999999" />
-      <path
-        d="m25.5 25.5-10.9 10.9-10.9 10.9v-43.6l10.9 10.9z"
-        fill="#777777"
       />
     </g>
   </svg>

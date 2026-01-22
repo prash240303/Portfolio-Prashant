@@ -1,4 +1,3 @@
-import MdxIcon from "@/components/Home/MdxIcon";
 import VercelLogoIcon from "@/components/Home/VercelIcon";
 import { FramerMotion } from "@/components/Icons/StackIcons/FramerMotion";
 import Nextjs from "@/components/Icons/StackIcons/Nextjs";
@@ -117,8 +116,8 @@ export const topProjects = [
     tags: ["Next.js", "OpenAI", "PineCone", "AWS S3"],
     timeline: "2023",
     tagline: "AI-SaaS product using RAG for knowledgebase training",
-    sourceCodeHref: "", // Add GitHub link if available
-    liveDemoHref: "https://talkpdf.tech/",
+    sourceCodeHref: "https://github.com/prash240303/talk-pdf", 
+    liveDemoHref: "",
   },
   {
     videoSrc: "",
@@ -127,7 +126,7 @@ export const topProjects = [
     tags: ["Next.js", "MapBox", "Python"],
     timeline: "2024",
     tagline: "Routing management using Genetic Algorithm",
-    sourceCodeHref: "", // Add GitHub link if available
+    sourceCodeHref: "https://github.com/agrim0312/Walmart-hackathon-frontend",
     liveDemoHref: "https://walmart-hackathon-frontend.vercel.app/",
   },
   {
@@ -137,7 +136,7 @@ export const topProjects = [
     tags: ["Figma", "Plugin"],
     timeline: "2022",
     tagline: "Generate beautiful linear and mesh gradients in Figma",
-    sourceCodeHref: "", // Usually no source code for Figma plugins
+    sourceCodeHref: "", 
     liveDemoHref:
       "https://www.figma.com/community/plugin/1187380125870182667/gradify",
   },
