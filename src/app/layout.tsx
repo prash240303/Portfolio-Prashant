@@ -9,6 +9,7 @@ import ScrollToTopButton from "@/components/shared/ScrollToTop";
 import Footer from "@/components/layout/Nav/Footer";
 import Header from "@/components/layout/Nav/Header";
 import Head from "next/head";
+import SmoothScroll from "@/components/shared/SmoothScroll";
 
 const info = {
   name: "Prashant",
@@ -56,13 +57,15 @@ export default function RootLayout({ children }: ChildrenProps) {
       >
         <Providers>
           <div className="relative dark:bg-black">
-            <Header />
-            <div className="container mx-auto flex min-h-screen max-w-3xl flex-col px-4 py-5 md:px-16">
-              {children}
-            </div>
+            <SmoothScroll>
+              <Header />
+              <div className="container mx-auto flex min-h-screen max-w-3xl flex-col px-4 py-5 md:px-16">
+                {children}
+              </div>
+              <Footer />
+            </SmoothScroll>
             
             <ScrollToTopButton />
-            <Footer />
           </div>
           <Toaster />
         </Providers>
