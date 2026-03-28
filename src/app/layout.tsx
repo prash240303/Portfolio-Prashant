@@ -9,6 +9,7 @@ import ScrollToTopButton from "@/components/shared/ScrollToTop";
 import Footer from "@/components/layout/Nav/Footer";
 import Header from "@/components/layout/Nav/Header";
 import SmoothScroll from "@/components/shared/SmoothScroll";
+import Neko from "@/components/Neko";
 
 const info = {
   name: "Prashant",
@@ -55,6 +56,8 @@ export default function RootLayout({ children }: ChildrenProps) {
         className={`${neu.variable} ${cath.variable} ${lombok.variable} ${instrumentSerif.variable} "bg-white dark:bg-darkBg flex flex-col items-center min-h-screen  font-sans antialiased`}
       >
         <Providers>
+          <Neko />
+
           <div>
             {/* Light mode background */}
             <div
