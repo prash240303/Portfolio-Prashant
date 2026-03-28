@@ -1,13 +1,13 @@
-import Link from 'next/link'
-import { useRecoilState } from 'recoil'
-import { usePathname } from 'next/navigation'
-import { AnimatePresence, motion } from 'framer-motion'
-import { hamburgerMenuState } from '@/lib/atoms'
-import { navItems } from '@/lib/constants'
+import Link from "next/link";
+import { useRecoilState } from "recoil";
+import { usePathname } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
+import { hamburgerMenuState } from "@/lib/atoms";
+import { navItems } from "@/lib/constants";
 
 const MobileNavBar = () => {
-  const path = usePathname()
-  const [isMenuOpen, setMenuOpen] = useRecoilState(hamburgerMenuState)
+  const path = usePathname();
+  const [isMenuOpen, setMenuOpen] = useRecoilState(hamburgerMenuState);
 
   return (
     <AnimatePresence mode="wait">
@@ -15,21 +15,21 @@ const MobileNavBar = () => {
         <div className="absolute left-0 top-full w-full overflow-hidden py-2">
           <motion.nav
             initial={{
-              y: '-100%',
-              backdropFilter: 'blur(0px)',
+              y: "-100%",
+              backdropFilter: "blur(0px)",
             }}
             animate={{
               y: 0,
-              backdropFilter: 'blur(10px)',
+              backdropFilter: "blur(10px)",
             }}
             exit={{
-              y: '-100%',
-              backdropFilter: 'blur(0px)',
+              y: "-100%",
+              backdropFilter: "blur(0px)",
               transition: { delay: 0.3, duration: 0.7 },
             }}
             transition={{ duration: 0.4 }}
             style={{ originY: 0 }}
-            className="z-50 w-full rounded-b-2xl bg-white py-5 shadow-md dark:bg-black dark:shadow-emerald-900/30 md:hidden"
+            className="z-50 w-full rounded-b-2xl bg-white py-5 shadow-md  dark:bg-darkBg dark:shadow-emerald-900/30 md:hidden"
           >
             <div className="flex flex-col items-center justify-center space-y-5">
               {navItems.map(({ name, href }, index) => (
@@ -57,7 +57,7 @@ const MobileNavBar = () => {
                     href={href}
                     onClick={() => setMenuOpen(false)}
                     className={`rounded-full px-4 py-2 opacity-50 transition-all ${
-                      path === href ? 'opacity-100' : 'hover:opacity-100'
+                      path === href ? "opacity-100" : "hover:opacity-100"
                     }`}
                   >
                     {name}
@@ -69,7 +69,7 @@ const MobileNavBar = () => {
         </div>
       )}
     </AnimatePresence>
-  )
-}
+  );
+};
 
-export default MobileNavBar
+export default MobileNavBar;

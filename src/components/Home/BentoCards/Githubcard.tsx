@@ -1,4 +1,4 @@
-import { Github } from "@/components/Icons/GIthubBentoIcon";
+import { Github } from "@/components/Icons/Github";
 import { GithubCalendar } from "@/components/shared/GithubCalendar";
 import BentoCard from "./BentoCard";
 import Link from "next/link";

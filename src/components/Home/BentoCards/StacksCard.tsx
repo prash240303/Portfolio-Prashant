@@ -63,40 +63,13 @@ const backendAndTools: TechItem[] = [
   { Icon: Github, name: "GitHub" },
 ];
 
-// const frontendTech: React.FC<React.SVGProps<SVGSVGElement>>[] = [
-//   Html,
-//   Css,
-//   JS,
-//   Typescript,
-//   ReactIcon,
-//   Nextjs,
-//   Tailwind,
-//   Sass,
-//   FramerMotion,
-//   Figma,
-//   Shadcn,
-//   Vite,
-// ];
-
-// const backendAndTools: React.FC<React.SVGProps<SVGSVGElement>>[] = [
-//   NodejsIcon,
-//   Express,
-//   Postgresql,
-//   Mongodb,
-//   Postman,
-//   WebSocket,
-//   VsCode,
-//   Git,
-//   Github,
-// ];
-
 const StacksCard = ({ isForSmall = false }: { isForSmall?: boolean }) => {
   return (
     <BentoCard className="group/stack row-span-1 col-span-5 h-56 p-4 lg:p-6">
       <div className="mb-3 flex items-center gap-2">
         <Stack className="size-8" />
-        <h2 className="text-neutral-800 dark:text-neutral-300 text-lg font-medium">
-          Stacks
+        <h2 className="text-neutral-800 font-instrumentSerif dark:text-neutral-300 text-lg font-medium">
+          Stack I use
         </h2>
       </div>
       <TooltipProvider>
@@ -110,7 +83,7 @@ const StacksCard = ({ isForSmall = false }: { isForSmall?: boolean }) => {
                 />
               </TooltipTrigger>
 
-              <TooltipContent className="bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-300" side="top">
+              <TooltipContent className="bg-black/5 dark:bg-white/5  rounded-sm! text-neutral-900 dark:text-white text-xs!" side="top">
                 <p className="text-sm">{name}</p>
               </TooltipContent>
             </Tooltip>

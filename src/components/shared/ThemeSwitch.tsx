@@ -34,7 +34,7 @@ export default function ThemeSwitch() {
         aria-label="Switch theme"
         type="button"
         onClick={onThemeChange}
-        className="ml-1 flex size-10 flex-col items-center justify-center overflow-hidden rounded-md font-medium duration-200 ease-in-out"
+        className=" flex size-10 flex-col items-center justify-center overflow-hidden rounded-md font-medium duration-200 ease-in-out"
       >
         {resolvedTheme === 'light' && <Moon size={15} />}
         {resolvedTheme === 'dark' && <Sun size={15} />}
@@ -42,3 +42,4 @@ export default function ThemeSwitch() {
     </div>
   )
 }
+  

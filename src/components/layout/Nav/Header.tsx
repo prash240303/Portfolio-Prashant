@@ -1,23 +1,39 @@
-import Link from "next/link";
-import React from "react";
-import Image from "next/image";
-import NavBar from "./Navbar";
+'use client'
 
-function Header() {
+import HamburgerMenu from '@/components/shared/HamburgerMenu'
+import MobileNavBar from '@/components/shared/MobileNavbar'
+import ThemeSwitch from '@/components/shared/ThemeSwitch'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { navItems } from '@/lib/constants'
+
+const NavBar = () => {
+  const path = usePathname()
+
   return (
-    <header className="relative mt-4 bg-transparent flex items-center z-10">
-      <Link href={"/"} className="absolute left-4 md:left-10 md:top-4">
-        <Image
-          alt="logo-prashant"
-          src="/logo.png"
-          className="w-32 h-12 filter dark:invert"
-          width={500}
-          height={500}
-        />
-      </Link>
-      <NavBar />
-    </header>
-  );
+    <div className="flex w-full bg-transparent flex-col items-center justify-between p-4 md:px-10">
+      <div className="flex flex-row-reverse items-center justify-between md:flex-row">
+        <nav className="hidden gap-1 px-1 py-5 md:flex">
+          {navItems.map(({ name, href }) => (
+            <div key={name + href}>
+              <Link
+                className={`relative w-fit overflow-hidden rounded-full px-3 py-2 opacity-50 transition-all ${
+                  path === href ? '' : 'hover:opacity-100'
+                }`}
+                href={href}
+              >
+                <span className="relative z-10">{name}</span>
+              </Link>
+            </div>
+          ))}
+        </nav>
+        <HamburgerMenu />
+
+        <ThemeSwitch />
+      </div>
+      <MobileNavBar />
+    </div>
+  )
 }
 
-export default Header;
+export default NavBar
