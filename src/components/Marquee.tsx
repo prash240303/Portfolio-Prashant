@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import ProjectCard from "../components/ProjectCard";
+// import ProjectCard from "../components/ProjectCard";
 import Marquee from "react-fast-marquee"; // Importing the react-fast-marquee
-import Projects from "../data/Projects"
 type Props = {};
 
 export default function WorkExperienceMarquee({ }: Props) {
@@ -106,11 +105,11 @@ export default function WorkExperienceMarquee({ }: Props) {
           </p>
         </div>
       </div>
-      <div className="grid md:grid-cols-2  grid-cols-1 gap-8 p-1">
+      {/* <div className="grid md:grid-cols-2  grid-cols-1 gap-8 p-1">
         {Projects.map((project, index) => (
           <ProjectCard key={project.id} {...project} index={index} />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

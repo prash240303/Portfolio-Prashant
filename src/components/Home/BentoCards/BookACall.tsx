@@ -106,7 +106,7 @@ export default function BookACall({
   return (
     <div className="w-full flex flex-col gap-4 mt-6 items-center justify-center">
       <div className="font-instrumentSerif italic text-xl">
-        If you've read this far, you might be interested in what I do.
+        If you&apos;ve read this far, you might be interested in what I do.
       </div>
       <Link
         href={href}
