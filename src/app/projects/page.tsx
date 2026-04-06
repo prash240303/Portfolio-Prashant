@@ -15,7 +15,7 @@ const page = () => {
     <section className="pb-16 w-full pt-8 md:mt-8 lg:mt-10">
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-center text-5xl font-semibold tracking-tight">
-          Projects
+          Proof of Work
         </h1>
         <h2 className="mt-3 text-center text-gray-400">
           Projects I&apos;ve crafted.

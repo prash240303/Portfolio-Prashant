@@ -8,15 +8,19 @@ export const Intro = () => {
       <div className="space-y-5 text-left">
         <p>
           Hi, I&apos;m Prashant, a Front-end developer from India. I love
-          crafting intuitive and dynamic{" "}
+          crafting intuitive and{" "}
           <span className="relative inline-block group">
-            <span className="relative z-10 bg-gradient-to-l from-purple-400 to-yellow-400 bg-clip-text text-transparent">
-              UIs
-            </span>
-            <span className="absolute inset-0 bg-gradient-to-l from-purple-400 to-yellow-400 blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300" />
-            <span className="absolute inset-0 bg-gradient-to-l from-purple-400 to-yellow-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
-          </span>{" "}
-          with Next.js. 
+            {/* <span className="relative z-10 animate-gradient bg-gradient-to-l from-violet-500 via-cyan-400 to-violet-500 bg-[length:200%_auto] bg-clip-text text-transparent">
+              dynamic UIs
+            </span> */}
+            <button className=" rounded-md mx-1 border border-neutral-300/80 bg-gradient-to-b from-neutral-100 to-neutral-200 px-1.5 py-0.5 text-neutral-500 shadow-[0_2px_4px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.9)] transition-colors hover:from-neutral-50 hover:to-neutral-100 dark:border-none dark:bg-[#2f2f2f] dark:bg-none dark:text-[#d4d4d4] dark:shadow-[0_6px_16px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.1)] dark:hover:bg-[#333]">
+              <span className="text-sm font-medium tracking-wide">
+                Dynamic UI
+              </span>
+            </button>
+            {/* <span className="absolute inset-0 bg-gradient-to-l from-violet-500 to-cyan-400 blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300" /> */}
+          </span>
+          with Next.js.
         </p>
         <p>
           I specialize in building responsive and user-friendly websites,

@@ -112,6 +112,10 @@ const config = {
           "0%": { transform: "translateY(20px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+        gradient: {
+          "0%": { backgroundPosition: "0% center" },
+          "100%": { backgroundPosition: "200% center" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -124,6 +128,7 @@ const config = {
         rotateNegative: "rotateNegative 1s infinite",
         scaleUp: "scaleUp 0.5s ease-out forwards",
         moveUp: "moveUp 0.5s ease-out forwards",
+        gradient: "gradient 4s linear infinite",
       },
     },
     screens: {

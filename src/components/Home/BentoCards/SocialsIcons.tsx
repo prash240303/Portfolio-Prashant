@@ -30,10 +30,10 @@ function SocialsIcons() {
           aria-label={label}
           className="
             w-10 h-10 rounded-full flex items-center justify-center
-            bg-neutral-200 dark:bg-neutral-900
+            bg-neutral-100 dark:bg-neutral-900
             text-neutral-700 dark:text-neutral-300
             hover:text-neutral-900 dark:hover:text-white
-            hover:bg-neutral-300 dark:hover:bg-neutral-700
+            hover:bg-white dark:hover:bg-black
             transition-all duration-200 ease-out
             hover:scale-110 hover:shadow-md
             dark:hover:shadow-lg dark:hover:shadow-neutral-900/20
@@ -47,10 +47,10 @@ function SocialsIcons() {
       <div
         className="
           w-10 h-10 rounded-full flex items-center justify-center
-          bg-neutral-200 dark:bg-neutral-900
+          bg-neutral-100 dark:bg-neutral-900
           transition-all duration-200 ease-out
           border border-neutral-300 dark:border-neutral-700
-          hover:bg-neutral-300 dark:hover:bg-neutral-700
+          hover:bg-white dark:hover:bg-black
           hover:scale-110
         "
       >

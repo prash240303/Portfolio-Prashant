@@ -63,52 +63,59 @@ const backendAndTools: TechItem[] = [
   { Icon: Github, name: "GitHub" },
 ];
 
-const StacksCard = ({ isForSmall = false }: { isForSmall?: boolean }) => {
+const StacksCard = () => {
   return (
-    <BentoCard className="group/stack row-span-1 col-span-5 h-56 p-4 lg:p-6">
+    <div className="w-full">
       <div className="mb-3 flex items-center gap-2">
-        <Stack className="size-8" />
-        <h2 className="text-neutral-800 font-instrumentSerif dark:text-neutral-300 text-lg font-medium">
+        <h1 className="text-3xl font-instrumentSerif font-medium tracking-tight">
           Stack I use
-        </h2>
+        </h1>
       </div>
-      <TooltipProvider>
-        <Marquee gap="20px" className="py-4" fade pauseOnHover>
-          {frontendTech.map(({ Icon, name }, index) => (
-            <Tooltip key={index}>
-              <TooltipTrigger asChild>
-                <Icon
-                  id={isForSmall ? `s-${index}` : `${index}`}
-                  className="size-10 cursor-pointer transition-all duration-100 ease-in-out hover:-translate-y-1"
-                />
-              </TooltipTrigger>
+      <BentoCard className="group/stack row-span-1 col-span-5  p-4 lg:p-6">
+        <TooltipProvider>
+          <Marquee gap="20px" className="py-4" fade pauseOnHover>
+            {frontendTech.map(({ Icon, name }, index) => (
+              <Tooltip key={index}>
+                <TooltipTrigger asChild>
+                  <Icon
+                    id={`${index}`}
+                    className="size-10 cursor-pointer transition-all duration-100 ease-in-out hover:-translate-y-1"
+                  />
+                </TooltipTrigger>
 
-              <TooltipContent className="bg-black/5 dark:bg-white/5  rounded-sm! text-neutral-900 dark:text-white text-xs!" side="top">
-                <p className="text-sm">{name}</p>
-              </TooltipContent>
-            </Tooltip>
-          ))}
-        </Marquee>
-      </TooltipProvider>
-      <TooltipProvider>
-        <Marquee gap="20px" className="py-4" reverse fade pauseOnHover>
-          {backendAndTools.map(({ Icon, name }, index) => (
-            <Tooltip  key={index}>
-              <TooltipTrigger asChild>
-                <Icon
-                  id={isForSmall ? `s2-${index}` : `${index}2`}
-                 className="size-10 cursor-pointer transition-all duration-100 hover:-translate-y-1"
-                />
-              </TooltipTrigger>
+                <TooltipContent
+                  className="bg-black/5 dark:bg-white/5  rounded-sm! text-neutral-900 dark:text-white text-xs!"
+                  side="top"
+                >
+                  <p className="text-sm">{name}</p>
+                </TooltipContent>
+              </Tooltip>
+            ))}
+          </Marquee>
+        </TooltipProvider>
+        <TooltipProvider>
+          <Marquee gap="20px" className="py-4" reverse fade pauseOnHover>
+            {backendAndTools.map(({ Icon, name }, index) => (
+              <Tooltip key={index}>
+                <TooltipTrigger asChild>
+                  <Icon
+                    id={`${index}2`}
+                    className="size-10 cursor-pointer transition-all duration-100 hover:-translate-y-1"
+                  />
+                </TooltipTrigger>
 
-              <TooltipContent className="bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-300" side="top">
-                <p className="text-sm ">{name}</p>
-              </TooltipContent>
-            </Tooltip>
-          ))}
-        </Marquee>
-      </TooltipProvider>
-    </BentoCard>
+                <TooltipContent
+                  className="bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-300"
+                  side="top"
+                >
+                  <p className="text-sm ">{name}</p>
+                </TooltipContent>
+              </Tooltip>
+            ))}
+          </Marquee>
+        </TooltipProvider>
+      </BentoCard>
+    </div>
   );
 };
 

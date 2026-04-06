@@ -80,16 +80,6 @@ export const inspirationWebsites = [
 ];
 export const topProjects = [
   {
-    videoSrc: "",
-    imageSrc: "/projects/gradify.png",
-    title: "Margdarshak AI-Chatbot",
-    tags: ["Langchain", "GPT-4o mini", "ChromaDB", "AWS S3", "React.js", "Python"],
-    timeline: "2025",
-    tagline: "Developed an AI chatbot for handling admission-related queries on the college website using RAG architecture.",
-    sourceCodeHref: "https://github.com/prash240303/major-project",
-    liveDemoHref: "",
-  },
-  {
     videoSrc: "/projects/shh.mov",
     imageSrc: "",
     title: "Shh: Real-time Chatrooms App",
@@ -108,26 +98,6 @@ export const topProjects = [
     tagline: "Created a new Dynamic HTML template page using TailwindCSS and RESTful APIs for showcasing different NITJ Clubs.",
     sourceCodeHref: "http://github.com/wdmc-nitj/nitj-website-deploy/pull/721",
     liveDemoHref: "https://www.nitj.ac.in/clubs/template.html?id=dance",
-  },
-  {
-    videoSrc: "",
-    imageSrc: "/projects/talkpdf.png",
-    title: "TalkPDF",
-    tags: ["Next.js", "OpenAI", "PineCone", "AWS S3"],
-    timeline: "2023",
-    tagline: "AI-SaaS product using RAG for knowledgebase training",
-    sourceCodeHref: "https://github.com/prash240303/talk-pdf", 
-    liveDemoHref: "",
-  },
-  {
-    videoSrc: "",
-    imageSrc: "/projects/vro.png",
-    title: "VRO: Vehicle Routing System",
-    tags: ["Next.js", "MapBox", "Python"],
-    timeline: "2024",
-    tagline: "Routing management using Genetic Algorithm",
-    sourceCodeHref: "https://github.com/agrim0312/Walmart-hackathon-frontend",
-    liveDemoHref: "https://walmart-hackathon-frontend.vercel.app/",
   },
   {
     videoSrc: "",

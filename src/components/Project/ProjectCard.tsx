@@ -31,15 +31,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <BlurFade delay={delay}>
-      <div className="flex min-w-4xl flex-col gap-10 sm:flex-row">
+      <div className="flex flex-col gap-4 ">
         <Link
-          className="flex-1"
           href={liveDemoHref}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`${title} project link`}
         >
-          <div className="group relative w-96 flex cursor-pointer flex-col gap-1 rounded-lg border border-gray-400/50 bg-[#e8e4e7]/70 p-1 shadow-2xl backdrop-blur-sm dark:border-white/10 dark:bg-[#121212] dark:shadow-[#121212]/50">
+          <div className="group relative w-full flex cursor-pointer flex-col gap-1 rounded-lg border border-gray-400/50 bg-[#e8e4e7]/70 p-1 shadow-2xl backdrop-blur-sm dark:border-white/10 dark:bg-[#121212] dark:shadow-[#121212]/50">
             <div className="flex items-center justify-start">
               <div className="flex gap-1 px-1 py-[2px]">
                 <div className="size-2 rounded-full bg-red-500/90 transition-all duration-300 group-hover:bg-red-500/90 sm:bg-zinc-300 dark:sm:bg-white/10"></div>
@@ -53,12 +52,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               </div>
             </div>
 
-            <div className="flex h-64 justify-center overflow-hidden rounded-lg">
+            <div className="flex h-52 justify-center overflow-hidden rounded-lg">
               {videoSrc ? (
                 <Suspense
                   fallback={
                     <Image
-                      width={1800}
+                      width={1600}
                       height={1000}
                       alt={`${title} project image`}
                       className="size-full rounded-lg object-cover transition-all duration-300 hover:scale-105"
@@ -82,11 +81,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
           </div>
         </Link>
-        <div className="flex-col flex w-full space-y-3 p-4">
-          <h2 className="mb-2 text-xl font-semibold dark:text-white">
+        <div className="flex-col flex w-full space-y-2 px-1 ">
+          <h2 className=" text-xl font-semibold dark:text-white">
             {title}
           </h2>
-          <p className="mb-2 text-xs text-gray-800 dark:text-gray-50">
+          <p className="mb-1 text-xs text-gray-800 dark:text-gray-50">
             {timeline}
           </p>
           <p className="mb-4 text-xs dark:text-slate-300">{tagline}</p>

@@ -257,26 +257,37 @@ html {
     @apply bg-background text-foreground;
   }
 }
-::view-transition-new(root) {
+/* ::view-transition-new(root) {
   mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M64 4.09277C65.844 19.2996 72.7275 33.4989 83.6143 44.3857C94.5017 55.2732 108.702 62.1566 123.91 64C108.702 65.8434 94.5017 72.7268 83.6143 83.6143C72.7277 94.5008 65.8441 108.7 64 123.906C62.1573 108.699 55.2736 94.5002 44.3867 83.6133C33.5005 72.7271 19.3027 65.8433 4.09668 64C19.3027 62.1567 33.5005 55.2729 44.3867 44.3867C55.2739 33.4996 62.1574 19.3003 64 4.09277Z" fill="white"/></svg>')
     center center / 0 no-repeat;
   animation: scale 2s;
-}
-
-::view-transition-old(root),
-.dark::view-transition-old(root) {
+} */
+::view-transition-old(root) {
   animation: none;
   z-index: -1;
 }
-.dark::view-transition-new(root) {
-  animation: scale 2s;
+
+::view-transition-new(root) {
+  mask: radial-gradient(circle, black 40%, transparent 70%) center / 0% 0% no-repeat;
+  animation: blurry-circle 0.6s ease-in-out forwards;
 }
 
-@keyframes scale {
-  to {
-    mask-size: 1000vmax;
+.dark::view-transition-new(root) {
+  mask: radial-gradient(circle, black 40%, transparent 70%) center / 0% 0% no-repeat;
+  animation: blurry-circle 0.6s ease-in-out forwards;
+}
+
+@keyframes blurry-circle {
+  0% {
+    mask-size: 0% 0%;
+  }
+  60% {
+  }
+  100% {
+    mask-size: 300% 300%;
   }
 }
+
 html {
   scroll-behavior: smooth;
 }
