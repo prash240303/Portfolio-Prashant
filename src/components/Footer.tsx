@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <main>
-        <div className="view-container px-6 mt-10 grid md:grid-cols-2 grid-cols-1 mb-[50px] gap-4 overflow:hidden ">
+        <div className="view-container px-6 mt-10 grid md:grid-cols-2 grid-cols-1 mb-[50px] gap-4 overflow-hidden ">
           <div className="flex flex-col font-medium w-full  text-xl dark:text-white  gap-1 mb-4">
             <div className=" w-fit mt-3 ">
               Created with lots of Procrastination 🥲 & Inspiration ☕️

@@ -2,6 +2,7 @@
 import { ArrowUpRight, ChevronRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import Divider from "./ui/Divider";
 
 interface prop {
   isHomeView: boolean;
@@ -40,14 +41,13 @@ export default function WorkExperience({ isHomeView }: prop) {
         <p>Here&apos;s a snapshot of my journey so far.</p>
       </div>
 
-      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
 
       {/* BPCL Section */}
-      <div className="space-y-6 text-sm">
+      <div className="space-y-6 mt-6 md:mt-8 text-sm">
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <Link
-              href=""
+              href="https://en.wikipedia.org/wiki/Bharat_Petroleum"
               target="_blank"
               className="group flex items-center justify-start gap-2 overflow-hidden"
             >
@@ -98,10 +98,10 @@ export default function WorkExperience({ isHomeView }: prop) {
         </div>
       </div>
 
-      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+      <Divider />
 
       {/* RaptorX Section */}
-      <div className="space-y-6 text-sm">
+      <div className="space-y-6 mt-3 md:mt-6 text-sm">
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <Link
@@ -164,8 +164,6 @@ export default function WorkExperience({ isHomeView }: prop) {
           </ul>
         </div>
       </div>
-
-      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
 
       {!isHomeView && (
         <>

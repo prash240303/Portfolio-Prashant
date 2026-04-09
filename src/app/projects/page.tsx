@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <section className="pb-16 w-full pt-8 md:mt-8 lg:mt-10">
+    <section className="px-4 md:px-12 pb-16 w-full pt-8 md:mt-8 lg:mt-10">
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-center text-5xl font-semibold tracking-tight">
           Proof of Work

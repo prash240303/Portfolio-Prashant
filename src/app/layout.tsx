@@ -51,9 +51,9 @@ interface ChildrenProps {
 
 export default function RootLayout({ children }: ChildrenProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="overflow-x-hidden" suppressHydrationWarning>
       <body
-        className={`${neu.variable} ${cath.variable} ${lombok.variable} ${instrumentSerif.variable} "bg-white dark:bg-darkBg flex flex-col items-center min-h-screen  font-sans antialiased`}
+        className={`${neu.variable} ${cath.variable} ${lombok.variable} ${instrumentSerif.variable} "bg-white dark:bg-darkBg flex flex-col items-center min-h-screen overflow-x-hidden font-sans antialiased`}
       >
         <Providers>
           <Neko />
@@ -87,8 +87,7 @@ export default function RootLayout({ children }: ChildrenProps) {
             />
             <SmoothScroll>
               {/* Center content — solid bg masks the lines in the middle */}
-              <div className="flex p-0 bg-white dark:bg-darkBg container overflow-hidden mx-auto flex-col max-w-3xl border-x-[1px] border-neutral-200 dark:border-neutral-800 min-h-screen">
-                {/* <Header /> */}
+              <div className="flex gap-0 p-0 bg-white dark:bg-darkBg container overflow-hidden mx-auto flex-col max-w-3xl border-x-[1px] border-neutral-200 dark:border-neutral-800 min-h-screen">
                 <div className="flex flex-col">{children}</div>
                 <Footer />
               </div>

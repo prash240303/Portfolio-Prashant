@@ -65,7 +65,7 @@ const backendAndTools: TechItem[] = [
 
 const StacksCard = () => {
   return (
-    <div className="w-full">
+    <div className="w-full mt-4 md:mt-8">
       <div className="mb-3 flex items-center gap-2">
         <h1 className="text-3xl font-instrumentSerif font-medium tracking-tight">
           Stack I use

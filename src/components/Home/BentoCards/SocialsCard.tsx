@@ -43,7 +43,7 @@ const socials = [
 
 const SocialsCard = () => {
   return (
-    <div className="flex flex-col items-start py-6 justify-center gap-[5px]">
+    <div className="flex flex-col items-start justify-center gap-[5px]">
       <div className="flex flex-col items-start justify-center gap-2">
         <div className="text-xl text-neutral-700 dark:text-neutral-300 font-instrumentSerif font-semibold">
           Let&apos;s connect
