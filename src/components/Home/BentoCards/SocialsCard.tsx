@@ -43,7 +43,7 @@ const socials = [
 
 const SocialsCard = () => {
   return (
-    <div className="flex flex-col items-start justify-center gap-[5px]">
+    <div className="flex w-full flex-col items-start justify-center gap-[5px]">
       <div className="flex flex-col items-start justify-center gap-2">
         <div className="text-xl text-neutral-700 dark:text-neutral-300 font-instrumentSerif font-semibold">
           Let&apos;s connect
@@ -52,7 +52,7 @@ const SocialsCard = () => {
           Find me on these platforms
         </div>
       </div>
-      <div className="flex gap-3  justify-center">
+      <div className="flex gap-3 flex-wrap md:justify-center justify-start">
         {socials.map((social) => (
           <SocialCard key={social.name} link={social.link} name={social.name} />
         ))}
@@ -78,7 +78,7 @@ const SocialCard = ({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        " group font-instrumentSerif tracking-wider flex h-fit hover:text-green-600 dark:hover:text-green-600 font-semibold hover:scale-105 transition-all duration-300 ease-in-out items-center justify-center gap-2 rounded-xl  py-3 px-2",
+        " group font-instrumentSerif tracking-wider flex h-fit hover:text-green-600 dark:hover:text-green-600 font-semibold hover:scale-105 transition-all duration-300 ease-in-out items-center justify-center gap-2 rounded-xl  py-3 md:px-2 pr-3",
         className,
       )}
       style={style}

@@ -26,10 +26,10 @@ export default function WorkExperience({ isHomeView }: prop) {
         <Link
           href="https://drive.google.com/file/d/1YurYayR7ggCCYNwXq-3PLcR6NYzJFgn4/view?usp=sharing"
           target="_blank"
-          className="flex items-center font-instrumentSerif justify-around gap-1 rounded-xl border-2 border-dashed border-black bg-white px-3 py-1 text-lg font-semibold text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-none hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:rounded-2xl active:shadow-none dark:border-white dark:bg-darkBg dark:text-gray-400 dark:hover:shadow-[4px_4px_0px_white]"
+          className="flex items-center font-instrumentSerif justify-center w-fit text-nowrap gap-1  rounded-xl border-2 border-dashed border-black bg-white px-3 md:py-1 py-4 md:text-lg text-sm font-semibold text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-none hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:rounded-2xl active:shadow-none dark:border-white dark:bg-darkBg dark:text-gray-200 dark:hover:shadow-[4px_4px_0px_white]"
         >
           View Resume
-          <ChevronRight className="size-5 stroke-black dark:stroke-gray-400" />
+          <ChevronRight className="size-5 stroke-black dark:stroke-gray-100" />
         </Link>
       </div>
 
@@ -41,7 +41,6 @@ export default function WorkExperience({ isHomeView }: prop) {
         <p>Here&apos;s a snapshot of my journey so far.</p>
       </div>
 
-
       {/* BPCL Section */}
       <div className="space-y-6 mt-6 md:mt-8 text-sm">
         <div className="space-y-2">
@@ -51,12 +50,13 @@ export default function WorkExperience({ isHomeView }: prop) {
               target="_blank"
               className="group flex items-center justify-start gap-2 overflow-hidden"
             >
-              <h2 className="text-lg font-semibold">
-                Bharat Petroleum Corporation Limited .
-              </h2>
-              <div className="relative size-5 -translate-x-4 -translate-y-1 overflow-hidden">
+              <h1 className="md:text-lg inline-block text-base font-semibold">
+                Bharat Petroleum Corporation Limited
+                <span className="hidden ml-2 md:inline-block">.</span>
+              </h1>
+              <div className="relative hidden md:block size-5 -translate-x-4 -translate-y-1 overflow-hidden">
                 <ArrowUpRight className="size-5 ml-1 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:translate-x-full" />
-                <ArrowUpRight className="relative size-5 -translate-x-full transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:translate-x-0" />
+                <ArrowUpRight className="relative ml-1 size-5 -translate-x-full transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:translate-x-0" />
               </div>
             </Link>
 
@@ -111,7 +111,7 @@ export default function WorkExperience({ isHomeView }: prop) {
             >
               <h2 className="text-lg font-semibold">RaptorX.ai .</h2>
               <div className="relative size-5 -translate-x-4 -translate-y-1 overflow-hidden">
-                <ArrowUpRight className="size-5 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:translate-x-full" />
+                <ArrowUpRight className="size-5 ml-1 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:translate-x-full" />
                 <ArrowUpRight className="relative size-5 ml-1 -translate-x-full transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:translate-x-0" />
               </div>
             </Link>
