@@ -66,12 +66,14 @@ const backendAndTools: TechItem[] = [
 const StacksCard = () => {
   return (
     <div className="w-full mt-4 md:mt-8">
+      {" "}
+      {/* 👈 added overflow-hidden */}
       <div className="mb-3 flex items-center gap-2">
         <h1 className="text-3xl font-instrumentSerif font-medium tracking-tight">
           Stack I use
         </h1>
       </div>
-      <BentoCard className="group/stack row-span-1 col-span-5  p-4 lg:p-6">
+      <BentoCard className=" row-span-1 col-span-5  p-4 lg:p-6">
         <TooltipProvider>
           <Marquee gap="20px" className="py-4" fade pauseOnHover>
             {frontendTech.map(({ Icon, name }, index) => (

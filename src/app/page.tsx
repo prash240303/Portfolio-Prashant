@@ -87,10 +87,9 @@ const page = () => {
             </div>
           </div>{" "}
         </BlurFade>
-
         <Divider />
 
-        <BlurFade className="px-4 md:px-12" delay={0.7}>
+        <BlurFade className="px-4 md:block hidden md:px-12" delay={0.7}>
           <StacksCard />
         </BlurFade>
         <Divider />
@@ -98,7 +97,7 @@ const page = () => {
         <BlurFade className="px-4 md:px-12" delay={0.7}>
           <BookACall />
         </BlurFade>
-        <Divider />
+        <Divider /> 
       </div>
     </section>
   );

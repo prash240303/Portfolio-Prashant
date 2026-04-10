@@ -31,7 +31,7 @@ export const Marquee = (props: MarqueeProps) => {
   return (
     <div
       className={cn(
-        'group flex overflow-hidden',
+        'group flex max-w-full overflow-hidden',
         direction === 'left' ? 'flex-row' : 'flex-col',
         className
       )}
@@ -50,7 +50,7 @@ export const Marquee = (props: MarqueeProps) => {
             } as React.CSSProperties
           }
           className={cn(
-            'flex shrink-0 justify-around gap-[var(--gap)]',
+            'flex shrink-0  min-w-0 justify-around gap-[var(--gap)]',
             direction === 'left'
               ? 'animate-marquee-left flex-row'
               : 'animate-marquee-up flex-col',

@@ -15,7 +15,7 @@ export default function WorkExperience({ isHomeView }: prop) {
   return (
     <>
       <div
-        className={`mb-8 flex items-center justify-between ${
+        className={`mb-8 w-full flex items-center justify-between ${
           isHomeView ? "mt-16" : "mt-0"
         }`}
       >
@@ -26,14 +26,14 @@ export default function WorkExperience({ isHomeView }: prop) {
         <Link
           href="https://drive.google.com/file/d/1YurYayR7ggCCYNwXq-3PLcR6NYzJFgn4/view?usp=sharing"
           target="_blank"
-          className="flex items-center font-instrumentSerif justify-center w-fit text-nowrap gap-1  rounded-xl border-2 border-dashed border-black bg-white px-3 md:py-1 py-4 md:text-lg text-sm font-semibold text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-none hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:rounded-2xl active:shadow-none dark:border-white dark:bg-darkBg dark:text-gray-200 dark:hover:shadow-[4px_4px_0px_white]"
+          className="flex items-center font-instrumentSerif justify-center w-fit text-nowrap gap-1  rounded-xl border-2 border-dashed border-black bg-white px-3 md:py-1 py-2 md:text-lg text-sm font-semibold text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-none hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:rounded-2xl active:shadow-none dark:border-white dark:bg-darkBg dark:text-gray-200 dark:hover:shadow-[4px_4px_0px_white]"
         >
           View Resume
           <ChevronRight className="size-5 stroke-black dark:stroke-gray-100" />
         </Link>
       </div>
 
-      <div className="space-y-5">
+      <div className=" w-full space-y-5">
         <p>
           Exploring new technologies and creating engaging web experiences,
           while continuously learning and growing as a developer.
@@ -42,7 +42,7 @@ export default function WorkExperience({ isHomeView }: prop) {
       </div>
 
       {/* BPCL Section */}
-      <div className="space-y-6 mt-6 md:mt-8 text-sm">
+      <div className="w-full space-y-6 mt-6 md:mt-8 text-sm">
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <Link
@@ -101,7 +101,7 @@ export default function WorkExperience({ isHomeView }: prop) {
       <Divider />
 
       {/* RaptorX Section */}
-      <div className="space-y-6 mt-3 md:mt-6 text-sm">
+      <div className="w-full space-y-6 mt-3 md:mt-6 text-sm">
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <Link
@@ -164,16 +164,6 @@ export default function WorkExperience({ isHomeView }: prop) {
           </ul>
         </div>
       </div>
-
-      {!isHomeView && (
-        <>
-          <p className="mt-6 leading-relaxed">
-            I&apos;m constantly learning and experimenting with new
-            technologies. Stay tuned for more exciting projects and experiences
-            coming soon...
-          </p>
-        </>
-      )}
     </>
   );
 }

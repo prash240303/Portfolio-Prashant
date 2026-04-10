@@ -6,9 +6,10 @@ type Props = {
   className?: string
 }
 
+// BentoCard.tsx
 const BentoCard = ({ children, className }: Props) => {
   return (
-    <div className={cn('bento group/bentoCard', className)}>
+    <div className={cn('bento group/bentoCard overflow-hidden', className)}>  {/* 👈 added overflow-hidden */}
       {children}
       <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover/bentoCard:bg-black/[.015] group-hover/bentoCard:dark:bg-neutral-800/10" />
     </div>
