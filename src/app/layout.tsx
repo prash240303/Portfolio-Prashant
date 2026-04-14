@@ -4,12 +4,12 @@ import { Toaster } from "@/components/ui/sonner";
 import React from "react";
 import { Providers } from "./Providers";
 import { cath, lombok, neu, instrumentSerif } from "@/lib/font";
-import { Analytics } from "@/components/shared/Analytics";
 import ScrollToTopButton from "@/components/shared/ScrollToTop";
 import Footer from "@/components/layout/Nav/Footer";
 import Header from "@/components/layout/Nav/Header";
 import SmoothScroll from "@/components/shared/SmoothScroll";
 import Neko from "@/components/Neko";
+import { Analytics } from "@vercel/analytics/react";
 
 const info = {
   name: "Prashant",
@@ -94,7 +94,7 @@ export default function RootLayout({ children }: ChildrenProps) {
             </SmoothScroll>
             <ScrollToTopButton />
             <Toaster />
-
+            <Analytics />
             {/* gradual blur */}
             <div className="fixed bottom-0 left-0 right-0 h-32 pointer-events-none">
               {[

@@ -12,6 +12,7 @@ import Link from "next/link";
 import StacksCard from "@/components/Home/BentoCards/StacksCard";
 import BookACall from "@/components/Home/BentoCards/BookACall";
 import Divider from "@/components/ui/Divider";
+import CraftsSection from "@/components/Home/BentoCards/CraftsCard";
 
 export const metadata: Metadata = {
   title: "Home Page",
@@ -59,7 +60,6 @@ const page = () => {
         <BlurFade className="px-4 md:px-12" delay={0.7}>
           <WorkExperience isHomeView={true} />
         </BlurFade>
-
         <Divider />
 
         <BlurFade className="px-4 md:px-12" delay={0.7}>
@@ -88,6 +88,10 @@ const page = () => {
           </div>{" "}
         </BlurFade>
         <Divider />
+        <BlurFade className="px-4 md:px-12" delay={0.7}>
+          <CraftsSection />
+        </BlurFade>
+        <Divider />
 
         <BlurFade className="px-4 md:block hidden md:px-12" delay={0.7}>
           <StacksCard />
@@ -97,7 +101,7 @@ const page = () => {
         <BlurFade className="px-4 md:px-12" delay={0.7}>
           <BookACall />
         </BlurFade>
-        <Divider /> 
+        <Divider />
       </div>
     </section>
   );
