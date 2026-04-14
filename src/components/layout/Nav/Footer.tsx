@@ -8,10 +8,37 @@ const Footer = () => {
   const [visits, setVisits] = useState<number | string | null>(null);
 
   useEffect(() => {
-    fetch("/api/visits")
-      .then((res) => res.json())
-      .then((data) => setVisits(data.count))
-      .catch(() => setVisits("N/A"));
+    async function handleVisits() {
+      try {
+        const hasVisited = localStorage.getItem("hasVisited");
+
+        if (!hasVisited) {
+          // ✅ First visit → increment
+          const res = await fetch("/api/visits", {
+            method: "POST",
+          });
+
+          const data = await res.json();
+          setVisits(data.count);
+
+          // mark as visited
+          localStorage.setItem("hasVisited", "true");
+        } else {
+          // ✅ Already visited → just fetch count (no increment)
+          const res = await fetch("/api/visits", {
+            method: "GET",
+            cache: "no-store",
+          });
+
+          const data = await res.json();
+          setVisits(data.count);
+        }
+      } catch (error) {
+        console.error("Error handling visits:", error);
+      }
+    }
+
+    handleVisits();
   }, []);
 
   const year = String(new Date().getFullYear());
