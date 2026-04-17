@@ -24,7 +24,7 @@ export default function WorkExperience({ isHomeView }: prop) {
         </h1>
 
         <Link
-          href="https://drive.google.com/file/d/1YurYayR7ggCCYNwXq-3PLcR6NYzJFgn4/view?usp=sharing"
+          href="https://drive.google.com/file/d/1Pg7Uv5AWakQyhwlWueAGhy69ErZSJuj6/view?usp=sharing"
           target="_blank"
           className="flex items-center font-instrumentSerif justify-center w-fit text-nowrap gap-1  rounded-xl border-2 border-dashed border-black bg-white px-3 md:py-1 py-2 md:text-lg text-sm font-semibold text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-none hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:rounded-2xl active:shadow-none dark:border-white dark:bg-darkBg dark:text-gray-200 dark:hover:shadow-[4px_4px_0px_white]"
         >
