@@ -39,7 +39,7 @@ interface ArrowButtonProps {
 
 export default function BookACall({
   label = "Book a free call",
-  href = "#",
+  href = "https://calendly.com/prash2402works/30min",
   arrowCount = 1, // 1 arrow so only one is visible at a time
 }: ArrowButtonProps) {
   const [offsets, setOffsets] = useState<number[]>(() =>
@@ -110,6 +110,7 @@ export default function BookACall({
       </div>
       <Link
         href={href}
+        target="_blank"
         className="relative mt-2 mx-auto inline-flex items-center bg-black w-fit h-20 rounded-2xl p-2 cursor-pointer overflow-hidden border border-white/[0.06] no-underline shadow-md transition-[transform,box-shadow] duration-[180ms] ease-in-out"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
