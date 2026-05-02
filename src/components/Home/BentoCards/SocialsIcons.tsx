@@ -10,10 +10,14 @@ import ThemeSwitch from "@/components/shared/ThemeSwitch";
 const socials = [
   { icon: Github, href: "https://github.com/prash240303", label: "GitHub" },
   { icon: Twitter, href: "https://twitter.com/prash2403", label: "Twitter" },
-  { icon: Paperclip, href: "/resume.pdf", label: "Resume" },
+  {
+    icon: Paperclip,
+    href: "https://drive.google.com/file/d/1Pg7Uv5AWakQyhwlWueAGhy69ErZSJuj6/view?usp=drive_link",
+    label: "Resume",
+  },
   {
     icon: Linkedin,
-    href: "https://linkedin.com/in/prash2403",
+    href: "https://www.linkedin.com/in/prashant2403",
     label: "LinkedIn",
   },
 ];

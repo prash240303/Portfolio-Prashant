@@ -13,7 +13,7 @@ const socials = [
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/prashant2403/",
+    link: "http://linkedin.com/in/prashant2403/",
     translateX: "12px",
     rotate: "-10deg",
     zIndex: 1,
@@ -34,7 +34,7 @@ const socials = [
   },
   {
     name: "Resume",
-    link: "https://drive.google.com/file/d/1YurYayR7ggCCYNwXq-3PLcR6NYzJFgn4/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1Pg7Uv5AWakQyhwlWueAGhy69ErZSJuj6/view?usp=drive_link",
     translateX: "4px",
     rotate: "-3deg",
     zIndex: 3,
